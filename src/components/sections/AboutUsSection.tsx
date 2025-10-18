@@ -1,7 +1,6 @@
 import React from "react";
-import { Button } from "../../../../components/ui/button";
-import { Card, CardContent } from "../../../../components/ui/card";
-
+import { Button } from "../ui/button";
+import { Card, CardContent } from "../ui/card";
 const decorativeElements = [
   {
     type: "line",
@@ -224,3 +223,5 @@ export const AboutUsSection = (): JSX.Element => {
     </section>
   );
 };
+
+export default AboutUsSection;

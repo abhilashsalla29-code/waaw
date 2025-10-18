@@ -1,6 +1,6 @@
 import { ArrowRightIcon } from "lucide-react";
 import React from "react";
-import { Button } from "../../../../components/ui/button";
+import { Button } from "../ui/button";
 
 const socialIcons = [
   { src: "/frame-14.svg", alt: "Social icon 1" },
@@ -193,3 +193,5 @@ export const FooterSection = (): JSX.Element => {
     </footer>
   );
 };
+
+export default FooterSection;

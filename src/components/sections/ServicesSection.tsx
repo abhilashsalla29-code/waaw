@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent } from "../../../../components/ui/card";
+import { Card, CardContent } from "../ui/card";
 
 const servicesData = [
   {
@@ -163,3 +163,5 @@ export const ServicesSection = (): JSX.Element => {
     </section>
   );
 };
+
+export default ServicesSection;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent } from "../../../../components/ui/card";
+import { Card, CardContent } from "../ui/card";
 
 const blogCards = [
   {
@@ -62,30 +62,39 @@ export const BlogsSection = (): JSX.Element => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[89px] w-full max-w-[1216px]">
             {blogCards.map((card, index) => (
-              <Card
+              <div
                 key={index}
-                className="relative w-full h-[400px] bg-transparent border-0 overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300"
+                className="relative w-[350px] h-[400px] cursor-pointer hover:scale-105 transition-transform duration-300"
               >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[286px] h-0.5 bg-[#82b7dc]" />
+                {/* Use frame-17-1.svg as the card background */}
+                <img
+                  src="/frame-17-1.svg"
+                  alt="Blog card"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                
+                {/* Content overlay */}
+                <div className="relative z-10 h-full flex flex-col justify-between p-8">
+                  <div>
+                    <h4 className="[font-family:'Montserrat',Helvetica] font-bold text-white text-[24px] text-center tracking-[0] leading-tight mb-4">
+                      {card.title}
+                    </h4>
 
-                <div className="absolute top-0.5 left-1/2 -translate-x-1/2 w-[286px] h-[271px] bg-[#99b2d417] blur-[50px] backdrop-blur-[37px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(37px)_brightness(100%)]" />
-
-                <div className="absolute top-px left-1/2 -translate-x-1/2 w-[286px] h-[23px] bg-[#99b2d44c] blur-[50px] backdrop-blur-[37px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(37px)_brightness(100%)]" />
-
-                <div className="absolute top-0.5 left-1/2 -translate-x-1/2 w-[286px] h-[49px] bg-[#99b2d44c] blur-[50px] backdrop-blur-[37px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(37px)_brightness(100%)]" />
-
-                <div className="absolute top-0.5 left-1/2 -translate-x-1/2 w-[286px] h-[49px] bg-[#99b2d44c] blur-[50px] backdrop-blur-[37px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(37px)_brightness(100%)]" />
-
-                <CardContent className="relative pt-[51px] px-[34px] flex flex-col items-center">
-                  <h4 className="[font-family:'Montserrat',Helvetica] font-bold text-[#d9d9d9] text-[28px] text-center tracking-[0] leading-10 mb-[113px] w-[278px]">
-                    {card.title}
-                  </h4>
-
-                  <p className="[font-family:'Poppins',Helvetica] font-medium text-[#bbbbbb] text-sm text-center tracking-[0] leading-[normal] w-[262px]">
-                    {card.description}
-                  </p>
-                </CardContent>
-              </Card>
+                    <p className="[font-family:'Poppins',Helvetica] font-medium text-[#bbbbbb] text-sm text-center tracking-[0] leading-relaxed">
+                      {card.description}
+                    </p>
+                  </div>
+                  
+                  {/* Bottom icon area - you can add another icon here if needed */}
+                  <div className="flex justify-center">
+                    <div className="w-8 h-8 bg-[#82b7dc] rounded-full flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -93,3 +102,5 @@ export const BlogsSection = (): JSX.Element => {
     </section>
   );
 };
+
+export default BlogsSection;

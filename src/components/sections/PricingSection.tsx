@@ -1,7 +1,7 @@
 import { CheckIcon } from "lucide-react";
 import React from "react";
-import { Button } from "../../../../components/ui/button";
-import { Card, CardContent } from "../../../../components/ui/card";
+import { Button } from "../ui/button";
+import { Card, CardContent } from "../ui/card";
 
 const pricingPlans = [
   {
@@ -196,3 +196,5 @@ export const PricingSection = (): JSX.Element => {
     </section>
   );
 };
+
+export default PricingSection;

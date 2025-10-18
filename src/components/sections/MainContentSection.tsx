@@ -4,8 +4,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../../../components/ui/accordion";
-import { Button } from "../../../../components/ui/button";
+} from "../ui/accordion";
+import { Button } from "../ui/button";
 
 const faqItems = [
   {
@@ -157,3 +157,5 @@ export const MainContentSection = (): JSX.Element => {
     </section>
   );
 };
+
+export default MainContentSection;
