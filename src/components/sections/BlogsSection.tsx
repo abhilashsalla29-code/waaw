@@ -28,7 +28,7 @@ export const BlogsSection = (): JSX.Element => {
 
       <div className="relative max-w-[1440px] mx-auto">
         <div className="flex flex-col items-center">
-          <div className="relative mb-[111px]">
+          <div className="relative mb-[60px] md:mb-[111px]">
             <div className="absolute top-[36px] left-[-26px] w-[33px] h-px rounded-[16.5px/0.5px] rotate-90 blur-[2px] bg-white" />
 
             <div className="absolute top-[36px] right-[-26px] w-[33px] h-px rounded-[16.5px/0.5px] rotate-90 blur-[2px] bg-white" />
@@ -45,26 +45,26 @@ export const BlogsSection = (): JSX.Element => {
 
             <div className="absolute top-[53px] left-[-19px] w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90 blur-sm" />
 
-            <h2 className="[font-family:'Montserrat',Helvetica] font-extrabold text-[#82b7dc] text-[40px] text-center tracking-[0] leading-[70px]">
+            <h2 className="[font-family:'Montserrat',Helvetica] font-extrabold text-[#82b7dc] text-[32px] md:text-[40px] text-center tracking-[0] leading-[50px] md:leading-[70px]">
               BLOGS
             </h2>
           </div>
 
-          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-[32px] text-center tracking-[0] leading-[normal] underline mb-[68px] max-w-[529px]">
+          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-[24px] md:text-[32px] text-center tracking-[0] leading-[normal] underline mb-[40px] md:mb-[68px] max-w-[529px]">
             Insights That Inspire Innovation
           </h3>
 
-          <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-xl text-center tracking-[0] leading-[normal] mb-[163px] max-w-[814px]">
+          <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-lg md:text-xl text-center tracking-[0] leading-[normal] mb-[80px] md:mb-[163px] max-w-[814px]">
             Explore the latest in design, development, and digital strategy. At
             Waave, we share ideas, trends, and expert perspectives that help
             businesses stay ahead in the ever-evolving digital world.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[89px] w-full max-w-[1216px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[40px] md:gap-[89px] w-full max-w-[1216px]">
             {blogCards.map((card, index) => (
               <div
                 key={index}
-                className="relative w-[350px] h-[400px] cursor-pointer hover:scale-105 transition-transform duration-300"
+                className="relative w-full md:w-[350px] h-[350px] md:h-[400px] cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto"
               >
                 {/* Use frame-17-1.svg as the card background */}
                 <img
@@ -72,23 +72,23 @@ export const BlogsSection = (): JSX.Element => {
                   alt="Blog card"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                
+
                 {/* Content overlay */}
-                <div className="relative z-10 h-full flex flex-col justify-between p-8">
+                <div className="relative z-10 h-full flex flex-col justify-between p-6 md:p-8">
                   <div>
-                    <h4 className="[font-family:'Montserrat',Helvetica] font-bold text-white text-[24px] text-center tracking-[0] leading-tight mb-4">
+                    <h4 className="[font-family:'Montserrat',Helvetica] font-bold text-white text-[20px] md:text-[24px] text-center tracking-[0] leading-tight mb-3 md:mb-4">
                       {card.title}
                     </h4>
 
-                    <p className="[font-family:'Poppins',Helvetica] font-medium text-[#bbbbbb] text-sm text-center tracking-[0] leading-relaxed">
+                    <p className="[font-family:'Poppins',Helvetica] font-medium text-[#bbbbbb] text-xs md:text-sm text-center tracking-[0] leading-relaxed">
                       {card.description}
                     </p>
                   </div>
-                  
+
                   {/* Bottom icon area - you can add another icon here if needed */}
                   <div className="flex justify-center">
-                    <div className="w-8 h-8 bg-[#82b7dc] rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-6 h-6 md:w-8 md:h-8 bg-[#82b7dc] rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>

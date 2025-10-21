@@ -1,5 +1,6 @@
-import { CheckIcon } from "lucide-react";
+"use client";
 import React from "react";
+import { CheckIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 
@@ -19,8 +20,6 @@ const pricingPlans = [
     buttonText: "Find Your Plan",
     buttonVariant: "default" as const,
     highlighted: false,
-    topPosition: "top-[531px]",
-    leftPosition: "left-[90px]",
   },
   {
     name: "Advanced",
@@ -37,8 +36,6 @@ const pricingPlans = [
     buttonText: "Get Started",
     buttonVariant: "secondary" as const,
     highlighted: true,
-    topPosition: "top-[447px]",
-    leftPosition: "left-[527px]",
   },
   {
     name: "Ultimate",
@@ -55,136 +52,107 @@ const pricingPlans = [
     buttonText: "Get Started",
     buttonVariant: "secondary" as const,
     highlighted: false,
-    topPosition: "top-[533px]",
-    leftPosition: "left-[964px]",
   },
 ];
 
 export const PricingSection = (): JSX.Element => {
   return (
-    <section className="relative w-full bg-black py-20">
-      <div className="relative mx-auto max-w-[1440px] px-4">
+    <section className="relative w-full bg-black py-20 px-4">
+      <div className="mx-auto max-w-[1440px]">
+        {/* Header */}
         <div className="relative mb-20 flex flex-col items-center">
           <div className="relative mb-8">
-            <h2 className="relative z-10 [font-family:'Montserrat',Helvetica] text-[40px] font-extrabold tracking-[0] leading-normal text-[#82b7dc] whitespace-nowrap">
+            <h2 className="[font-family:'Montserrat',Helvetica] text-[32px] md:text-[40px] font-extrabold text-[#82b7dc] whitespace-nowrap">
               PRICING
             </h2>
-
-            <div className="absolute top-[25px] -left-8 w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90 blur-[2px]" />
-            <div className="absolute top-[25px] -right-8 w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90 blur-[2px]" />
-            <div className="absolute top-[5px] -left-5 w-2 h-2 bg-white rounded rotate-180 blur-sm" />
-            <div className="absolute top-[5px] -right-5 w-2 h-2 bg-white rounded rotate-180 blur-sm" />
-            <div className="absolute top-[60px] -left-10 w-[157px] h-1 bg-white rounded-[78.5px/2px] blur-[5px]" />
-            <div className="absolute -top-[22px] left-[90px] w-[157px] h-1 bg-white rounded-[78.5px/2px] rotate-180 blur-[5px]" />
-            <div className="absolute top-[42px] -left-[26px] w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90 blur-sm" />
-            <div className="absolute -top-[35px] -right-[26px] w-[35px] h-[35px] bg-white rounded-[17.5px] -rotate-90 blur-sm" />
+            {/* Decoratives */}
+            <div className="absolute top-[25px] -left-8 w-[33px] h-px bg-white rounded-full rotate-90 blur-[2px]" />
+            <div className="absolute top-[25px] -right-8 w-[33px] h-px bg-white rounded-full rotate-90 blur-[2px]" />
+            <div className="absolute top-[5px] -left-5 w-2 h-2 bg-white rounded-full blur-sm" />
+            <div className="absolute top-[5px] -right-5 w-2 h-2 bg-white rounded-full blur-sm" />
+            <div className="absolute top-[60px] -left-10 w-[157px] h-1 bg-white rounded-full blur-[5px]" />
+            <div className="absolute -top-[22px] left-[90px] w-[157px] h-1 bg-white rounded-full rotate-180 blur-[5px]" />
+            <div className="absolute top-[42px] -left-[26px] w-[35px] h-[35px] bg-white rounded-full rotate-90 blur-sm" />
+            <div className="absolute -top-[35px] -right-[26px] w-[35px] h-[35px] bg-white rounded-full -rotate-90 blur-sm" />
           </div>
-
-          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-[32px] text-center tracking-[0] leading-normal underline mb-6">
+          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-[24px] md:text-[32px] underline mb-6 text-center">
             Invest in Your Digital Future
           </h3>
-
-          <p className="max-w-[845px] [font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-xl text-center tracking-[0] leading-normal">
+          <p className="max-w-[845px] text-[#bbbbbb] text-lg md:text-xl text-center">
             Select the plan that aligns with your business objectives. Each
             package is designed to provide reliable, scalable, and high-quality
             digital solutions.
           </p>
         </div>
 
-        <div className="relative flex justify-center gap-8">
-          {pricingPlans.map((plan, index) => (
+        {/* Cards */}
+        <div className="flex flex-col lg:flex-row justify-center gap-8">
+          {pricingPlans.map((plan, idx) => (
             <Card
-              key={index}
-              className={`relative w-[386px] ${
-                plan.highlighted ? "h-[609px]" : "h-[608px]"
-              } rounded-[${plan.highlighted ? "30px" : "40px"}] overflow-hidden border ${
-                plan.highlighted ? "border-[#82b7dc26]" : "border-[#ffffff26]"
-              } backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] [background:radial-gradient(50%_50%_at_30%_-4%,rgba(255,255,255,0.1)_0%,rgba(0,0,0,0.1)_100%)] ${
-                plan.highlighted ? "-mt-[84px]" : ""
-              }`}
+              key={idx}
+              className={`relative w-full max-w-[386px] ${
+                plan.highlighted ? "md:-mt-20" : ""
+              } rounded-[30px] overflow-hidden border backdrop-blur-[2px] backdrop-brightness-[110%] bg-[rgba(255,255,255,0.05)] border-${
+                plan.highlighted ? "white/20" : "white/10"
+              } shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)]`}
             >
-              <CardContent className="relative p-0 h-full">
+              <CardContent className="relative p-0">
                 {plan.highlighted && (
                   <>
-                    <img
-                      className="absolute top-[562px] left-[133px] w-[93px] h-[93px]"
-                      alt="Ellipse"
-                      src="/ellipse-3.svg"
-                    />
-                    <div className="absolute top-0 left-0 w-full h-[175px] bg-[#ffffff12] blur-[50px] backdrop-blur-[37px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(37px)_brightness(100%)]" />
+                    <div className="absolute top-0 left-0 w-full h-[175px] bg-[rgba(255,255,255,0.07)] blur-[50px]" />
                     <div className="absolute top-0 left-0 w-full h-0.5 bg-[#d9d9d9]" />
-                    <div className="absolute top-0 left-0 w-full h-[49px] bg-[#ffffff4c] blur-[50px] backdrop-blur-[37px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(37px)_brightness(100%)]" />
+                    <div className="absolute top-0 left-0 w-full h-[49px] bg-[rgba(255,255,255,0.3)] blur-[50px]" />
                   </>
                 )}
 
-                <div className="relative z-10">
-                  <div
-                    className={`${plan.highlighted ? "pt-[19px]" : "pt-[21px]"} px-[46px]`}
-                  >
-                    <h4 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#a19e9e] text-2xl tracking-[0] leading-normal">
-                      {plan.name}
-                    </h4>
-                  </div>
+                <div className="relative z-10 px-[30px] md:px-[46px] pt-[20px]">
+                  <h4 className="text-[#a19e9e] font-semibold text-xl md:text-2xl">
+                    {plan.name}
+                  </h4>
+                  <p className="text-[#bbbbbb] text-sm md:text-[13px] mt-2">
+                    {plan.description}
+                  </p>
+                </div>
 
-                  <div
-                    className={`${plan.highlighted ? "mt-[43px]" : "mt-[42px]"} px-[46px]`}
-                  >
-                    <p className="w-[304px] [font-family:'Montserrat',Helvetica] font-normal text-[#bbbbbb] text-[13px] tracking-[0] leading-normal">
-                      {plan.description}
-                    </p>
-                  </div>
+                <div className="px-[20px] md:px-[30px] mt-6">
+                  <div className="bg-[rgba(255,255,255,0.1)] rounded-[20px] md:rounded-[30px] p-6">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[#bbbbbb] font-semibold text-lg md:text-xl">
+                        ₹
+                      </span>
+                      <span className="text-[#bbbbbb] font-semibold text-lg md:text-xl">
+                        {plan.price}
+                      </span>
+                    </div>
 
-                  <div
-                    className={`${plan.highlighted ? "mt-[46px]" : "mt-[45px]"} px-[30px]`}
-                  >
-                    <div className="w-[327px] h-[481px] bg-[#ffffff14] rounded-[30px] relative">
-                      <div className="pt-[30px] px-[27px] flex items-center">
-                        <img
-                          className="w-6 h-6"
-                          alt="Bx rupee"
-                          src="/bx-rupee.svg"
-                        />
-                        <span className="ml-[7px] [font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-xl text-center tracking-[0] leading-normal">
-                          {plan.price}
-                        </span>
-                      </div>
+                    <div className="mt-6 flex justify-center">
+                      <Button
+                        variant={plan.buttonVariant}
+                        className={`w-full max-w-[271px] h-[40px] md:h-[50px] rounded-[20px] md:rounded-[30px] backdrop-blur-[2px] backdrop-brightness-[110%] text-${
+                          plan.buttonVariant === "default"
+                            ? "black bg-white"
+                            : "white bg-transparent"
+                        }`}
+                      >
+                        {plan.buttonText}
+                      </Button>
+                    </div>
 
-                      <div className="mt-[52px] flex justify-center">
-                        <Button
-                          className={`w-[271px] h-[50px] rounded-[30px] backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] ${
-                            plan.buttonVariant === "default"
-                              ? "bg-[#ffffffd9] text-black hover:bg-[#ffffffd9]/90"
-                              : "bg-[#00000000] text-white hover:bg-[#ffffff1a]"
-                          } [font-family:'Montserrat',Helvetica] font-medium text-xl tracking-[0] leading-normal`}
-                        >
-                          {plan.buttonText}
-                        </Button>
-                      </div>
+                    <h5 className="text-[#a19e9e] font-semibold text-sm md:text-[15px] mt-6">
+                      Everything You Get
+                    </h5>
 
-                      <div className="mt-[21px] px-[23px]">
-                        <h5 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#a19e9e] text-[15px] tracking-[0] leading-normal whitespace-nowrap">
-                          Everything You Get
-                        </h5>
-
-                        <div className="mt-[17px] space-y-[11px]">
-                          {plan.features.map((feature, featureIndex) => (
-                            <div
-                              key={featureIndex}
-                              className="flex items-start gap-[13px]"
-                            >
-                              <div className="mt-0.5 w-4 h-4 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
-                                <CheckIcon
-                                  className="w-3 h-3 text-black"
-                                  strokeWidth={3}
-                                />
-                              </div>
-                              <span className="[font-family:'Montserrat',Helvetica] font-medium text-[#a19e9e] text-sm tracking-[0] leading-normal">
-                                {feature}
-                              </span>
-                            </div>
-                          ))}
+                    <div className="mt-4 space-y-3">
+                      {plan.features.map((feat, i) => (
+                        <div key={i} className="flex items-center gap-3">
+                          <div className="bg-white w-4 h-4 rounded flex items-center justify-center">
+                            <CheckIcon className="w-3 h-3 text-black" strokeWidth={3} />
+                          </div>
+                          <span className="text-[#a19e9e] text-xs md:text-sm">
+                            {feat}
+                          </span>
                         </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
