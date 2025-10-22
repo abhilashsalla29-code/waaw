@@ -175,23 +175,26 @@ export const AboutUsSection = (): JSX.Element => {
         <section className="w-full relative bg-black overflow-hidden">
           <div className="relative w-full h-[1024px] md:h-[900px] lg:h-[1024px]">
         {/* Background Mesh Image 1 */}
-        <img
+        {/* <img
           className="absolute w-[25.49%] h-[35.84%] top-[68.16%] left-[39.93%] md:w-[30%] md:h-[40%] md:top-[60%] md:left-[35%]"
           alt="Mesh"
           src="/mesh1.png"
-        />
+        /> */}
 
         {/* ABOUT Title */}
+        <div className="absolute top-[-30px] left-[20%] lg:left-[30%] w-[200px] lg:w-[300px] h-[2px] bg-gradient-to-r from-transparent via-white to-transparent blur-[1px] hidden md:block" />
+          <div className="absolute top-[-35px] left-[22%] lg:left-[31%] w-[12px] h-[12px] bg-white rounded-full blur-[2px] hidden md:block" />
         <div className="absolute top-[106px] left-[50%] -translate-x-1/2 md:top-[80px] lg:top-[106px] w-[155px] [font-family:'Montserrat',Helvetica] font-extrabold text-[#82b7dc] text-[32px] md:text-[36px] lg:text-[40px] tracking-[0] leading-[normal] whitespace-nowrap text-center">
           ABOUT
         </div>
+
 
         {/* Decorative Elements */}
         {decorativeElements.map((element, index) => (
           <div key={`decorative-${index}`} className={element.className} />
         ))}
 
-        {/* Background Mesh Image 2 */}
+        Background Mesh Image 2
         <img
           className="absolute w-[25.49%] h-[35.84%] top-[34.86%] left-[38.19%] md:w-[30%] md:h-[40%] md:top-[28%] md:left-[35%]"
           alt="Mesh"

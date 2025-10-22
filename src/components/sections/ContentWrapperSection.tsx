@@ -1,247 +1,174 @@
 import React from "react";
 
-const stages = [
-  {
-    title: "Envision",
-    position: "top-right",
-    titleTop: "top-[250px]",
-    titleLeft: "left-[75%]",
-    items: [
-      { text: "Define goals", top: "top-[290px]", left: "left-[76%]" },
-      { text: "Research audience", top: "top-[310px]", left: "left-[76%]" },
-      { text: "Plan features", top: "top-[330px]", left: "left-[76%]" },
-      { text: "Set the vision", top: "top-[350px]", left: "left-[76%]" },
-    ],
-    iconTop: "top-[200px]",
-    iconLeft: "left-[70%]",
-    iconSrc: "/frame-1.svg",
-    vectorTop: "top-[240px]",
-    vectorLeft: "left-[60%]",
-    vectorSrc: "/vector-22.svg",
-    bulletPositions: [
-      { top: "top-[295px]", left: "left-[74%]" },
-      { top: "top-[315px]", left: "left-[74%]" },
-      { top: "top-[335px]", left: "left-[74%]" },
-      { top: "top-[355px]", left: "left-[74%]" },
-    ],
-  },
-  {
-    title: "Design",
-    position: "bottom-right",
-    titleTop: "top-[520px]",
-    titleLeft: "left-[75%]",
-    items: [
-      { text: "Wireframes & flows", top: "top-[560px]", left: "left-[76%]" },
-      { text: "UI/UX layouts", top: "top-[580px]", left: "left-[76%]" },
-      { text: "Visual interfaces", top: "top-[600px]", left: "left-[76%]" },
-      { text: "Interactive prototypes", top: "top-[620px]", left: "left-[76%]" },
-    ],
-    iconTop: "top-[470px]",
-    iconLeft: "left-[70%]",
-    iconSrc: "/frame-47.svg",
-    vectorTop: "top-[460px]",
-    vectorLeft: "left-[60%]",
-    vectorSrc: "/vector-23.svg",
-    bulletPositions: [
-      { top: "top-[565px]", left: "left-[74%]" },
-      { top: "top-[585px]", left: "left-[74%]" },
-      { top: "top-[605px]", left: "left-[74%]" },
-      { top: "top-[625px]", left: "left-[74%]" },
-    ],
-  },
-  {
-    title: "Elevate",
-    position: "bottom-left",
-    titleTop: "top-[520px]",
-    titleLeft: "left-[8%]",
-    items: [
-      { text: "Refine design", top: "top-[560px]", left: "left-[9%]" },
-      { text: "Optimize usability", top: "top-[580px]", left: "left-[9%]" },
-      { text: "Ensure responsiveness", top: "top-[600px]", left: "left-[9%]" },
-      { text: "Enhance features", top: "top-[620px]", left: "left-[9%]" },
-    ],
-    iconTop: "top-[470px]",
-    iconLeft: "left-[15%]",
-    iconSrc: "/frame-39.svg",
-    vectorTop: "top-[460px]",
-    vectorLeft: "left-[25%]",
-    vectorSrc: "/vector-24-1.svg",
-    bulletPositions: [
-      { top: "top-[565px]", left: "left-[7%]" },
-      { top: "top-[585px]", left: "left-[7%]" },
-      { top: "top-[605px]", left: "left-[7%]" },
-      { top: "top-[625px]", left: "left-[7%]" },
-    ],
-  },
-  {
-    title: "Unleash",
-    position: "top-left",
-    titleTop: "top-[250px]",
-    titleLeft: "left-[8%]",
-    items: [
-      { text: "Finalize product", top: "top-[290px]", left: "left-[9%]" },
-      { text: "Test & QA", top: "top-[310px]", left: "left-[9%]" },
-      { text: "Launch smoothly", top: "top-[330px]", left: "left-[9%]" },
-      { text: "Provide support", top: "top-[350px]", left: "left-[9%]" },
-    ],
-    iconTop: "top-[200px]",
-    iconLeft: "left-[15%]",
-    iconSrc: "/frame-40.svg",
-    vectorTop: "top-[240px]",
-    vectorLeft: "left-[25%]",
-    vectorSrc: "/vector-21.svg",
-    bulletPositions: [
-      { top: "top-[295px]", left: "left-[7%]" },
-      { top: "top-[315px]", left: "left-[7%]" },
-      { top: "top-[335px]", left: "left-[7%]" },
-      { top: "top-[355px]", left: "left-[7%]" },
-    ],
-  },
-];
-
-export const ContentWrapperSection = (): JSX.Element => {
+export const ContentWrapperSection = () => {
   return (
-    <section className="w-full relative bg-black py-[50px] md:py-[94px] px-4">
-      <div className="relative max-w-[1440px] mx-auto">
-        <div className="relative h-[500px] md:h-[700px]">
-          {/* Main heading */}
-          <h2 className="absolute top-[10px] md:top-[20px] left-1/2 transform -translate-x-1/2 [font-family:'Montserrat',Helvetica] font-extrabold text-[#82b7dc] text-[28px] md:text-[40px] tracking-[0] leading-[normal] whitespace-nowrap">
-            MADE TO MOVE MINDS
-          </h2>
+    <section className="w-full relative bg-black py-12 md:py-20 px-4 overflow-hidden">
+      <div className="relative max-w-[1400px] mx-auto">
+        {/* Main heading */}
+        <h2 className="text-center [font-family:'Montserrat',Helvetica] font-extrabold text-[#82b7dc] text-2xl md:text-4xl lg:text-5xl tracking-[0] leading-normal mb-4 md:mb-6">
+          MADE TO MOVE MINDS
+        </h2>
 
-          {/* Decorative elements - top line */}
-          <div className="absolute top-[5px] md:top-[15px] left-1/2 transform -translate-x-1/2 w-[300px] md:w-[600px] h-px bg-white rounded blur-[2px]" />
+        {/* Decorative line */}
+        <div className="w-32 md:w-64 h-[1px] bg-white mx-auto mb-6 md:mb-8 opacity-50" />
 
-          {/* Decorative dots */}
-          <div className="absolute top-[0px] md:top-[10px] left-[15%] md:left-[20%] w-2 h-2 bg-white rounded blur-sm" />
-          <div className="absolute top-[0px] md:top-[10px] right-[15%] md:right-[20%] w-2 h-2 bg-white rounded blur-sm" />
+        {/* Description text */}
+        <p className="text-center [font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-sm md:text-base lg:text-lg max-w-[90%] md:max-w-[800px] mx-auto leading-relaxed mb-12 md:mb-16">
+          From initial ideas to a polished final product, we guide every step with creativity and precision.
+          Our process ensures seamless design, development, and delivery for impactful digital experiences.
+        </p>
 
-          {/* Description text */}
-          <p className="absolute top-[50px] md:top-[90px] left-1/2 transform -translate-x-1/2 w-[90%] md:w-[800px] [font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-base md:text-lg text-center tracking-[0] leading-[1.4]">
-            From initial ideas to a polished final product, we guide every step with creativity and precision.
-            <br className="hidden md:block" />
-            Our process ensures seamless design, development, and delivery for impactful digital experiences.
-          </p>
-
-          {/* Central circular elements - hidden on mobile */}
-          <div className="hidden md:block absolute top-[200px] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        {/* Main visual container with Frame-50 and rotating center */}
+        <div className="relative w-full max-w-[1000px] mx-auto mb-12 md:mb-16">
+          <div className="relative w-full aspect-square max-w-[700px] mx-auto">
+            {/* Frame-50 background image */}
             <img
-              className="w-[300px] h-[300px]"
-              alt="Ellipse"
-              src="/ellipse-51.svg"
+              src="/Frame 50.png"
+              alt="Process Framework"
+              className="w-full h-full object-contain"
             />
-            <img
-              className="absolute top-0 left-0 w-[300px] h-[300px]"
-              alt="Ellipse"
-              src="/ellipse-54.svg"
-            />
-            <img
-              className="absolute top-0 left-0 w-[300px] h-[300px]"
-              alt="Ellipse"
-              src="/ellipse-52.svg"
-            />
-            <img
-              className="absolute top-0 left-0 w-[300px] h-[300px]"
-              alt="Ellipse"
-              src="/ellipse-53.svg"
-            />
-          </div>
 
-          {/* Central glow effect - hidden on mobile */}
-          <div className="hidden md:block absolute top-[200px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] rounded-full blur-[100px] [background:radial-gradient(50%_50%_at_50%_50%,rgba(130,183,220,0.6)_0%,transparent_100%)]" />
-
-          {/* Central mesh/logo - hidden on mobile */}
-          <img
-            className="hidden md:block absolute top-[200px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px]"
-            alt="Mesh"
-            src="/mesh3-1.png"
-          />
-
-          {/* Central "235 x 235" text - hidden on mobile */}
-          <div className="hidden md:block absolute top-[280px] left-1/2 transform -translate-x-1/2 bg-[#82b7dc] text-white px-4 py-1 rounded text-sm font-medium">
-            235 x 235
-          </div>
-
-          {/* Mobile simplified layout */}
-          <div className="md:hidden flex flex-col items-center space-y-8 mt-32">
-            <div className="text-center">
-              <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-xl mb-4">
-                Our Process
-              </h3>
-              <div className="space-y-6">
-                {stages.map((stage, index) => (
-                  <div key={index} className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
-                      <img
-                        className="w-6 h-6"
-                        alt="Frame"
-                        src={stage.iconSrc}
-                      />
-                    </div>
-                    <div>
-                      <h4 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-lg mb-1">
-                        {stage.title}
-                      </h4>
-                      <ul className="text-[#bbbbbb] text-sm space-y-1">
-                        {stage.items.slice(0, 2).map((item, itemIndex) => (
-                          <li key={itemIndex} className="flex items-center">
-                            <span className="w-1 h-1 bg-[#bbbbbb] rounded-full mr-2 flex-shrink-0"></span>
-                            {item.text}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            {/* Rotating center image - audiencegridm */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[35%] md:w-[30%] aspect-square">
+              <img
+                src="/audiencegridm.png"
+                alt="Audience Grid"
+                className="w-full h-full object-contain animate-spin-slow"
+              />
             </div>
           </div>
+        </div>
 
-          {/* Desktop layout - Render all stages */}
-          <div className="hidden md:block">
-            {stages.map((stage, index) => (
-              <React.Fragment key={index}>
-                {/* Connecting lines/vectors */}
-                <img
-                  className={`absolute ${stage.vectorTop} ${stage.vectorLeft} w-[150px] h-[60px]`}
-                  alt="Vector"
-                  src={stage.vectorSrc}
-                />
+        {/* Process Details Section - Responsive Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 max-w-[1200px] mx-auto">
+          {/* Envision */}
+          <div className="text-center md:text-left space-y-3">
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1a2332] rounded-full flex items-center justify-center mx-auto md:mx-0 mb-3">
+              <img className="w-6 h-6 md:w-7 md:h-7" alt="Envision" src="/frame-1.svg" />
+            </div>
+            <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-lg md:text-xl">
+              Envision
+            </h3>
+            <ul className="space-y-2 text-[#bbbbbb] text-sm md:text-base">
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Define goals</span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Research audience</span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Plan features</span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Set the vision</span>
+              </li>
+            </ul>
+          </div>
 
-                {/* Stage icons */}
-                <div className={`absolute ${stage.iconTop} ${stage.iconLeft} w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center`}>
-                  <img
-                    className="w-8 h-8"
-                    alt="Frame"
-                    src={stage.iconSrc}
-                  />
-                </div>
+          {/* Design */}
+          <div className="text-center md:text-left space-y-3">
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1a2332] rounded-full flex items-center justify-center mx-auto md:mx-0 mb-3">
+              <img className="w-6 h-6 md:w-7 md:h-7" alt="Design" src="/frame-47.svg" />
+            </div>
+            <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-lg md:text-xl">
+              Design
+            </h3>
+            <ul className="space-y-2 text-[#bbbbbb] text-sm md:text-base">
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Wireframes & flows</span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>UI/UX layouts</span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Visual interfaces</span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Interactive prototypes</span>
+              </li>
+            </ul>
+          </div>
 
-                {/* Stage titles */}
-                <h3
-                  className={`absolute ${stage.titleTop} ${stage.titleLeft} [font-family:'Montserrat',Helvetica] font-semibold text-white text-2xl tracking-[0] leading-[normal]`}
-                >
-                  {stage.title}
-                </h3>
+          {/* Elevate */}
+          <div className="text-center md:text-left space-y-3">
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1a2332] rounded-full flex items-center justify-center mx-auto md:mx-0 mb-3">
+              <img className="w-6 h-6 md:w-7 md:h-7" alt="Elevate" src="/frame-39.svg" />
+            </div>
+            <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-lg md:text-xl">
+              Elevate
+            </h3>
+            <ul className="space-y-2 text-[#bbbbbb] text-sm md:text-base">
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Refine design</span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Optimize usability</span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Ensure responsiveness</span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Enhance features</span>
+              </li>
+            </ul>
+          </div>
 
-                {/* Stage items with bullets */}
-                {stage.items.map((item, itemIndex) => (
-                  <React.Fragment key={itemIndex}>
-                    <div
-                      className={`absolute ${item.top} ${item.left} [font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-sm tracking-[0] leading-[normal]`}
-                    >
-                      {item.text}
-                    </div>
-                    <div
-                      className={`absolute ${stage.bulletPositions[itemIndex].top} ${stage.bulletPositions[itemIndex].left} w-1 h-1 bg-[#bbbbbb] rounded-full`}
-                    />
-                  </React.Fragment>
-                ))}
-              </React.Fragment>
-            ))}
+          {/* Unleash */}
+          <div className="text-center md:text-left space-y-3">
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1a2332] rounded-full flex items-center justify-center mx-auto md:mx-0 mb-3">
+              <img className="w-6 h-6 md:w-7 md:h-7" alt="Unleash" src="/frame-40.svg" />
+            </div>
+            <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-lg md:text-xl">
+              Unleash
+            </h3>
+            <ul className="space-y-2 text-[#bbbbbb] text-sm md:text-base">
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Finalize product</span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Test & QA</span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Launch smoothly</span>
+              </li>
+              <li className="flex items-start justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                <span>Provide support</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes spin-slow {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-spin-slow {
+          animation: spin-slow 20s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };

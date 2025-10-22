@@ -52,8 +52,8 @@ export const FooterSection = (): JSX.Element => (
 
       {/* Left image */}
       <img
-        className="absolute top-0 left-0 w-[60%] md:w-[41.95%] h-[80%] md:h-[98.32%] object-cover"
-        src="/tknot-alum-1-1.png"
+        className="absolute  w-[50%] md:w-[41.95%] h-[70%] md:h-[78.32%] object-cover"
+        src="/audiencegridm.png"
         alt="Decor"
       />
 
@@ -61,12 +61,12 @@ export const FooterSection = (): JSX.Element => (
       <div className="absolute top-[-15px] left-[200px] md:left-[322px] w-[30px] md:w-[53px] h-[30px] md:h-[53px] rounded-full blur-[6px] md:blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)]" />
 
       {/* Vertical bars */}
-      {verticalBars.map((pos, idx) => (
+      {/* {verticalBars.map((pos, idx) => (
         <div
           key={idx}
           className={`hidden md:block absolute ${pos} top-[calc(50%_-_420px)] h-[1041px] w-[2.89%] shadow-[inset_-2.5px_0_2.5px_#bababa,inset_2.5px_0_2.5px_#00000069] bg-[linear-gradient(90deg,rgba(103,103,103,1)_0%,rgba(255,255,255,0.54)_46%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(24,24,24,0.49)_0%,rgba(255,255,255,0.25)_50%,rgba(255,255,255,0)_100%)]`}
         />
-      ))}
+      ))} */}
 
       {/* Button */}
       <Button className="absolute top-[140px] md:top-[222px] left-4 md:left-[515px] flex items-center gap-2 w-[150px] md:w-[198px] h-[40px] md:h-[50px] bg-gradient-to-r from-[#3466aa] to-[#3466aa] hover:from-[#2a5590] hover:to-[#2a5590] rounded-[20px] md:rounded-[25px]">

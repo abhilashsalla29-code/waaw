@@ -112,7 +112,7 @@ export const ServicesSection = (): JSX.Element => {
                 </div>
 
                 {/* Service Card */}
-                <Card className="w-full md:w-[579px] min-h-[280px] md:h-[300px] lg:h-80 rounded-[24px] md:rounded-[30px] lg:rounded-[40px] overflow-hidden border-0 [background:radial-gradient(50%_50%_at_30%_-4%,rgba(255,255,255,0.1)_0%,rgba(0,0,0,0.1)_100%)] shadow-xl backdrop-blur-sm">
+                <Card className="w-full md:w-[579px] min-h-[280px] rounded-[24px] md:rounded-[30px] lg:rounded-[40px] overflow-hidden border-0 [background:radial-gradient(50%_50%_at_30%_-4%,rgba(255,255,255,0.1)_0%,rgba(0,0,0,0.1)_100%)] shadow-xl backdrop-blur-sm">
                   <CardContent className="relative p-0 h-full">
                     {/* Horizontal Light Bar Effect */}
                     <div className="absolute top-[-285px] left-[50%] -translate-x-1/2 w-[7px] h-[569px] rounded-[3.5px/284.5px] -rotate-90 bg-white blur-sm" />
@@ -129,11 +129,11 @@ export const ServicesSection = (): JSX.Element => {
                         {service.title}
                       </h3>
 
-                      <div className="space-y-2 md:space-y-3 lg:space-y-4">
+                      <div className="space-y-3 md:space-y-4 lg:space-y-5">
                         {service.points.map((point, pointIndex) => (
                           <p
                             key={pointIndex}
-                            className="[font-family:'Poppins',Helvetica] font-medium text-[#bbbbbb] text-[13px] md:text-[14px] lg:text-base tracking-[0] leading-[1.4] md:leading-[1.5]"
+                            className="[font-family:'Poppins',Helvetica] font-medium text-[#bbbbbb] text-[14px] md:text-[16px] lg:text-lg tracking-[0] leading-[1.5] md:leading-[1.6]"
                           >
                             {point}
                           </p>
@@ -161,7 +161,7 @@ export const ServicesSection = (): JSX.Element => {
       />
 
       {/* Side Reed Decorations - Desktop Only */}
-      <img
+      {/* <img
         className="hidden lg:block absolute top-[-97px] right-0 h-[2803px] w-[200px] xl:w-[295px] opacity-60"
         alt="Decorative reeds"
         src="/wider-frosted-reeds.png"
@@ -170,7 +170,7 @@ export const ServicesSection = (): JSX.Element => {
         className="hidden lg:block absolute top-[-52px] left-0 h-[2100px] w-[200px] xl:w-[295px] opacity-60"
         alt="Decorative reeds"
         src="/wider-frosted-reeds.png"
-      />
+      /> */}
     </section>
   );
 };
