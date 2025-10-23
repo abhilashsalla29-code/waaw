@@ -67,14 +67,14 @@ export default function Hero() {
       </div>
 
       {/* Frosted overlay - hidden on mobile */}
-      <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[200px] md:w-[300px] lg:w-[400px] h-[400px] md:h-[500px] lg:h-[600px] pointer-events-none">
+      {/* <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[200px] md:w-[300px] lg:w-[400px] h-[400px] md:h-[500px] lg:h-[600px] pointer-events-none">
         <Image
           src="/wider-frosted-reeds.png"
           alt="Frosted overlay effect"
           fill
           className="object-cover opacity-60 object-left drop-shadow-[0_0_60px_rgba(255,255,255,0.2)]"
         />
-      </div>
+      </div> */}
 
     
  
@@ -115,7 +115,7 @@ export default function Hero() {
     <div className="relative z-10 flex flex-col md:flex-row gap-4 md:gap-12 items-center lg:hidden -mt-8">
       <Stat number="150+" label="Relied on by Leaders" />
       <Stat number="300+" label="Real-Time User" className="-mt-6" />
-      <Stat number="15+" label="Industry Expertise" className="-mt-12" />
+      <Stat number="15+" label="Industry Expertise" className="-mt-6" />
     </div>
 
     {/* Desktop stats */}
@@ -131,9 +131,9 @@ export default function Hero() {
   );
 }
 
-function Stat({ number, label }: { number: string; label: string }) {
+function Stat({ number, label, className }: { number: string; label: string; className?: string }) {
   return (
-    <div className="w-[180px] h-[100px] flex flex-col items-center justify-center bg-gradient-to-b from-white/10 to-[#3466aa]/20 border border-white/20 backdrop-blur-lg rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+    <div className={`w-[180px] h-[100px] flex flex-col items-center justify-center bg-gradient-to-b from-white/10 to-[#3466aa]/20 border border-white/20 backdrop-blur-lg rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.1)] ${className || ""}`}>
       <span className="text-2xl sm:text-3xl font-bold">{number}</span>
       <p className="mt-1 text-xs sm:text-sm text-gray-300">{label}</p>
     </div>

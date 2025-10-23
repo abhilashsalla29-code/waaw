@@ -29,25 +29,22 @@ export const BlogsSection = (): JSX.Element => {
       <div className="relative max-w-[1440px] mx-auto">
         <div className="flex flex-col items-center">
           <div className="relative mb-[60px] md:mb-[111px]">
-            <div className="absolute top-[36px] left-[-26px] w-[33px] h-px rounded-[16.5px/0.5px] rotate-90 blur-[2px] bg-white" />
-
-            <div className="absolute top-[36px] right-[-26px] w-[33px] h-px rounded-[16.5px/0.5px] rotate-90 blur-[2px] bg-white" />
-
-            <div className="absolute top-[16px] left-[-14px] w-2 h-2 rounded rotate-180 blur-sm bg-white" />
-
-            <div className="absolute top-[16px] right-[-14px] w-2 h-2 rounded rotate-180 blur-sm bg-white" />
-
-            <div className="absolute top-[-6px] left-[14px] w-[157px] h-1 bg-white rounded-[78.5px/2px] rotate-180 blur-[5px]" />
-
-            <div className="absolute top-[71px] left-[-1px] w-[157px] h-1 bg-white rounded-[78.5px/2px] blur-[5px]" />
-
-            <div className="absolute top-[-19px] right-[-4px] w-[35px] h-[35px] bg-white rounded-[17.5px] -rotate-90 blur-sm" />
-
-            <div className="absolute top-[53px] left-[-19px] w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90 blur-sm" />
-
-            <h2 className="[font-family:'Montserrat',Helvetica] font-extrabold text-[#82b7dc] text-[32px] md:text-[40px] text-center tracking-[0] leading-[50px] md:leading-[70px]">
-              BLOGS
-            </h2>
+              <>
+  <div className="w-24 h-px bg-[#82b7dc] mx-auto mb-2"></div>
+  <div className="text-[#82b7dc] text-2xl font-extrabold tracking-wide text-center">
+    BLOGS
+  </div>
+  <div className="w-24 h-px bg-[#82b7dc] mx-auto mt-2"></div>
+</>
+            {/* Decorative Elements Around BLOGS Title */}
+            {/* <div className="absolute top-[36px] left-[-26px] w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90" />
+            <div className="absolute top-[36px] right-[-26px] w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90" />
+            <div className="absolute top-[16px] left-[-14px] w-2 h-2 bg-white rounded rotate-180" />
+            <div className="absolute top-[16px] right-[-14px] w-2 h-2 bg-white rounded rotate-180" />
+            <div className="absolute top-[-6px] left-[14px] w-[157px] h-1 bg-white rounded-[78.5px/2px] rotate-180" />
+            <div className="absolute top-[71px] left-[-1px] w-[157px] h-1 bg-white rounded-[78.5px/2px]" />
+            <div className="absolute top-[-19px] right-[-4px] w-[35px] h-[35px] bg-white rounded-[17.5px] -rotate-90" />
+            <div className="absolute top-[53px] left-[-19px] w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90" /> */}
           </div>
 
           <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-[24px] md:text-[32px] text-center tracking-[0] leading-[normal] underline mb-[40px] md:mb-[68px] max-w-[529px]">
@@ -56,7 +53,7 @@ export const BlogsSection = (): JSX.Element => {
 
           <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-lg md:text-xl text-center tracking-[0] leading-[normal] mb-[80px] md:mb-[163px] max-w-[814px]">
             Explore the latest in design, development, and digital strategy. At
-            Waave, we share ideas, trends, and expert perspectives that help
+            WAAW, we share ideas, trends, and expert perspectives that help
             businesses stay ahead in the ever-evolving digital world.
           </p>
 
@@ -70,7 +67,7 @@ export const BlogsSection = (): JSX.Element => {
                 <img
                   src="/frame-17-1.svg"
                   alt="Blog card"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover object-bottom"
                 />
 
                 {/* Content overlay */}
@@ -87,12 +84,12 @@ export const BlogsSection = (): JSX.Element => {
 
                   {/* Bottom icon area - you can add another icon here if needed */}
                   <div className="flex justify-center">
-                    <div className="w-6 h-6 md:w-8 md:h-8 bg-[#82b7dc] rounded-full flex items-center justify-center">
-                      <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {/* <div className="w-6 h-6 md:w-8 md:h-8 bg-[#82b7dc] rounded-full flex items-center justify-center"> */}
+                      {/* <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
+                      </svg> */}
                     </div>
-                  </div>
+                  {/* </div> */}
                 </div>
               </div>
             ))}

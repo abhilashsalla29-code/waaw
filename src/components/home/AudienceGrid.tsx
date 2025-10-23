@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "../ui/card";
-import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
 
 const cardData = [
   {
@@ -10,75 +9,75 @@ const cardData = [
     description:
       "Waaw empowers new ventures to turn ideas into fully functional digital products helping founders build, test, and scale faster with modern web and app solutions.",
     hasGlass: true,
-    position: "desktop",
+    position: "top-left",
   },
   {
     title: "Enterprises Seeking Efficiency",
     description:
       "Large organizations leverage Waaw's advanced technologies, integrations, and scalable architectures to improve productivity, data flow, and system performance.",
     hasGlass: false,
-    position: "desktop",
+    position: "top-right",
   },
   {
     title: "Creators & Tech Collaborators",
     description:
       "Designers, developers, and agencies collaborate with Waaw to transform creative visions into robust, high-performing digital experiences backed by strong technical expertise.",
     hasGlass: false,
-    position: "desktop",
+    position: "bottom-left",
   },
   {
     title: "Businesses Going Digital",
     description:
       "Small and medium enterprises benefit from Waaw's tools to automate operations, create online presence, and deliver seamless customer experiences across platforms.",
     hasGlass: true,
-    position: "desktop",
+    position: "bottom-right",
   },
 ];
 
 export const AudienceGrid = (): JSX.Element => {
   return (
-    <section className="w-full min-h-[950px] lg:min-h-[1100px] relative bg-gradient-to-b from-[#0a0f14] via-black to-[#0d1217] overflow-hidden py-12 lg:py-20">
+    <section className="w-full min-h-[950px] lg:min-h-[1000px] relative bg-gradient-to-b from-[#0a0f14] via-black to-[#0d1217] overflow-hidden py-12 lg:py-16">
       {/* Background Gradient Orbs */}
       <div className="absolute top-[20%] left-[10%] w-[400px] h-[400px] bg-[#82b7dc]/10 rounded-full blur-[120px] hidden lg:block" />
       <div className="absolute bottom-[10%] right-[15%] w-[350px] h-[350px] bg-[#3466aa]/10 rounded-full blur-[100px] hidden lg:block" />
 
       {/* Title Section */}
       <div className="relative w-full max-w-7xl mx-auto px-4">
-        <div className="relative mb-16 lg:mb-24">
-          {/* Decorative Line Top Left */}
-          <div className="absolute top-[-30px] left-[20%] lg:left-[30%] w-[200px] lg:w-[300px] h-[2px] bg-gradient-to-r from-transparent via-white to-transparent blur-[1px] hidden md:block" />
-          <div className="absolute top-[-35px] left-[22%] lg:left-[31%] w-[12px] h-[12px] bg-white rounded-full blur-[2px] hidden md:block" />
+        <div className="relative mb-12 lg:mb-16">
+          {/* Top Decorative Line with Dot */}
+          <div className="absolute top-[-40px] left-[50%] -translate-x-1/2 w-[300px] lg:w-[400px] h-[2px] bg-gradient-to-r from-transparent via-white to-transparent blur-[1px] hidden md:block" />
+          <div className="absolute top-[-45px] left-[50%] -translate-x-1/2 translate-x-[-150px] lg:translate-x-[-200px] w-[14px] h-[14px] bg-white rounded-full blur-[2px] shadow-[0_0_20px_rgba(255,255,255,0.8)] hidden md:block" />
 
-          <h1 className="text-center [font-family:'Montserrat',Helvetica] font-extrabold text-[28px] md:text-[36px] lg:text-[40px] leading-[40px] md:leading-[55px] lg:leading-[70px] tracking-[0] px-4">
-            <span className="text-white block mb-2">THE MINDS AND BUSINESSES</span>
+          <h1 className="text-center [font-family:'Montserrat',Helvetica] font-extrabold text-[26px] md:text-[32px] lg:text-[38px] leading-[36px] md:leading-[50px] lg:leading-[60px] tracking-[0] px-4">
+            <span className="text-white block mb-1">THE MINDS AND BUSINESSES</span>
             <span className="text-[#82b7dc]">BEHIND THE WAAW</span>
           </h1>
 
-          {/* Decorative Line Bottom Right */}
-          <div className="absolute bottom-[-35px] right-[20%] lg:right-[30%] w-[200px] lg:w-[300px] h-[2px] bg-gradient-to-r from-transparent via-white to-transparent blur-[1px] hidden md:block" />
-          <div className="absolute bottom-[-40px] right-[22%] lg:right-[31%] w-[12px] h-[12px] bg-white rounded-full blur-[2px] hidden md:block" />
+          {/* Bottom Decorative Line with Dot */}
+          <div className="absolute bottom-[-40px] right-[50%] translate-x-1/2 w-[300px] lg:w-[400px] h-[2px] bg-gradient-to-r from-transparent via-white to-transparent blur-[1px] hidden md:block" />
+          <div className="absolute bottom-[-45px] right-[50%] translate-x-1/2 translate-x-[150px] lg:translate-x-[200px] w-[14px] h-[14px] bg-white rounded-full blur-[2px] shadow-[0_0_20px_rgba(255,255,255,0.8)] hidden md:block" />
         </div>
 
         {/* Desktop Layout - Asymmetric 2x2 Grid with Center Icon */}
         <div className="hidden lg:block relative">
-          <div className="relative w-full max-w-[1200px] mx-auto h-[700px]">
+          <div className="relative w-full max-w-[1100px] mx-auto h-[650px]">
             {/* Top Row */}
-            <div className="absolute top-0 left-0 right-0 flex justify-center gap-8">
+            <div className="absolute top-0 left-0 right-0 flex justify-center gap-10">
               {/* Card 1 - Top Left (Glass Effect) */}
-              <Card className="w-[380px] h-[275px] rounded-[30px] overflow-hidden backdrop-blur-[8px] backdrop-brightness-[110%] shadow-[inset_0_2px_4px_rgba(255,255,255,0.25),inset_0_-2px_4px_rgba(0,0,0,0.15),0_8px_32px_rgba(130,183,220,0.15)] bg-[linear-gradient(135deg,rgba(255,255,255,0.08)_0%,rgba(130,183,220,0.05)_100%)] border border-white/20 hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.35),0_12px_40px_rgba(130,183,220,0.25)] transition-all duration-300">
+              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden backdrop-blur-[10px] backdrop-brightness-[115%] shadow-[inset_0_2px_6px_rgba(255,255,255,0.3),inset_0_-2px_6px_rgba(0,0,0,0.2),0_10px_40px_rgba(130,183,220,0.2)] bg-[linear-gradient(145deg,rgba(255,255,255,0.12)_0%,rgba(130,183,220,0.08)_100%)] border border-white/25 hover:shadow-[inset_0_2px_8px_rgba(255,255,255,0.4),0_15px_50px_rgba(130,183,220,0.3)] transition-all duration-300">
                 <CardContent className="relative w-full h-full p-0">
                   {/* Decorative Light Bars */}
-                  <div className="absolute top-[-202px] left-[183px] w-[7px] h-[397px] rounded-[3.5px/198.5px] -rotate-90 bg-white/80 blur-sm" />
-                  <div className="absolute -top-1 left-[-7px] w-[7px] h-[397px] bg-white/70 rounded-[3.5px/198.5px] blur-sm" />
+                  <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90 bg-white/90 blur-sm" />
+                  <div className="absolute -top-1 left-[-6px] w-[6px] h-[360px] bg-white/80 rounded-[3px/180px] blur-sm" />
                   
                   {/* Glow Effect */}
-                  <div className="absolute top-[78px] left-[13px] w-[442px] h-[118px] bg-[#82b7dc] rounded-[221px/59px] blur-[110px] opacity-30" />
+                  <div className="absolute top-[70px] left-[10px] w-[400px] h-[100px] bg-[#82b7dc] rounded-[200px/50px] blur-[100px] opacity-35" />
 
-                  <div className="relative z-10 pt-10 px-8">
-                    <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[26px] text-center mb-6 leading-[34px]">
+                  <div className="relative z-10 pt-8 px-7">
+                    <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
                       {cardData[0].title}
                     </h3>
-                    <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[14px] leading-[22px]">
+                    <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[13px] leading-[20px]">
                       {cardData[0].description}
                     </p>
                   </div>
@@ -86,15 +85,15 @@ export const AudienceGrid = (): JSX.Element => {
               </Card>
 
               {/* Card 2 - Top Right (No Glass, Darker) */}
-              <Card className="w-[380px] h-[275px] rounded-[30px] overflow-hidden backdrop-blur-[2px] backdrop-brightness-[95%] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-1px_2px_rgba(0,0,0,0.25),0_4px_20px_rgba(0,0,0,0.4)] bg-[linear-gradient(316deg,rgba(15,20,28,0.9)_0%,rgba(25,35,50,0.8)_100%)] border border-white/10 hover:border-[#82b7dc]/30 transition-all duration-300">
+              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden backdrop-blur-[3px] backdrop-brightness-[90%] shadow-[inset_0_1px_3px_rgba(255,255,255,0.12),inset_0_-1px_3px_rgba(0,0,0,0.3),0_6px_25px_rgba(0,0,0,0.5)] bg-[linear-gradient(320deg,rgba(18,25,35,0.95)_0%,rgba(28,38,55,0.85)_100%)] border border-white/8 hover:border-[#82b7dc]/25 transition-all duration-300">
                 <CardContent className="relative w-full h-full p-0">
-                  <div className="absolute top-[-202px] left-[183px] w-[7px] h-[397px] rounded-[3.5px/198.5px] -rotate-90 bg-white/50 blur-[1.5px]" />
+                  <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90 bg-white/40 blur-[2px]" />
                   
-                  <div className="relative z-10 pt-10 px-8">
-                    <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[26px] text-center mb-6 leading-[34px]">
+                  <div className="relative z-10 pt-8 px-7">
+                    <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
                       {cardData[1].title}
                     </h3>
-                    <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[14px] leading-[22px]">
+                    <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[13px] leading-[20px]">
                       {cardData[1].description}
                     </p>
                   </div>
@@ -105,55 +104,54 @@ export const AudienceGrid = (): JSX.Element => {
             {/* Center Rotating Icon */}
             <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-20">
               {/* Outer Rotating Ring */}
-              <motion.div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] rounded-full border-2 border-[#82b7dc]/40"
+              {/* <motion.div
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] rounded-full border-2 border-[#82b7dc]/30"
                 animate={{ rotate: 360 }}
-                transition={{ duration: 12, ease: "linear", repeat: Infinity }}
+                transition={{ duration: 15, ease: "linear", repeat: Infinity }}
                 style={{
-                  boxShadow: "0 0 40px 8px rgba(130,183,220,0.2)",
+                  boxShadow: "0 0 50px 10px rgba(130,183,220,0.15)",
                 }}
-              />
+              /> */}
 
               {/* Pulsing Glow */}
               <motion.div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140px] h-[140px] rounded-full bg-[#82b7dc]/30 blur-3xl"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] rounded-full bg-[#82b7dc]/25 blur-3xl"
                 animate={{ 
-                  scale: [1, 1.2, 1], 
-                  opacity: [0.6, 0.9, 0.6] 
+                  scale: [1, 1.3, 1], 
+                  opacity: [0.5, 0.8, 0.5] 
                 }}
-                transition={{ duration: 3, ease: "easeInOut", repeat: Infinity }}
+                transition={{ duration: 3.5, ease: "easeInOut", repeat: Infinity }}
               />
 
               {/* Center Icon Container */}
-              <div className="relative w-[80px] h-[80px] rounded-full bg-gradient-to-br from-[#82b7dc] to-[#4a7bc8] shadow-[0_0_35px_rgba(130,183,220,0.7),inset_0_2px_8px_rgba(255,255,255,0.3)] flex items-center justify-center border-4 border-white/20">
+              <div className="relative w-[75px] h-[75px] rounded-full bg-gradient-to-br from-[#82b7dc] via-[#5a95c8] to-[#4a7bc8] shadow-[0_0_40px_rgba(130,183,220,0.8),inset_0_2px_10px_rgba(255,255,255,0.35)] flex items-center justify-center border-[3px] border-white/25">
                 {/* Rotating Icon/Image */}
                 <motion.div
                   animate={{ rotate: -360 }}
-                  transition={{ duration: 8, ease: "linear", repeat: Infinity }}
+                  transition={{ duration: 10, ease: "linear", repeat: Infinity }}
+                  className="w-[38px] h-[38px]"
                 >
-                  <Image
+                  <img
                     src="/audiencegridm.png"
-                    alt="center"
-                    width={40}
-                    height={40}
-                    className="object-contain drop-shadow-lg"
+                    alt="Audience Grid Icon"
+                    className="w-full h-full object-cover rounded-full"
                   />
                 </motion.div>
               </div>
             </div>
 
             {/* Bottom Row */}
-            <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-8">
+            <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-10">
               {/* Card 3 - Bottom Left (No Glass, Darker) */}
-              <Card className="w-[380px] h-[275px] rounded-[30px] overflow-hidden backdrop-blur-[2px] backdrop-brightness-[95%] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-1px_2px_rgba(0,0,0,0.25),0_4px_20px_rgba(0,0,0,0.4)] bg-[linear-gradient(316deg,rgba(15,20,28,0.9)_0%,rgba(25,35,50,0.8)_100%)] border border-white/10 hover:border-[#82b7dc]/30 transition-all duration-300">
+              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden backdrop-blur-[3px] backdrop-brightness-[90%] shadow-[inset_0_1px_3px_rgba(255,255,255,0.12),inset_0_-1px_3px_rgba(0,0,0,0.3),0_6px_25px_rgba(0,0,0,0.5)] bg-[linear-gradient(320deg,rgba(18,25,35,0.95)_0%,rgba(28,38,55,0.85)_100%)] border border-white/8 hover:border-[#82b7dc]/25 transition-all duration-300">
                 <CardContent className="relative w-full h-full p-0">
-                  <div className="absolute top-[-202px] left-[183px] w-[7px] h-[397px] rounded-[3.5px/198.5px] -rotate-90 bg-white/50 blur-[1.5px]" />
+                  <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90 bg-white/40 blur-[2px]" />
                   
-                  <div className="relative z-10 pt-10 px-8">
-                    <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[26px] text-center mb-6 leading-[34px]">
+                  <div className="relative z-10 pt-8 px-7">
+                    <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
                       {cardData[2].title}
                     </h3>
-                    <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[14px] leading-[22px]">
+                    <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[13px] leading-[20px]">
                       {cardData[2].description}
                     </p>
                   </div>
@@ -161,18 +159,18 @@ export const AudienceGrid = (): JSX.Element => {
               </Card>
 
               {/* Card 4 - Bottom Right (Glass Effect) */}
-              <Card className="w-[380px] h-[275px] rounded-[30px] overflow-hidden backdrop-blur-[8px] backdrop-brightness-[110%] shadow-[inset_0_2px_4px_rgba(255,255,255,0.25),inset_0_-2px_4px_rgba(0,0,0,0.15),0_8px_32px_rgba(130,183,220,0.15)] bg-[linear-gradient(135deg,rgba(255,255,255,0.08)_0%,rgba(130,183,220,0.05)_100%)] border border-white/20 hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.35),0_12px_40px_rgba(130,183,220,0.25)] transition-all duration-300">
+              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden backdrop-blur-[10px] backdrop-brightness-[115%] shadow-[inset_0_2px_6px_rgba(255,255,255,0.3),inset_0_-2px_6px_rgba(0,0,0,0.2),0_10px_40px_rgba(130,183,220,0.2)] bg-[linear-gradient(145deg,rgba(255,255,255,0.12)_0%,rgba(130,183,220,0.08)_100%)] border border-white/25 hover:shadow-[inset_0_2px_8px_rgba(255,255,255,0.4),0_15px_50px_rgba(130,183,220,0.3)] transition-all duration-300">
                 <CardContent className="relative w-full h-full p-0">
-                  <div className="absolute top-[-202px] left-[183px] w-[7px] h-[397px] rounded-[3.5px/198.5px] -rotate-90 bg-white/80 blur-sm" />
-                  <div className="absolute -top-1 left-[-7px] w-[7px] h-[397px] bg-white/70 rounded-[3.5px/198.5px] blur-sm" />
+                  <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90 bg-white/90 blur-sm" />
+                  <div className="absolute -top-1 left-[-6px] w-[6px] h-[360px] bg-white/80 rounded-[3px/180px] blur-sm" />
                   
-                  <div className="absolute top-[78px] left-[13px] w-[442px] h-[118px] bg-[#82b7dc] rounded-[221px/59px] blur-[110px] opacity-30" />
+                  <div className="absolute top-[70px] left-[10px] w-[400px] h-[100px] bg-[#82b7dc] rounded-[200px/50px] blur-[100px] opacity-35" />
 
-                  <div className="relative z-10 pt-10 px-8">
-                    <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[26px] text-center mb-6 leading-[34px]">
+                  <div className="relative z-10 pt-8 px-7">
+                    <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
                       {cardData[3].title}
                     </h3>
-                    <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[14px] leading-[22px]">
+                    <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[13px] leading-[20px]">
                       {cardData[3].description}
                     </p>
                   </div>
@@ -184,27 +182,45 @@ export const AudienceGrid = (): JSX.Element => {
 
         {/* Mobile/Tablet Layout - Stacked Cards */}
         <div className="lg:hidden flex flex-col gap-6 px-4 max-w-[500px] mx-auto">
+          {/* Center Icon for Mobile */}
+          <div className="flex justify-center mb-4">
+            <div className="relative w-[70px] h-[70px] rounded-full bg-gradient-to-br from-[#82b7dc] via-[#5a95c8] to-[#4a7bc8] shadow-[0_0_40px_rgba(130,183,220,0.8)] flex items-center justify-center border-[3px] border-white/25">
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 10, ease: "linear", repeat: Infinity }}
+                className="w-[35px] h-[35px]"
+              >
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  <circle cx="20" cy="20" r="18" fill="white" opacity="0.9"/>
+                  <path d="M20 8 L26 14 L20 20 L14 14 Z" fill="#4a7bc8"/>
+                  <path d="M20 20 L26 26 L20 32 L14 26 Z" fill="#82b7dc"/>
+                  <circle cx="20" cy="20" r="3" fill="white"/>
+                </svg>
+              </motion.div>
+            </div>
+          </div>
+
           {cardData.map((card, index) => (
             <Card
               key={index}
-              className={`w-full h-auto min-h-[260px] rounded-[24px] overflow-hidden ${
+              className={`w-full h-auto min-h-[240px] rounded-[24px] overflow-hidden ${
                 card.hasGlass
-                  ? "backdrop-blur-[8px] backdrop-brightness-[110%] shadow-[inset_0_2px_4px_rgba(255,255,255,0.25),0_8px_32px_rgba(130,183,220,0.15)] bg-[linear-gradient(135deg,rgba(255,255,255,0.08)_0%,rgba(130,183,220,0.05)_100%)] border border-white/20"
-                  : "backdrop-blur-[2px] shadow-[0_4px_20px_rgba(0,0,0,0.4)] bg-[linear-gradient(316deg,rgba(15,20,28,0.9)_0%,rgba(25,35,50,0.8)_100%)] border border-white/10"
+                  ? "backdrop-blur-[10px] backdrop-brightness-[115%] shadow-[inset_0_2px_6px_rgba(255,255,255,0.3),0_10px_40px_rgba(130,183,220,0.2)] bg-[linear-gradient(145deg,rgba(255,255,255,0.12)_0%,rgba(130,183,220,0.08)_100%)] border border-white/25"
+                  : "backdrop-blur-[3px] shadow-[0_6px_25px_rgba(0,0,0,0.5)] bg-[linear-gradient(320deg,rgba(18,25,35,0.95)_0%,rgba(28,38,55,0.85)_100%)] border border-white/8"
               }`}
             >
               <CardContent className="relative w-full h-full p-6">
                 {card.hasGlass && (
                   <>
-                    <div className="absolute top-[-100px] left-[50%] w-[5px] h-[250px] -rotate-90 bg-white/60 blur-sm" />
-                    <div className="absolute top-[50px] left-0 w-[300px] h-[80px] bg-[#82b7dc] rounded-full blur-[80px] opacity-20" />
+                    <div className="absolute top-[-100px] left-[50%] w-[5px] h-[250px] -rotate-90 bg-white/70 blur-sm" />
+                    <div className="absolute top-[50px] left-0 w-[300px] h-[80px] bg-[#82b7dc] rounded-full blur-[80px] opacity-25" />
                   </>
                 )}
                 
-                <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[22px] md:text-[24px] text-center mb-4 leading-[32px]">
+                <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[21px] md:text-[23px] text-center mb-4 leading-[30px]">
                   {card.title}
                 </h3>
-                <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[14px] leading-[22px]">
+                <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[13px] leading-[20px]">
                   {card.description}
                 </p>
               </CardContent>

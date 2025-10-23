@@ -17,11 +17,11 @@ const pillMobile = [
 const AboutUsSectionMobile = () => (
   <section className="bg-black px-3 py-8 flex flex-col items-center gap-7 min-h-screen w-full md:hidden">
     {/* Title */}
-    <div className="text-[#82b7dc] text-2xl font-extrabold mb-2 mt-2 tracking-wide text-center">
+    <div className="text-[#82b7dc] text-2xl font-extrabold mb-2 mt-2 tracking-wide text-center border border-white">
       ABOUT
     </div>
     {/* Mesh */}
-    <img src="/mesh1.png" alt="Mesh" className="mx-auto w-[220px] mb-3" />
+    {/* <img src="/mesh1.png" alt="Mesh" className="mx-auto w-[220px] mb-3" /> */}
     {/* Main Heading */}
     <h2 className="text-white text-xl font-semibold underline text-center max-w-[95vw] mx-auto mb-2">
       We build more than apps and websites
@@ -182,24 +182,34 @@ export const AboutUsSection = (): JSX.Element => {
         /> */}
 
         {/* ABOUT Title */}
-        <div className="absolute top-[-30px] left-[20%] lg:left-[30%] w-[200px] lg:w-[300px] h-[2px] bg-gradient-to-r from-transparent via-white to-transparent blur-[1px] hidden md:block" />
-          <div className="absolute top-[-35px] left-[22%] lg:left-[31%] w-[12px] h-[12px] bg-white rounded-full blur-[2px] hidden md:block" />
-        <div className="absolute top-[106px] left-[50%] -translate-x-1/2 md:top-[80px] lg:top-[106px] w-[155px] [font-family:'Montserrat',Helvetica] font-extrabold text-[#82b7dc] text-[32px] md:text-[36px] lg:text-[40px] tracking-[0] leading-[normal] whitespace-nowrap text-center">
-          ABOUT
-        </div>
-
+       <>
+  <div className="w-24 h-px bg-[#82b7dc] mx-auto mb-2"></div>
+  <div className="text-[#82b7dc] text-2xl font-extrabold tracking-wide text-center">
+    ABOUT
+  </div>
+  <div className="w-24 h-px bg-[#82b7dc] mx-auto mt-2"></div>
+</>
+        {/* Decorative Elements Around ABOUT Title
+        <div className="absolute top-[131px] left-[610px] w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90 md:top-[100px] md:left-[45%]" />
+        <div className="absolute top-[131px] left-[797px] w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90 md:top-[100px] md:left-[55%]" />
+        <div className="absolute top-[111px] left-[622px] w-2 h-2 bg-white rounded rotate-180 md:top-[85px] md:left-[45%]" />
+        <div className="absolute top-[111px] left-[809px] w-2 h-2 bg-white rounded rotate-180 md:top-[85px] md:left-[55%]" />
+        <div className="absolute top-[172px] left-[603px] w-[157px] h-1 bg-white rounded-[78.5px/2px] md:top-[130px] md:left-[42%]" />
+        <div className="absolute top-[84px] left-[681px] w-[157px] h-1 bg-white rounded-[78.5px/2px] rotate-180 md:top-[65px] md:left-[46%]" />
+        <div className="absolute top-[154px] left-[585px] w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90 md:top-[120px] md:left-[40%]" />
+        <div className="absolute top-[71px] left-[821px] w-[35px] h-[35px] bg-white rounded-[17.5px] -rotate-90 md:top-[55px] md:left-[57%]" /> */}
 
         {/* Decorative Elements */}
-        {decorativeElements.map((element, index) => (
-          <div key={`decorative-${index}`} className={element.className} />
-        ))}
+        {/* {decorativeElements.map((element, index) => (
+          // <div key={`decorative-${index}`} className={element.className} />
+        ))} */}
 
         Background Mesh Image 2
         <img
           className="absolute w-[25.49%] h-[35.84%] top-[34.86%] left-[38.19%] md:w-[30%] md:h-[40%] md:top-[28%] md:left-[35%]"
           alt="Mesh"
           src="/MESH.png"
-        />
+        /> 
 
         {/* Glow Orbs */}
         {glowOrbs.map((orb, index) => (

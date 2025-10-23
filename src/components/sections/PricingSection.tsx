@@ -62,18 +62,22 @@ export const PricingSection = (): JSX.Element => {
         {/* Header */}
         <div className="relative mb-20 flex flex-col items-center">
           <div className="relative mb-8">
-            <h2 className="[font-family:'Montserrat',Helvetica] text-[32px] md:text-[40px] font-extrabold text-[#82b7dc] whitespace-nowrap">
-              PRICING
-            </h2>
-            {/* Decoratives */}
-            <div className="absolute top-[25px] -left-8 w-[33px] h-px bg-white rounded-full rotate-90 blur-[2px]" />
-            <div className="absolute top-[25px] -right-8 w-[33px] h-px bg-white rounded-full rotate-90 blur-[2px]" />
-            <div className="absolute top-[5px] -left-5 w-2 h-2 bg-white rounded-full blur-sm" />
-            <div className="absolute top-[5px] -right-5 w-2 h-2 bg-white rounded-full blur-sm" />
-            <div className="absolute top-[60px] -left-10 w-[157px] h-1 bg-white rounded-full blur-[5px]" />
-            <div className="absolute -top-[22px] left-[90px] w-[157px] h-1 bg-white rounded-full rotate-180 blur-[5px]" />
-            <div className="absolute top-[42px] -left-[26px] w-[35px] h-[35px] bg-white rounded-full rotate-90 blur-sm" />
-            <div className="absolute -top-[35px] -right-[26px] w-[35px] h-[35px] bg-white rounded-full -rotate-90 blur-sm" />
+                <>
+  <div className="w-24 h-px bg-[#82b7dc] mx-auto mb-2"></div>
+  <div className="text-[#82b7dc] text-2xl font-extrabold tracking-wide text-center">
+    PRICING
+  </div>
+  <div className="w-24 h-px bg-[#82b7dc] mx-auto mt-2"></div>
+</>
+            {/* Decorative Elements Around PRICING Title */}
+            {/* <div className="absolute top-[25px] -left-8 w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90" />
+            <div className="absolute top-[25px] -right-8 w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90" />
+            <div className="absolute top-[5px] -left-5 w-2 h-2 bg-white rounded rotate-180" />
+            <div className="absolute top-[5px] -right-5 w-2 h-2 bg-white rounded rotate-180" />
+            <div className="absolute top-[60px] -left-10 w-[157px] h-1 bg-white rounded-[78.5px/2px]" />
+            <div className="absolute -top-[22px] left-[90px] w-[157px] h-1 bg-white rounded-[78.5px/2px] rotate-180" />
+            <div className="absolute top-[42px] -left-[26px] w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90" />
+            <div className="absolute -top-[35px] -right-[26px] w-[35px] h-[35px] bg-white rounded-[17.5px] -rotate-90" /> */}
           </div>
           <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-[24px] md:text-[32px] underline mb-6 text-center">
             Invest in Your Digital Future

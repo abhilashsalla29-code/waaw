@@ -1,5 +1,8 @@
-# TODO: Improve Services Section Cards
+# TODO: Update Footer Routing and Responsiveness
 
-- [x] Update Card height to be flexible (remove fixed h-[300px] lg:h-80, keep min-h-[280px])
-- [x] Increase font sizes for service points (from text-[13px] md:text-[14px] to text-[14px] md:text-[16px] lg:text-lg)
-- [x] Adjust padding inside cards for better spacing (increase px and pb)
+- [x] Import Link from 'next/link' in FooterSection.tsx
+- [x] Update company links to use Next.js Link with appropriate routes (Home: '/', About Us: '/about', Services: '/services', Blogs: '/blogs', Let's Talk: '/contact')
+- [x] Update resource links to use Next.js Link where pages exist (Pricing: '/pricing', Industry: '/industries', others to '#' if no page)
+- [x] Update legal links to use Next.js Link or a href for policies
+- [x] Enhance responsiveness by adding sm: breakpoints for padding, margins, text sizes, grid gaps, and layout adjustments for small screens
+- [x] Test the footer on different screen sizes to ensure proper responsiveness and routing

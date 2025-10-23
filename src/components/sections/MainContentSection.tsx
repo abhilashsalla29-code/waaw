@@ -46,10 +46,14 @@ export const MainContentSection = (): JSX.Element => {
       <div className="flex flex-col md:flex-row justify-between items-start gap-8">
         <div className="flex flex-col items-center relative w-full md:w-auto">
           <div className="relative mb-[40px] md:mb-[81px]">
-            <div className="relative z-10 [font-family:'Montserrat',Helvetica] font-extrabold text-[#82b7dc] text-[32px] md:text-[40px] tracking-[0] leading-[normal] whitespace-nowrap">
-              FAQ
-            </div>
-
+                <>
+  <div className="w-24 h-px bg-[#82b7dc] mx-auto mb-2"></div>
+  <div className="text-[#82b7dc] text-2xl font-extrabold tracking-wide text-center">
+    FAQS
+  </div>
+  <div className="w-24 h-px bg-[#82b7dc] mx-auto mt-2"></div>
+</>
+{/* 
             <div className="absolute top-[25px] left-[-20px] w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90 blur-[2px]" />
 
             <div className="absolute top-[25px] left-[115px] w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90 blur-[2px]" />
@@ -64,7 +68,7 @@ export const MainContentSection = (): JSX.Element => {
 
             <div className="absolute top-[42px] left-[-37px] w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90 blur-sm" />
 
-            <div className="absolute top-[-35px] left-[140px] w-[35px] h-[35px] bg-white rounded-[17.5px] -rotate-90 blur-sm" />
+            <div className="absolute top-[-35px] left-[140px] w-[35px] h-[35px] bg-white rounded-[17.5px] -rotate-90 blur-sm" /> */}
           </div>
 
           <div className="w-full md:w-[462px] [font-family:'Montserrat',Helvetica] font-semibold text-white text-[24px] md:text-[32px] text-center tracking-[0] leading-[normal] mb-[40px] md:mb-[86px]">

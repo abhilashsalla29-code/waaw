@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
 import { Button } from "../ui/button";
 
@@ -14,9 +15,25 @@ const contactIcons = [
   { src: "/frame-18.svg", alt: "Email icon" },
 ];
 
-const companyLinks = ["Home", "About Us", "Services", "Blogs", "Let's Talk"];
-const resourceLinks = ["Features", "Pricing", "Industry", "Roadmap", "FAQ"];
-const legalLinks = ["Privacy Policy", "Refund Policy", "Terms and Condition"];
+const companyLinks = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Blogs", href: "/blogs" },
+  { label: "Let's Talk", href: "/contact" },
+];
+const resourceLinks = [
+  { label: "Features", href: "#" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Industry", href: "/industries" },
+  { label: "Roadmap", href: "#" },
+  { label: "FAQ", href: "#" },
+];
+const legalLinks = [
+  { label: "Privacy Policy", href: "#" },
+  { label: "Refund Policy", href: "#" },
+  { label: "Terms and Condition", href: "#" },
+];
 
 const verticalBars = [
   "left-0",
@@ -30,7 +47,7 @@ const verticalBars = [
 ];
 
 export const FooterSection = (): JSX.Element => (
-  <footer className="w-full relative bg-black overflow-hidden py-[40px] md:py-[84px] px-4 md:px-[167px]">
+  <footer className="w-full relative bg-black overflow-hidden py-[40px] sm:py-[60px] md:py-[84px] px-4 sm:px-8 md:px-[167px]">
     {/* Top-left glow */}
     <div className="absolute top-[-145px] left-[-145px] w-[290px] h-[290px] rounded-full blur-[250px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(130,183,220,1)_0%)]" />
     {/* Bottom-right glow */}
@@ -79,7 +96,7 @@ export const FooterSection = (): JSX.Element => (
       {/* Subtitle */}
       <p className="absolute top-[100px] md:top-[162px] left-4 md:left-[515px] w-[85%] md:w-[472px] [font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-xs md:text-sm text-center md:text-left">
         Ideas begin as ripples and rise into powerful waves of creation. At
-        Waave, we shape digital experiences that move brands forward.
+        WAAW, we shape digital experiences that move brands forward.
       </p>
     </div>
 
@@ -87,11 +104,11 @@ export const FooterSection = (): JSX.Element => (
     <div className="mt-10 md:mt-20 w-full max-w-[1258px] mx-auto h-px [background:radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,1)_40%,rgba(0,0,0,1)_100%)]" />
 
     {/* Footer grid */}
-    <div className="mt-8 md:mt-16 max-w-[1258px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div className="mt-8 sm:mt-12 md:mt-16 max-w-[1258px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
       {/* Brand + Social */}
       <div className="flex flex-col items-center md:items-start">
         <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-2xl mb-4">
-          Waave
+          WAAW
         </h3>
         <div className="flex gap-4">
           {socialIcons.map((icon, i) => (
@@ -110,14 +127,14 @@ export const FooterSection = (): JSX.Element => (
         <h4 className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-xl mb-4">
           Company
         </h4>
-        {companyLinks.map((label, i) => (
-          <a
+        {companyLinks.map((link, i) => (
+          <Link
             key={i}
-            href="#"
+            href={link.href}
             className="[font-family:'Montserrat',Helvetica] font-normal text-[#bbbbbb] text-base mb-3 hover:text-white transition-colors"
           >
-            {label}
-          </a>
+            {link.label}
+          </Link>
         ))}
       </div>
 
@@ -126,14 +143,14 @@ export const FooterSection = (): JSX.Element => (
         <h4 className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-xl mb-4">
           Resources
         </h4>
-        {resourceLinks.map((label, i) => (
-          <a
+        {resourceLinks.map((link, i) => (
+          <Link
             key={i}
-            href="#"
+            href={link.href}
             className="[font-family:'Montserrat',Helvetica] font-normal text-[#bbbbbb] text-base mb-3 hover:text-white transition-colors"
           >
-            {label}
-          </a>
+            {link.label}
+          </Link>
         ))}
       </div>
 
@@ -151,28 +168,28 @@ export const FooterSection = (): JSX.Element => (
         <div className="flex items-center gap-3">
           <img src={contactIcons[1].src} alt={contactIcons[1].alt} className="w-8 h-8 md:w-10 md:h-10" />
           <a
-            href="mailto:support@waave.com"
+            href="mailto:support@WAAW.com"
             className="[font-family:'Montserrat',Helvetica] text-[#bbbbbb] text-base hover:text-white transition-colors"
           >
-            support@waave.com
+            support@WAAW.com
           </a>
         </div>
       </div>
     </div>
 
     {/* Bottom legal */}
-    <div className="mt-8 md:mt-12 max-w-[1258px] mx-auto flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12">
+    <div className="mt-8 sm:mt-10 md:mt-12 max-w-[1258px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 md:gap-12">
       <p className="[font-family:'Montserrat',Helvetica] font-normal text-white text-xs">
-        Copyright © 2025 Waave. All rights reserved
+        Copyright © 2025 WAAW. All rights reserved
       </p>
       <div className="flex gap-6">
-        {legalLinks.map((label, i) => (
+        {legalLinks.map((link, i) => (
           <a
             key={i}
-            href="#"
+            href={link.href}
             className="[font-family:'Montserrat',Helvetica] font-normal text-white text-xs hover:text-[#82b7dc] transition-colors"
           >
-            {label}
+            {link.label}
           </a>
         ))}
       </div>
