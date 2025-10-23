@@ -17,7 +17,7 @@ const pillMobile = [
 const AboutUsSectionMobile = () => (
   <section className="bg-black px-3 py-8 flex flex-col items-center gap-7 min-h-screen w-full md:hidden">
     {/* Title */}
-    <div className="text-[#82b7dc] text-2xl font-extrabold mb-2 mt-2 tracking-wide text-center border border-white">
+    <div className="text-[#82b7dc] text-2xl font-extrabold  mt-2 tracking-wide text-center border border-white">
       ABOUT
     </div>
     {/* Mesh */}
@@ -116,10 +116,10 @@ const glowOrbs = [
     className:
       "absolute top-[694px] left-[608px] w-[18px] h-[18px] rounded-[9px] blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] md:top-[565px] md:left-[42%]",
   },
-  {
-    className:
-      "absolute top-[369px] left-[522px] w-[77px] h-[77px] rounded-[38.5px] blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] md:top-[300px] md:left-[35%]",
-  },
+  // {
+  //   className:
+  //     "absolute top-[369px] left-[522px] w-[77px] h-[77px] rounded-[38.5px] blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] md:top-[300px] md:left-[35%]",
+  // },
   {
     className:
       "absolute top-[696px] left-[603px] w-[31px] h-[31px] rounded-[15.5px] blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] md:top-[567px] md:left-[41%]",
@@ -164,7 +164,7 @@ const pillButtons = [
   },
   {
     text: "Strategic Development",
-    className: "top-[917px] left-[339px] md:top-[800px] md:left-[calc(50%-147px)] lg:top-[917px] lg:left-[339px]",
+    className: "top-[804px] left-[339px] md:top-[800px] md:left-[calc(50%-147px)] lg:top-[917px] lg:left-[339px]",
   },
 ];
 
