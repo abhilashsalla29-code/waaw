@@ -49,7 +49,7 @@ export const AudienceGrid = (): JSX.Element => {
           <div className="absolute top-[-45px] left-[50%] -translate-x-1/2 translate-x-[-150px] lg:translate-x-[-200px] w-[14px] h-[14px] bg-white rounded-full blur-[2px] shadow-[0_0_20px_rgba(255,255,255,0.8)] hidden md:block" />
 
           <h1 className="text-center [font-family:'Montserrat',Helvetica] font-extrabold text-[26px] md:text-[32px] lg:text-[38px] leading-[36px] md:leading-[50px] lg:leading-[60px] tracking-[0] px-4">
-            <span className="text-white block mb-1">THE MINDS AND BUSINESSES</span>
+            <span className="text-[#bbbbbb] block mb-1">THE MINDS AND BUSINESSES</span>
             <span className="text-[#82b7dc]">BEHIND THE WAAW</span>
           </h1>
 
@@ -74,7 +74,7 @@ export const AudienceGrid = (): JSX.Element => {
                   <div className="absolute top-[70px] left-[10px] w-[400px] h-[100px] bg-[#82b7dc] rounded-[200px/50px] blur-[100px] opacity-35" />
 
                   <div className="relative z-10 pt-8 px-7">
-                    <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
+                    <h3 className="text-[#bbbbbb] [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
                       {cardData[0].title}
                     </h3>
                     <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[13px] leading-[20px]">
@@ -90,7 +90,7 @@ export const AudienceGrid = (): JSX.Element => {
                   <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90 bg-white/40 blur-[2px]" />
                   
                   <div className="relative z-10 pt-8 px-7">
-                    <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
+                    <h3 className="text-[#bbbbbb] [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
                       {cardData[1].title}
                     </h3>
                     <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[13px] leading-[20px]">
@@ -148,7 +148,7 @@ export const AudienceGrid = (): JSX.Element => {
                   <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90 bg-white/40 blur-[2px]" />
                   
                   <div className="relative z-10 pt-8 px-7">
-                    <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
+                    <h3 className="text-[#bbbbbb] [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
                       {cardData[2].title}
                     </h3>
                     <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[13px] leading-[20px]">
@@ -167,7 +167,7 @@ export const AudienceGrid = (): JSX.Element => {
                   <div className="absolute top-[70px] left-[10px] w-[400px] h-[100px] bg-[#82b7dc] rounded-[200px/50px] blur-[100px] opacity-35" />
 
                   <div className="relative z-10 pt-8 px-7">
-                    <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
+                    <h3 className="text-[#bbbbbb] [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
                       {cardData[3].title}
                     </h3>
                     <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[13px] leading-[20px]">
@@ -217,7 +217,7 @@ export const AudienceGrid = (): JSX.Element => {
                   </>
                 )}
                 
-                <h3 className="text-white [font-family:'Montserrat',Helvetica] font-bold text-[21px] md:text-[23px] text-center mb-4 leading-[30px]">
+                <h3 className="text-[#bbbbbb] [font-family:'Montserrat',Helvetica] font-bold text-[21px] md:text-[23px] text-center mb-4 leading-[30px]">
                   {card.title}
                 </h3>
                 <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-center text-[13px] leading-[20px]">

@@ -1,11 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen bg-black text-white overflow-hidden">
+    <section className="relative w-full min-h-screen bg-black text-[#bbbbbb] overflow-hidden">
       {/* Main container */}
       <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* LEFT SIDE */}
@@ -41,12 +42,14 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <Button className="bg-white text-[#3466aa] font-semibold rounded-full px-6 py-2 md:px-8 md:py-3 text-base flex items-center gap-2 hover:bg-[#f0f4ff]">
-              Get Started
-              <svg width="20" height="20" viewBox="0 0 239 54" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M209.918 0.0853882C225.521 -1.1476 239 11.1283 239 26.7797C239 42.6479 225.159 55.0019 209.363 53.4907C183.959 51.0603 147.189 48.0834 119.5 48.0834C91.8114 48.0834 55.0412 51.0603 29.6367 53.4907C13.8406 55.0019 0 42.6479 0 26.7797C0.000181538 11.1283 13.4792 -1.1476 29.082 0.0853882C54.5113 2.09489 91.6278 4.58344 119.5 4.58344C147.372 4.58344 184.489 2.09489 209.918 0.0853882Z"/>
-              </svg>
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-white text-[#3466aa] font-semibold rounded-full px-6 py-2 md:px-8 md:py-3 text-base flex items-center gap-2 hover:bg-[#f0f4ff]">
+                Get Started
+                <svg width="20" height="20" viewBox="0 0 239 54" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M209.918 0.0853882C225.521 -1.1476 239 11.1283 239 26.7797C239 42.6479 225.159 55.0019 209.363 53.4907C183.959 51.0603 147.189 48.0834 119.5 48.0834C91.8114 48.0834 55.0412 51.0603 29.6367 53.4907C13.8406 55.0019 0 42.6479 0 26.7797C0.000181538 11.1283 13.4792 -1.1476 29.082 0.0853882C54.5113 2.09489 91.6278 4.58344 119.5 4.58344C147.372 4.58344 184.489 2.09489 209.918 0.0853882Z"/>
+                </svg>
+              </Button>
+            </Link>
           </motion.div>
         </div>
 

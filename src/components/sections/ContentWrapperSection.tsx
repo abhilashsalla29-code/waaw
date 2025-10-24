@@ -46,7 +46,7 @@ export const ContentWrapperSection = () => {
             <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1a2332] rounded-full flex items-center justify-center mx-auto md:mx-0 mb-3">
               <img className="w-6 h-6 md:w-7 md:h-7" alt="Envision" src="/frame-1.svg" />
             </div>
-            <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-lg md:text-xl">
+            <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-lg md:text-xl">
               Envision
             </h3>
             <ul className="space-y-2 text-[#bbbbbb] text-sm md:text-base">
@@ -74,7 +74,7 @@ export const ContentWrapperSection = () => {
             <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1a2332] rounded-full flex items-center justify-center mx-auto md:mx-0 mb-3">
               <img className="w-6 h-6 md:w-7 md:h-7" alt="Design" src="/frame-47.svg" />
             </div>
-            <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-lg md:text-xl">
+            <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-lg md:text-xl">
               Design
             </h3>
             <ul className="space-y-2 text-[#bbbbbb] text-sm md:text-base">
@@ -102,7 +102,7 @@ export const ContentWrapperSection = () => {
             <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1a2332] rounded-full flex items-center justify-center mx-auto md:mx-0 mb-3">
               <img className="w-6 h-6 md:w-7 md:h-7" alt="Elevate" src="/frame-39.svg" />
             </div>
-            <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-lg md:text-xl">
+            <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-lg md:text-xl">
               Elevate
             </h3>
             <ul className="space-y-2 text-[#bbbbbb] text-sm md:text-base">
@@ -130,7 +130,7 @@ export const ContentWrapperSection = () => {
             <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1a2332] rounded-full flex items-center justify-center mx-auto md:mx-0 mb-3">
               <img className="w-6 h-6 md:w-7 md:h-7" alt="Unleash" src="/frame-40.svg" />
             </div>
-            <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-lg md:text-xl">
+            <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-lg md:text-xl">
               Unleash
             </h3>
             <ul className="space-y-2 text-[#bbbbbb] text-sm md:text-base">

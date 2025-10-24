@@ -29,7 +29,7 @@ const MissionValuesSectionMobile = () => (
     <div className="flex flex-col items-center gap-6 w-full max-w-[500px] mx-auto">
       {valuesData.map((value, idx) => (
         <div key={idx} className="w-full">
-          <h3 className="text-white text-xl font-bold text-center mb-3 [font-family:'Montserrat',Helvetica]">
+          <h3 className="text-[#bbbbbb] text-xl font-bold text-center mb-3 [font-family:'Montserrat',Helvetica]">
             {value.title}
           </h3>
           <p className="text-[#bbbbbb] text-sm text-center leading-relaxed [font-family:'Montserrat',Helvetica] font-medium">
@@ -56,7 +56,7 @@ const MissionValuesSection = () => {
               <div key={idx} className="relative">
                 <Card className="bg-transparent border-0 shadow-none">
                   <CardContent className="p-0">
-                    <h3 className="text-white text-2xl lg:text-3xl font-bold text-center mb-5 [font-family:'Montserrat',Helvetica]">
+                    <h3 className="text-[#bbbbbb] text-2xl lg:text-3xl font-bold text-center mb-5 [font-family:'Montserrat',Helvetica]">
                       {value.title}
                     </h3>
                     <p className="text-[#bbbbbb] text-sm lg:text-base text-center leading-relaxed [font-family:'Montserrat',Helvetica] font-medium max-w-[450px] mx-auto">

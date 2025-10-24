@@ -9,7 +9,7 @@ export function Navbar() {
     <header className="inset-x-0 top-0 z-50 w-full fixed bg-black">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 lg:px-8">
         {/* Left side - waaw logo */}
-        <Link href="/" className="text-white text-lg font-semibold">
+        <Link href="/" className="text-[#bbbbbb] text-lg font-semibold">
           waaw
         </Link>
 
@@ -18,13 +18,13 @@ export function Navbar() {
           <Link href="/" className="text-[#82b7dc] font-semibold text-xl">
             Home
           </Link>
-          <Link href="/about" className="text-white font-semibold text-xl hover:text-[#82b7dc] transition">
+          <Link href="/about" className="text-[#bbbbbb] font-semibold text-xl hover:text-[#82b7dc] transition">
             About Us
           </Link>
-          <Link href="/services" className="text-white font-semibold text-xl hover:text-[#82b7dc] transition">
+          <Link href="/services" className="text-[#bbbbbb] font-semibold text-xl hover:text-[#82b7dc] transition">
             Services
           </Link>
-          <Link href="/blogs" className="text-white font-semibold text-xl hover:text-[#82b7dc] transition">
+          <Link href="/blogs" className="text-[#bbbbbb] font-semibold text-xl hover:text-[#82b7dc] transition">
             Blogs
           </Link>
         </nav>
@@ -57,7 +57,7 @@ export function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white focus:outline-none"
+          className="md:hidden text-[#bbbbbb] focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,13 +77,13 @@ export function Navbar() {
             <Link href="/" className="block text-[#82b7dc] font-semibold text-xl" onClick={() => setIsOpen(false)}>
               Home
             </Link>
-            <Link href="/about" className="block text-white font-semibold text-xl hover:text-[#82b7dc] transition" onClick={() => setIsOpen(false)}>
+            <Link href="/about" className="block text-[#bbbbbb] font-semibold text-xl hover:text-[#82b7dc] transition" onClick={() => setIsOpen(false)}>
               About Us
             </Link>
-            <Link href="/services" className="block text-white font-semibold text-xl hover:text-[#82b7dc] transition" onClick={() => setIsOpen(false)}>
+            <Link href="/services" className="block text-[#bbbbbb] font-semibold text-xl hover:text-[#82b7dc] transition" onClick={() => setIsOpen(false)}>
               Services
             </Link>
-            <Link href="/blogs" className="block text-white font-semibold text-xl hover:text-[#82b7dc] transition" onClick={() => setIsOpen(false)}>
+            <Link href="/blogs" className="block text-[#bbbbbb] font-semibold text-xl hover:text-[#82b7dc] transition" onClick={() => setIsOpen(false)}>
               Blogs
             </Link>
             <Link href="/contact" className="block mt-6" onClick={() => setIsOpen(false)}>

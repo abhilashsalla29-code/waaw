@@ -58,59 +58,77 @@ export const ServicesSection = (): JSX.Element => {
   return (
     <section className="relative w-full bg-black overflow-hidden py-14 md:py-24 min-h-screen">
       {/* Background Glows */}
-      <div className="absolute top-[1671px] left-[1271px] w-[290px] h-[290px] rounded-full blur-[220px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(130,183,220,1)_0%)] hidden lg:block" />
-      <div className="absolute top-[-258px] left-[-226px] w-[416px] h-[426px] rounded-full blur-[225px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(130,183,220,1)_0%)] hidden lg:block" />
+      <div className="absolute top-[10%] right-[5%] w-[300px] h-[300px] rounded-full blur-[220px] bg-[radial-gradient(circle_at_95%_-3%,rgba(130,183,220,0.8)_0%,transparent_70%)] hidden lg:block" />
+      <div className="absolute top-[-10%] left-[-10%] w-[400px] h-[400px] rounded-full blur-[225px] bg-[radial-gradient(circle_at_95%_-3%,rgba(130,183,220,0.8)_0%,transparent_70%)] hidden lg:block" />
 
       <div className="relative max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
         {/* Header */}
-        <header className="flex flex-col items-center mb-14 md:mb-20 relative">
-          <h1 className="font-extrabold text-[#82b7dc] text-[30px] md:text-[38px] lg:text-[48px] tracking-widest leading-tight uppercase underline underline-offset-8 decoration-[2.5px] decoration-[#fff8] [font-family:'Montserrat',Helvetica] shadow-lg drop-shadow-blue-200">
+        <header className="flex flex-col items-center mb-14 md:mb-20 relative text-center">
+          <h1 className="mt-10 font-extrabold text-[#82b7dc] text-[30px] md:text-[38px] lg:text-[48px] tracking-widest leading-tight uppercase underline underline-offset-8 decoration-[2.5px] decoration-[#ffffff88] [font-family:'Montserrat',Helvetica] drop-shadow-[0_2px_12px_rgba(130,183,220,0.4)]">
             SERVICES
           </h1>
-          <p className="font-extrabold text-white text-xl md:text-2xl lg:text-3xl text-center leading-snug max-w-[90%] md:max-w-[600px] mt-2 [font-family:'Montserrat',Helvetica] tracking-wide underline decoration-[#82b7dc]/50 decoration-2 underline-offset-4">
+          <p className="font-extrabold text-[#bbbbbb] text-xl md:text-2xl lg:text-3xl leading-snug max-w-[90%] md:max-w-[600px] mt-3 [font-family:'Montserrat',Helvetica] tracking-wide underline decoration-[#82b7dc]/40 decoration-2 underline-offset-4">
             Where Creativity Meets Cutting-Edge Technology.
           </p>
         </header>
 
-        {/* Core Pillars with connectors */}
+        {/* Core Pillars */}
         <div className="flex flex-col items-center">
-          <h2 className="font-extrabold text-[#82b7dc] text-[26px] md:text-[32px] lg:text-[40px] text-center tracking-wider leading-normal mb-10 md:mb-16 [font-family:'Montserrat',Helvetica] uppercase">
+          <h2 className="font-extrabold text-[#82b7dc] text-[26px] md:text-[32px] lg:text-[40px] text-center tracking-wider leading-normal mb-12 [font-family:'Montserrat',Helvetica] uppercase">
             Our Core Pillars
           </h2>
-          {/* Decorated sides on large screens */}
-          <img src="/servicesm.png" className="hidden lg:block absolute w-[20%] xl:w-[25.95%] top-[5.46%] left-[-9.43%] opacity-80" alt="Side Decor" />
-          <img src="/servicesm.png" className="hidden lg:block absolute w-[20%] xl:w-[25.95%] top-[74.94%] left-[83.75%] opacity-80" alt="Side Decor" />
 
-          {/* Service cards with vertical connector lines */}
-          <div className="relative flex flex-col items-center gap-8 md:gap-12 w-full px-4 md:px-0">
+          {/* Decorative corners */}
+          <img
+            className="hidden lg:block absolute w-[22%] xl:w-[25%] top-[6%] left-[-10%] opacity-70"
+            alt="Decorative"
+            src="/servicesm.png"
+          />
+          <img
+            className="hidden lg:block absolute w-[22%] xl:w-[25%] bottom-[6%] right-[-10%] opacity-70"
+            alt="Decorative"
+            src="/servicesm.png"
+          />
+
+          {/* Vertical Connector + Cards */}
+          <div className="relative flex flex-col items-center gap-12 w-full px-4 md:px-0">
+            {/* Vertical main line */}
+            <div className="absolute top-0 bottom-0 w-[3px] bg-gradient-to-b from-[#82b7dc]/70 via-[#82b7dc]/40 to-transparent rounded-full hidden md:block" />
+
             {servicesData.map((service, index) => (
-              <div key={index} className="relative flex flex-col md:flex-row items-center md:items-start w-full max-w-[700px] transition-transform duration-150 hover:scale-[1.03]">
-                {/* Connector line + circle + text */}
-                <div className="relative flex flex-col items-center mb-4 md:mb-0 md:mr-6 lg:mr-10 min-w-[150px]">
-                  {index > 0 && (
-                    <div className="hidden md:block absolute bottom-full mb-[-12px] w-1.5 h-[320px] lg:h-[344px] rounded-md bg-gradient-to-b from-[#82b7dc]/80 to-transparent" />
-                  )}
-                  {/* Circle with glow */}
-                  <div className="relative z-10 w-10 h-10 bg-gradient-to-br from-[#1b2334] to-[#84bad3] rounded-full flex items-center justify-center shadow-xl mb-2">
-                    <div className="w-[24px] h-[24px] rounded-full blur-[2px] bg-gradient-to-br from-white/70 to-[#82b7dc]" />
+              <div
+                key={index}
+                className="relative flex flex-col md:flex-row items-center md:items-start w-full max-w-[700px] gap-8 md:gap-12 z-10"
+              >
+                {/* Connector Node */}
+                <div className="relative flex flex-col items-center md:items-center">
+                  <div className="relative w-10 h-10 bg-gradient-to-br from-[#1b2334] to-[#84bad3] rounded-full flex items-center justify-center shadow-lg ring-2 ring-[#82b7dc]/40">
+                    <div className="w-[22px] h-[22px] rounded-full bg-gradient-to-br from-white/70 to-[#82b7dc] blur-[2px]" />
                   </div>
-                  {/* Text below circle */}
-                  <h3 className="font-semibold text-white text-base md:text-lg lg:text-xl whitespace-nowrap text-center [font-family:'Montserrat',Helvetica] tracking-wide">
+                  <h3 className="mt-3 font-semibold text-[#bbbbbb] text-base md:text-lg lg:text-xl text-center [font-family:'Montserrat',Helvetica] tracking-wide">
                     {service.title}
                   </h3>
                 </div>
-                {/* Service Content */}
-                <Card className="w-full md:w-[600px] min-h-[320px] rounded-3xl border-0 [background:radial-gradient(50%_50%_at_30%_-4%,rgba(255,255,255,0.13)_0%,rgba(0,0,0,0.16)_100%)] shadow-2xl backdrop-blur-md">
+
+                {/* Service Card */}
+                <Card className="w-full md:w-[600px] min-h-[340px] rounded-3xl border border-white/10 bg-[radial-gradient(50%_50%_at_30%_-4%,rgba(255,255,255,0.15)_0%,rgba(0,0,0,0.18)_100%)] shadow-xl shadow-black/40 backdrop-blur-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
                   <CardContent className="relative p-0 h-full">
-                    {/* Content with smaller font */}
-                    <div className="relative z-10 pt-9 md:pt-12 lg:pt-14 px-8 md:px-14 lg:px-20 pb-7 text-[#e0e6eb]">
-                      <h4 className="font-bold text-white text-[20px] md:text-[24px] lg:text-[28px] text-center leading-snug mb-4 [font-family:'Montserrat',Helvetica] tracking-wide uppercase">{service.title}</h4>
-                      <div className="space-y-3 md:space-y-4 lg:space-y-5 text-[12px] md:text-[14px] lg:text-[16px] tracking-wide leading-relaxed font-medium">
+                    <div className="relative z-10 py-10 px-8 md:px-14 lg:px-20 text-[#e0e6eb] flex flex-col items-center text-center">
+                      <h4 className="font-extrabold text-[#bbbbbb] text-[22px] md:text-[26px] lg:text-[30px] leading-tight mb-5 tracking-widest uppercase [font-family:'Montserrat',Helvetica] drop-shadow-[0_2px_6px_rgba(255,255,255,0.2)]">
+                        {service.title}
+                      </h4>
+                      <div className="space-y-3 md:space-y-4 lg:space-y-5 text-[13px] md:text-[15px] lg:text-[17px] tracking-wide leading-relaxed font-medium text-[#d8dee4]/90">
                         {service.points.map((point, pointIndex) => (
-                          <p key={pointIndex}>{point}</p>
+                          <p
+                            key={pointIndex}
+                            className="transition-transform duration-300 hover:translate-x-1"
+                          >
+                            {point}
+                          </p>
                         ))}
                       </div>
                     </div>
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
                   </CardContent>
                 </Card>
               </div>

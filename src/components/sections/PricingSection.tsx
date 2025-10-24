@@ -79,7 +79,7 @@ export const PricingSection = (): JSX.Element => {
             <div className="absolute top-[42px] -left-[26px] w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90" />
             <div className="absolute -top-[35px] -right-[26px] w-[35px] h-[35px] bg-white rounded-[17.5px] -rotate-90" /> */}
           </div>
-          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-[24px] md:text-[32px] underline mb-6 text-center">
+          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[24px] md:text-[32px] underline mb-6 text-center">
             Invest in Your Digital Future
           </h3>
           <p className="max-w-[845px] text-[#bbbbbb] text-lg md:text-xl text-center">
@@ -90,13 +90,13 @@ export const PricingSection = (): JSX.Element => {
         </div>
 
         {/* Cards */}
-        <div className="flex flex-col lg:flex-row justify-center gap-8">
+        <div className="flex flex-col lg:flex-row justify-center gap-8  lg:gap-12 items-center">
           {pricingPlans.map((plan, idx) => (
             <Card
               key={idx}
               className={`relative w-full max-w-[386px] ${
-                plan.highlighted ? "md:-mt-20" : ""
-              } rounded-[30px] overflow-hidden border backdrop-blur-[2px] backdrop-brightness-[110%] bg-[rgba(255,255,255,0.05)] border-${
+                plan.highlighted ? "md:-mt-10" : ""
+              } rounded-[30px] overflow-hidden mt-4 border  backdrop-blur-[2px] backdrop-brightness-[110%] bg-[rgba(255,255,255,0.05)] border-${
                 plan.highlighted ? "white/20" : "white/10"
               } shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)]`}
             >
@@ -118,7 +118,7 @@ export const PricingSection = (): JSX.Element => {
                   </p>
                 </div>
 
-                <div className="px-[20px] md:px-[30px] mt-6">
+                <div className="px-[20px] md:px-[30px] mt-6 mb-4">
                   <div className="bg-[rgba(255,255,255,0.1)] rounded-[20px] md:rounded-[30px] p-6">
                     <div className="flex items-center gap-2">
                       <span className="text-[#bbbbbb] font-semibold text-lg md:text-xl">

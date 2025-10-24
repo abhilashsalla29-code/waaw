@@ -1,1 +1,2 @@
-- [ ] Replace the inline SVG in the "Get Started" button with subtract-4.svg from public folder in Hero.tsx
+- [x] Wrap "Get Started" button in Hero.tsx with Link to "/contact"
+- [x] Wrap "Get Started" button in FooterSection.tsx with Link to "/contact"

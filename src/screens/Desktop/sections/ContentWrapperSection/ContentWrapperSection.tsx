@@ -186,7 +186,7 @@ export const ContentWrapperSection = (): JSX.Element => {
               />
 
               <h3
-                className={`absolute ${stage.titleTop} ${stage.titleLeft} ${stage.title === "Envision" ? "w-[116px]" : stage.title === "Elevate" ? "w-[107px]" : stage.title === "Design" ? "w-24" : "w-[110px]"} [font-family:'Montserrat',Helvetica] font-semibold text-white text-[26px] text-center tracking-[0] leading-[normal]`}
+                className={`absolute ${stage.titleTop} ${stage.titleLeft} ${stage.title === "Envision" ? "w-[116px]" : stage.title === "Elevate" ? "w-[107px]" : stage.title === "Design" ? "w-24" : "w-[110px]"} [font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[26px] text-center tracking-[0] leading-[normal]`}
               >
                 {stage.title}
               </h3>

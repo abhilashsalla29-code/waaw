@@ -54,50 +54,47 @@ export const FooterSection = (): JSX.Element => (
     <div className="absolute bottom-[-145px] right-[-145px] w-[290px] h-[290px] rounded-full blur-[250px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(130,183,220,1)_0%)]" />
 
     {/* Hero card */}
-    <div className="relative mx-auto max-w-[1106px] h-[250px] md:h-[358px] rounded-[30px] overflow-hidden border border-white/20 backdrop-blur-[2px] backdrop-brightness-[110%] bg-[linear-gradient(11deg,rgba(0,0,0,0.1)_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)]">
-      {/* Decorative ellipse */}
-      <img
-        className="absolute top-[180px] md:top-[263px] left-4 md:left-28 w-[90%] md:w-[920px] h-[120px] md:h-[190px]"
-        src="/ellipse-3-1.svg"
-        alt="Ellipse"
-      />
-
-      {/* Title */}
-      <h2 className="absolute top-[20px] md:top-[53px] left-4 md:left-[515px] w-[80%] md:w-[517px] [font-family:'Montserrat',Helvetica] font-extrabold text-2xl md:text-4xl text-[#82b7dc] text-center md:text-left">
-        WHERE IDEAS FLOW AND BRANDS GROW.
-      </h2>
-
+    <div className="relative mx-auto max-w-[1106px] min-h-[400px] md:h-[358px] rounded-[30px] overflow-hidden border border-white/20 backdrop-blur-[2px] backdrop-brightness-[110%] bg-[linear-gradient(11deg,rgba(0,0,0,0.1)_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] flex flex-col md:flex-row">
       {/* Left image */}
       <img
-        className="absolute  w-[50%] md:w-[41.95%] h-[70%] md:h-[78.32%] object-cover"
+        className="w-full md:w-[41.95%] h-[200px] md:h-full object-cover"
         src="/audiencegridm.png"
         alt="Decor"
       />
 
-      {/* Small glow circle */}
-      <div className="absolute top-[-15px] left-[200px] md:left-[322px] w-[30px] md:w-[53px] h-[30px] md:h-[53px] rounded-full blur-[6px] md:blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)]" />
-
-      {/* Vertical bars */}
-      {/* {verticalBars.map((pos, idx) => (
-        <div
-          key={idx}
-          className={`hidden md:block absolute ${pos} top-[calc(50%_-_420px)] h-[1041px] w-[2.89%] shadow-[inset_-2.5px_0_2.5px_#bababa,inset_2.5px_0_2.5px_#00000069] bg-[linear-gradient(90deg,rgba(103,103,103,1)_0%,rgba(255,255,255,0.54)_46%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(24,24,24,0.49)_0%,rgba(255,255,255,0.25)_50%,rgba(255,255,255,0)_100%)]`}
+      {/* Text content */}
+      <div className="flex-1 flex flex-col justify-center items-center md:items-start p-4 md:p-8 relative">
+        {/* Decorative ellipse - hidden on mobile, shown on md+ */}
+        <img
+          className="hidden md:block absolute top-[180px] left-[-50px] w-[920px] h-[190px]"
+          src="/ellipse-3-1.svg"
+          alt="Ellipse"
         />
-      ))} */}
 
-      {/* Button */}
-      <Button className="absolute top-[140px] md:top-[222px] left-4 md:left-[515px] flex items-center gap-2 w-[150px] md:w-[198px] h-[40px] md:h-[50px] bg-gradient-to-r from-[#3466aa] to-[#3466aa] hover:from-[#2a5590] hover:to-[#2a5590] rounded-[20px] md:rounded-[25px]">
-        <span className="[font-family:'Montserrat',Helvetica] font-bold text-white text-sm md:text-base">
-          Get Started
-        </span>
-        <ArrowRightIcon className="w-4 md:w-6 h-4 md:h-6 text-white" />
-      </Button>
+        {/* Small glow circle - adjusted for mobile */}
+        <div className="absolute top-[-15px] right-[50px] md:left-[200px] w-[30px] md:w-[53px] h-[30px] md:h-[53px] rounded-full blur-[6px] md:blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)]" />
 
-      {/* Subtitle */}
-      <p className="absolute top-[100px] md:top-[162px] left-4 md:left-[515px] w-[85%] md:w-[472px] [font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-xs md:text-sm text-center md:text-left">
-        Ideas begin as ripples and rise into powerful waves of creation. At
-        WAAW, we shape digital experiences that move brands forward.
-      </p>
+        {/* Title */}
+        <h2 className="w-full md:w-[517px] [font-family:'Montserrat',Helvetica] font-extrabold text-2xl md:text-4xl text-[#82b7dc] text-center md:text-left mb-4">
+          WHERE IDEAS FLOW AND BRANDS GROW.
+        </h2>
+
+        {/* Subtitle */}
+        <p className="w-full md:w-[472px] [font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-xs md:text-sm text-center md:text-left mb-6">
+          Ideas begin as ripples and rise into powerful waves of creation. At
+          WAAW, we shape digital experiences that move brands forward.
+        </p>
+
+        {/* Button */}
+        <Link href="/contact">
+          <Button className="flex items-center gap-2 w-[150px] md:w-[198px] h-[40px] md:h-[50px] bg-gradient-to-r from-[#3466aa] to-[#3466aa] hover:from-[#2a5590] hover:to-[#2a5590] rounded-[20px] md:rounded-[25px]">
+            <span className="[font-family:'Montserrat',Helvetica] font-bold text-[#bbbbbb] text-sm md:text-base">
+              Get Started
+            </span>
+            <ArrowRightIcon className="w-4 md:w-6 h-4 md:h-6 text-[#bbbbbb]" />
+          </Button>
+        </Link>
+      </div>
     </div>
 
     {/* Divider */}
@@ -131,7 +128,7 @@ export const FooterSection = (): JSX.Element => (
           <Link
             key={i}
             href={link.href}
-            className="[font-family:'Montserrat',Helvetica] font-normal text-[#bbbbbb] text-base mb-3 hover:text-white transition-colors"
+            className="[font-family:'Montserrat',Helvetica] font-normal text-[#bbbbbb] text-base mb-3 hover:text-[#bbbbbb] transition-colors"
           >
             {link.label}
           </Link>
@@ -147,7 +144,7 @@ export const FooterSection = (): JSX.Element => (
           <Link
             key={i}
             href={link.href}
-            className="[font-family:'Montserrat',Helvetica] font-normal text-[#bbbbbb] text-base mb-3 hover:text-white transition-colors"
+            className="[font-family:'Montserrat',Helvetica] font-normal text-[#bbbbbb] text-base mb-3 hover:text-[#bbbbbb] transition-colors"
           >
             {link.label}
           </Link>
@@ -169,7 +166,7 @@ export const FooterSection = (): JSX.Element => (
           <img src={contactIcons[1].src} alt={contactIcons[1].alt} className="w-8 h-8 md:w-10 md:h-10" />
           <a
             href="mailto:support@WAAW.com"
-            className="[font-family:'Montserrat',Helvetica] text-[#bbbbbb] text-base hover:text-white transition-colors"
+            className="[font-family:'Montserrat',Helvetica] text-[#bbbbbb] text-base hover:text-[#bbbbbb] transition-colors"
           >
             support@WAAW.com
           </a>
@@ -179,7 +176,7 @@ export const FooterSection = (): JSX.Element => (
 
     {/* Bottom legal */}
     <div className="mt-8 sm:mt-10 md:mt-12 max-w-[1258px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 md:gap-12">
-      <p className="[font-family:'Montserrat',Helvetica] font-normal text-white text-xs">
+      <p className="[font-family:'Montserrat',Helvetica] font-normal text-[#bbbbbb] text-xs">
         Copyright © 2025 WAAW. All rights reserved
       </p>
       <div className="flex gap-6">
@@ -187,7 +184,7 @@ export const FooterSection = (): JSX.Element => (
           <a
             key={i}
             href={link.href}
-            className="[font-family:'Montserrat',Helvetica] font-normal text-white text-xs hover:text-[#82b7dc] transition-colors"
+            className="[font-family:'Montserrat',Helvetica] font-normal text-[#bbbbbb] text-xs hover:text-[#82b7dc] transition-colors"
           >
             {link.label}
           </a>

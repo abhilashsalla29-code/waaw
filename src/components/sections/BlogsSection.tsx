@@ -47,7 +47,7 @@ export const BlogsSection = (): JSX.Element => {
             <div className="absolute top-[53px] left-[-19px] w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90" /> */}
           </div>
 
-          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-white text-[24px] md:text-[32px] text-center tracking-[0] leading-[normal] underline mb-[40px] md:mb-[68px] max-w-[529px]">
+          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[24px] md:text-[32px] text-center tracking-[0] leading-[normal] underline mb-[40px] md:mb-[68px] max-w-[529px]">
             Insights That Inspire Innovation
           </h3>
 
@@ -73,7 +73,7 @@ export const BlogsSection = (): JSX.Element => {
                 {/* Content overlay */}
                 <div className="relative z-10 h-full flex flex-col justify-between p-6 md:p-8">
                   <div>
-                    <h4 className="[font-family:'Montserrat',Helvetica] font-bold text-white text-[20px] md:text-[24px] text-center tracking-[0] leading-tight mb-3 md:mb-4">
+                    <h4 className="[font-family:'Montserrat',Helvetica] font-bold text-[#bbbbbb] text-[20px] md:text-[24px] text-center tracking-[0] leading-tight mb-3 md:mb-4">
                       {card.title}
                     </h4>
 
@@ -85,7 +85,7 @@ export const BlogsSection = (): JSX.Element => {
                   {/* Bottom icon area - you can add another icon here if needed */}
                   <div className="flex justify-center">
                     {/* <div className="w-6 h-6 md:w-8 md:h-8 bg-[#82b7dc] rounded-full flex items-center justify-center"> */}
-                      {/* <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      {/* <svg className="w-3 h-3 md:w-4 md:h-4 text-[#bbbbbb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg> */}
                     </div>

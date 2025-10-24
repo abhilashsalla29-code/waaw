@@ -71,7 +71,7 @@ export const MainContentSection = (): JSX.Element => {
             <div className="absolute top-[-35px] left-[140px] w-[35px] h-[35px] bg-white rounded-[17.5px] -rotate-90 blur-sm" /> */}
           </div>
 
-          <div className="w-full md:w-[462px] [font-family:'Montserrat',Helvetica] font-semibold text-white text-[24px] md:text-[32px] text-center tracking-[0] leading-[normal] mb-[40px] md:mb-[86px]">
+          <div className="w-full md:w-[462px] [font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[24px] md:text-[32px] text-center tracking-[0] leading-[normal] mb-[40px] md:mb-[86px]">
             Get Clarity Before You Start
           </div>
 
@@ -116,7 +116,7 @@ export const MainContentSection = (): JSX.Element => {
                       </span>
                       <div className="relative w-[40px] md:w-[46px] h-9 md:h-11 flex-shrink-0 plus-icon">
                         <div className="absolute top-0 left-[calc(50.00%_-_20px)] md:left-[calc(50.00%_-_23px)] w-9 md:w-11 h-9 md:h-11 bg-[#00000000] rounded-[30px] shadow-[inset_0px_4px_4px_#ffffff14,inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)]" />
-                        <div className="absolute top-[3px] md:top-[5px] left-[11px] md:left-[13px] [font-family:'Montserrat',Helvetica] font-semibold text-white text-[24px] md:text-[32px] tracking-[0] leading-[normal]">
+                        <div className="absolute top-[3px] md:top-[5px] left-[11px] md:left-[13px] [font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[24px] md:text-[32px] tracking-[0] leading-[normal]">
                           +
                         </div>
                       </div>

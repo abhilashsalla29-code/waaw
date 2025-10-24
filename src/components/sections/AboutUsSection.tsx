@@ -37,8 +37,7 @@ const AboutUsSectionMobile = () => (
       <img alt="Vector" src="/vector-15.svg" className="absolute w-4 right-2 top-[14px]" />
     </Button>
     {/* Mesh 2 Optional: */}
-    <img src="/MESH.png" alt="Mesh2" className="mx-auto w-[130px] my-2" />
-    {/* Stats */}
+    <img src="/MESH.png" alt="Mesh2" className="mx-auto w-[130px] my-24" />
     <div className="flex flex-col items-center gap-4 w-full">
       {statsMobile.map((card, idx) => (
         <Card key={idx} className="w-full max-w-[320px] mx-auto rounded-xl p-0 bg-[rgba(52,102,170,.12)] border-0 backdrop-blur-sm shadow-md">
@@ -294,7 +293,7 @@ export const AboutUsSection = (): JSX.Element => {
             className={`${button.className} ${index === 0 ? "flex" : ""} w-[295px] h-[71px] md:w-[260px] md:h-[65px] lg:w-[295px] lg:h-[71px] absolute rounded-[30px] overflow-hidden backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] bg-[linear-gradient(316deg,rgba(255,255,255,0.01)_0%,rgba(130,183,220,0.01)_100%)] hover:bg-[linear-gradient(316deg,rgba(255,255,255,0.08)_0%,rgba(130,183,220,0.08)_100%)] transition-all h-auto p-0 group`}
           >
             <div
-              className={`${index === 0 ? "mt-[-202px] ml-[183px]" : "absolute top-[-202px] left-[183px]"} w-[7px] h-[397px] rounded-[3.5px/198.5px] -rotate-90 bg-white blur-sm`}
+              className={`${index === 0 ? "mt-[-202px] ml-[183px]" : "absolute top-[-202px] left-[183px]"} w-[7px] h-[397px] rounded-[3.5px/198.5px] -rotate-90 bg-black blur-sm`}
             />
             <span
               className={`${
@@ -302,8 +301,8 @@ export const AboutUsSection = (): JSX.Element => {
                   ? "absolute top-[22px] left-[41px]"
                   : index === 1
                     ? "absolute top-[22px] left-[41px]"
-                    : "absolute top-[9px] left-[62px] w-[171px] text-center"
-              } [font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[16px] md:text-[20px] lg:text-[22px] tracking-[0] leading-[normal] group-hover:text-white transition-colors`}
+                    : "absolute top-[22px] left-[42px] w-[171px] text-center"
+              } [font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[16px] md:text-[20px] lg:text-[22px] tracking-[0] leading-[normal]  transition-colors`}
             >
               {button.text}
             </span>
