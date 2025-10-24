@@ -163,7 +163,7 @@ export default function Contact() {
                 </label>
                 <textarea
                   id="message"
-                  rows="5"
+                  rows={5}
                   placeholder="Message"
                   className="w-full bg-black/40 border border-gray-700 rounded-xl px-5 py-3.5 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none"
                 ></textarea>

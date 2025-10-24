@@ -15,47 +15,47 @@ const pillMobile = [
 ];
 
 const AboutUsSectionMobile = () => (
-  <section className="bg-black px-3 py-8 flex flex-col items-center gap-7 min-h-screen w-full md:hidden">
+  <section className="bg-black px-3 py-8 md:px-6 lg:px-8 xl:px-12 flex flex-col items-center gap-7 min-h-screen w-full">
     {/* Title */}
-    <div className="text-[#82b7dc] text-2xl font-extrabold  mt-2 tracking-wide text-center border border-white">
+    <div className="text-[#82b7dc] text-2xl md:text-4xl lg:text-5xl font-extrabold mt-2 tracking-wide text-center border border-white">
       ABOUT
     </div>
     {/* Mesh */}
-    {/* <img src="/mesh1.png" alt="Mesh" className="mx-auto w-[220px] mb-3" /> */}
+    {/* <img src="/mesh1.png" alt="Mesh" className="mx-auto w-[220px] md:w-[300px] lg:w-[400px] mb-3" /> */}
     {/* Main Heading */}
-    <h2 className="text-white text-xl font-semibold underline text-center max-w-[95vw] mx-auto mb-2">
+    <h2 className="text-white text-xl md:text-3xl lg:text-4xl font-semibold underline text-center max-w-[95vw] mx-auto mb-2">
       We build more than apps and websites
     </h2>
     {/* Description */}
-    <p className="text-[#bbbbbb] text-[16px] text-center mb-3">
+    <p className="text-[#bbbbbb] text-[16px] md:text-lg lg:text-xl text-center mb-3">
       We create digital experiences that inspire, engage, and grow businesses.
     </p>
     {/* CTA */}
     <Button variant="ghost" className="relative mb-2 px-0">
-      <img alt="bg" src="/subtract.svg" className="w-[160px] absolute left-0 top-0" />
-      <span className="relative font-bold text-[#3466aa] text-sm px-6">Explore Now</span>
-      <img alt="Vector" src="/vector-15.svg" className="absolute w-4 right-2 top-[14px]" />
+      <img alt="bg" src="/subtract.svg" className="w-[160px] md:w-[200px] lg:w-[240px] absolute left-0 top-0" />
+      <span className="relative font-bold text-[#3466aa] text-sm md:text-base lg:text-lg px-6">Explore Now</span>
+      <img alt="Vector" src="/vector-15.svg" className="absolute w-4 md:w-5 lg:w-6 right-2 top-[14px] md:top-[16px] lg:top-[18px]" />
     </Button>
     {/* Mesh 2 Optional: */}
-    <img src="/MESH.png" alt="Mesh2" className="mx-auto w-[130px] my-24" />
+    <img src="/MESH.png" alt="Mesh2" className="mx-auto w-[130px] md:w-[180px] lg:w-[220px] my-24" />
     <div className="flex flex-col items-center gap-4 w-full">
       {statsMobile.map((card, idx) => (
-        <Card key={idx} className="w-full max-w-[320px] mx-auto rounded-xl p-0 bg-[rgba(52,102,170,.12)] border-0 backdrop-blur-sm shadow-md">
+        <Card key={idx} className="w-full max-w-[320px] md:max-w-[400px] lg:max-w-[480px] mx-auto rounded-xl p-0 bg-[rgba(52,102,170,.12)] border-0 backdrop-blur-sm shadow-md">
           <CardContent className="flex flex-col items-center justify-center py-3 px-2">
-            <div className="text-white font-bold text-[1.7rem]">{card.value}</div>
-            <div className="text-[#bbbbbb] text-base font-medium text-center">{card.description}</div>
+            <div className="text-white font-bold text-[1.7rem] md:text-2xl lg:text-3xl">{card.value}</div>
+            <div className="text-[#bbbbbb] text-base md:text-lg lg:text-xl font-medium text-center">{card.description}</div>
           </CardContent>
         </Card>
       ))}
     </div>
     {/* Slogan */}
-    <div className="text-white text-base font-bold text-center my-2">
+    <div className="text-white text-base md:text-lg lg:text-xl font-bold text-center my-2">
       Strategize Design Launch
     </div>
     {/* Pills */}
     <div className="flex flex-wrap justify-center w-full gap-3">
       {pillMobile.map((label, idx) => (
-        <Button key={idx} variant="ghost" className="bg-[rgba(130,183,220,0.05)] rounded-xl px-5 text-[#bbbbbb] font-semibold shadow-sm py-2">
+        <Button key={idx} variant="ghost" className="bg-[rgba(130,183,220,0.05)] rounded-xl px-5 md:px-7 lg:px-9 text-[#bbbbbb] font-semibold shadow-sm py-2 md:py-3 lg:py-4 text-sm md:text-base lg:text-lg">
           {label}
         </Button>
       ))}
@@ -170,9 +170,9 @@ const pillButtons = [
 export const AboutUsSection = (): JSX.Element => {
   return (
     <>
-      <div className="hidden md:block">
+      <div className="hidden xl:block">
         <section className="w-full relative bg-black overflow-hidden">
-          <div className="relative w-full h-[1024px] md:h-[900px] lg:h-[1024px]">
+          <div className="relative w-full md:max-w-screen-md md:mx-auto lg:max-w-screen-lg lg:mx-auto xl:max-w-screen-xl xl:mx-auto h-[1024px] md:h-[900px] lg:h-[1024px]">
         {/* Background Mesh Image 1 */}
         {/* <img
           className="absolute w-[25.49%] h-[35.84%] top-[68.16%] left-[39.93%] md:w-[30%] md:h-[40%] md:top-[60%] md:left-[35%]"
@@ -311,7 +311,7 @@ export const AboutUsSection = (): JSX.Element => {
           </div>
         </section>
       </div>
-      <div className="block md:hidden">
+      <div className="block 2xl:hidden">
         <AboutUsSectionMobile />
       </div>
     </>
