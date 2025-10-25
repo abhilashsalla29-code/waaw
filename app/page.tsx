@@ -16,10 +16,18 @@ export default function Page() {
       <Navbar />
       <Hero />
       <AudienceGrid />
-      <AboutUsSection />
-      <ServicesSection />
-      <PricingSection />
-      <BlogsSection />
+      <section id="about">
+        <AboutUsSection />
+      </section>
+      <section id="services">
+        <ServicesSection />
+      </section>
+      <section id="pricing">
+        <PricingSection />
+      </section>
+      <section id="blogs">
+        <BlogsSection />
+      </section>
       <MainContentSection />
       <ContentWrapperSection />
       <FooterSection />

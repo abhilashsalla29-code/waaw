@@ -23,11 +23,11 @@ const companyLinks = [
   { label: "Let's Talk", href: "/contact" },
 ];
 const resourceLinks = [
-  { label: "Features", href: "#" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Industry", href: "/industries" },
-  { label: "Roadmap", href: "#" },
-  { label: "FAQ", href: "#" },
+  { label: "Features", href: "#home" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Industry", href: "#industries" },
+  { label: "Roadmap", href: "#roadmap" },
+  { label: "FAQ", href: "#faq" },
 ];
 const legalLinks = [
   { label: "Privacy Policy", href: "#" },
@@ -57,7 +57,7 @@ export const FooterSection = (): JSX.Element => (
     <div className="relative mx-auto max-w-[1106px] min-h-[400px] md:h-[358px] rounded-[30px] overflow-hidden border border-white/20 backdrop-blur-[2px] backdrop-brightness-[110%] bg-[linear-gradient(11deg,rgba(0,0,0,0.1)_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] flex flex-col md:flex-row">
       {/* Left image */}
       <img
-        className="w-full md:w-[41.95%] h-[200px] md:h-full object-cover"
+        className="w-full md:w-[41.95%] h-[120px] md:h-full object-cover"
         src="/audiencegridm.png"
         alt="Decor"
       />
@@ -87,8 +87,8 @@ export const FooterSection = (): JSX.Element => (
 
         {/* Button */}
         <Link href="/contact">
-          <Button className="flex items-center gap-2 w-[150px] md:w-[198px] h-[40px] md:h-[50px] bg-gradient-to-r from-[#3466aa] to-[#3466aa] hover:from-[#2a5590] hover:to-[#2a5590] rounded-[20px] md:rounded-[25px]">
-            <span className="[font-family:'Montserrat',Helvetica] font-bold text-[#bbbbbb] text-sm md:text-base">
+          <Button className="flex items-center gap-2 w-[150px] md:w-[198px] h-[40px] md:h-[50px] bg-gradient-to-r from-[#3466aa] to-[#3466aa] hover:from-[#2a5590] hover:to-[#2a5590] rounded-[20px] md:rounded-[25px] hover:scale-105 transition-all duration-300">
+            <span className="[font-family:'Montserrat',Helvetica] font-bold text-[#bbbbbb] text-sm md:text-base ">
               Get Started
             </span>
             <ArrowRightIcon className="w-4 md:w-6 h-4 md:h-6 text-[#bbbbbb]" />

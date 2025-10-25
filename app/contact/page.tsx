@@ -12,9 +12,9 @@ export default function Contact() {
       <section className="flex flex-col items-center justify-center text-center pt-24 pb-16 px-6">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-          <h2 className="text-xs sm:text-sm tracking-[0.3em] text-gray-400 uppercase font-light">
+          {/* <h2 className="text-xs sm:text-sm tracking-[0.3em] text-gray-400 uppercase font-light">
             Let's Talk
-          </h2>
+          </h2> */}
           <div className="w-2 h-2 rounded-full bg-blue-400"></div>
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 max-w-4xl leading-tight">

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
@@ -10,35 +11,36 @@ import { Button } from "../ui/button";
 const faqItems = [
   {
     id: "item-1",
-    question: "What makes Waave different from other agencies?",
-    answer: "",
+    question: "What makes Waaw different from other agencies?",
+    answer: "Waaw stands out by combining innovative design, cutting-edge technology, and personalized strategies. We focus on delivering measurable results for your business while maintaining a friendly and professional approach.",
   },
   {
     id: "item-2",
     question: "How does the project process work?",
-    answer: "",
+    answer: "Our project process at Waaw begins with understanding your goals, followed by planning, design, development, and rigorous testing. We keep you updated at every stage to ensure your vision is brought to life efficiently.",
   },
   {
     id: "item-3",
     question: "What kind of businesses do you work with?",
-    answer: "",
+    answer: "Waaw works with startups, small to medium-sized businesses, and established enterprises across industries. Whether you need a website, mobile app, or complete digital solution, we tailor our services to your business needs.",
   },
   {
     id: "item-4",
-    question: "Can Waave handle both web and app development?",
-    answer: "",
+    question: "Can Waaw handle both web and app development?",
+    answer: "Yes, Waaw provides full-service web and app development. From responsive websites to custom mobile applications, we deliver high-quality solutions that are both user-friendly and scalable.",
   },
   {
     id: "item-5",
     question: "Do you provide ongoing support after launch?",
-    answer: "",
+    answer: "Absolutely. Waaw offers ongoing maintenance and support services to ensure your website or app runs smoothly. Our team is available for updates, troubleshooting, and performance optimization whenever you need it.",
   },
   {
     id: "item-6",
-    question: "How can I start a project with Waave?",
-    answer: "",
+    question: "How can I start a project with Waaw?",
+    answer: "Starting a project with Waaw is simple. Contact us via our website or email, share your project details, and our team will guide you through the planning and development process to bring your idea to life.",
   },
 ];
+
 
 export const MainContentSection = (): JSX.Element => {
   return (
@@ -83,21 +85,26 @@ export const MainContentSection = (): JSX.Element => {
 
           <div className="hidden md:block absolute top-[246px] left-[-15px] w-[89px] h-[89px] rounded-[44.5px] blur-[55px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)]" />
 
-          <Button className="relative w-[200px] md:w-[239px] h-[50px] md:h-[59px] bg-transparent border-0 p-0 hover:bg-transparent h-auto">
-            <img
-              className="absolute top-0 left-0 w-full h-full"
-              alt="Subtract"
-              src="/subtract-3.svg"
-            />
-            <span className="relative z-10 [font-family:'Montserrat',Helvetica] font-bold text-[#3466aa] text-base md:text-lg tracking-[0] leading-[normal]">
-              Plan with Us
-            </span>
-            <img
-              className="absolute w-[13.49%] h-[44.45%] top-[28.81%] left-[80.08%] z-10"
-              alt="Vector"
-              src="/vector-15.svg"
-            />
-          </Button>
+          <Link href="/contact" className="block mt-6">
+              <div className="relative inline-flex items-center justify-center w-[200px] h-[59px]">
+                <img
+                  className="absolute top-0 left-0 w-[200px] h-[59px]"
+                  alt="Subtract"
+                  src="/subtract.svg"
+                />
+                <span
+                  className="absolute left-5 top-1/2 -translate-y-1/2 [font-family:'Montserrat',Helvetica] font-semibold text-black text-xl z-10"
+                  style={{ width: '120px', textAlign: 'left' }}
+                >
+                  Plan with us
+                </span>
+                <img
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 z-10"
+                  alt="Vector"
+                  src="/vector-20.svg"
+                />
+              </div>
+            </Link>
         </div>
 
         <div className="w-full md:w-[629px] flex flex-col">
@@ -122,7 +129,9 @@ export const MainContentSection = (): JSX.Element => {
                       </div>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent></AccordionContent>
+                  <AccordionContent className="[font-family:'Montserrat',Helvetica] font-normal text-[#bbbbbb] text-sm md:text-base text-left tracking-[0] leading-[normal] mt-4">
+                    {item.answer}
+                  </AccordionContent>
                   <div
                     className="h-px [background:radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,1)_40%,rgba(0,0,0,1)_100%)]"
                     style={{

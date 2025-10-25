@@ -1,2 +1,3 @@
-- [x] Wrap "Get Started" button in Hero.tsx with Link to "/contact"
-- [x] Wrap "Get Started" button in FooterSection.tsx with Link to "/contact"
+- [x] Update Hero button hover effects (add scale, shadow, transition)
+- [x] Update Footer button hover effects (add scale, transition)
+- [x] Update MainContentSection button hover effects (add scale, opacity, transition)

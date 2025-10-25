@@ -21,20 +21,20 @@ const blogCards = [
 
 export const BlogsSection = (): JSX.Element => {
   return (
-    <section className="relative w-full min-h-[960px] bg-black overflow-hidden py-[110px] px-4">
+    <section className="relative w-full min-h-[960px] bg-black overflow-hidden py-[50px] px-4 mt-4">
       <div className="absolute top-[-145px] left-[-145px] w-[290px] h-[290px] rounded-[145px] blur-[250px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(130,183,220,1)_0%)]" />
 
       <div className="absolute top-[777px] left-[1363px] w-[290px] h-[290px] rounded-[145px] blur-[250px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(130,183,220,1)_0%)]" />
 
       <div className="relative max-w-[1440px] mx-auto">
         <div className="flex flex-col items-center">
-          <div className="relative mb-[60px] md:mb-[111px]">
+          <div className="relative mb-[30px] md:mb-[111px]">
               <>
   <div className="w-24 h-px bg-[#82b7dc] mx-auto mb-2"></div>
-  <div className="text-[#82b7dc] text-2xl font-extrabold tracking-wide text-center">
+  <div className="text-[#82b7dc] text-2xl font-extrabold tracking-wide text-center mt-2">
     BLOGS
   </div>
-  <div className="w-24 h-px bg-[#82b7dc] mx-auto mt-2"></div>
+  <div className="w-24 h-px bg-[#82b7dc] mx-auto "></div>
 </>
             {/* Decorative Elements Around BLOGS Title */}
             {/* <div className="absolute top-[36px] left-[-26px] w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90" />
@@ -47,11 +47,11 @@ export const BlogsSection = (): JSX.Element => {
             <div className="absolute top-[53px] left-[-19px] w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90" /> */}
           </div>
 
-          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[24px] md:text-[32px] text-center tracking-[0] leading-[normal] underline mb-[40px] md:mb-[68px] max-w-[529px]">
+          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[24px] md:text-[32px] text-center tracking-[0] leading-[normal] underline mb-[2px] md:mb-[38px] max-w-[529px]">
             Insights That Inspire Innovation
           </h3>
 
-          <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-lg md:text-xl text-center tracking-[0] leading-[normal] mb-[80px] md:mb-[163px] max-w-[814px]">
+          <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#bbbbbb] text-lg md:text-xl text-center tracking-[0] leading-[normal] mb-[80px] md:mb-[43px] max-w-[814px]">
             Explore the latest in design, development, and digital strategy. At
             WAAW, we share ideas, trends, and expert perspectives that help
             businesses stay ahead in the ever-evolving digital world.

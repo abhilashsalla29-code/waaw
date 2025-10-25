@@ -32,7 +32,7 @@ export function Navbar() {
         {/* Desktop Contact Button */}
         <Link
           href="/contact"
-          className="hidden md:relative md:inline-flex md:items-center md:justify-center md:w-[200px] md:h-[59px]"
+          className="hidden md:relative md:inline-flex md:items-center md:justify-center md:w-[200px] md:h-[59px] hover:bg-[#f0f4ff] hover:scale-105 hover:shadow-lg transition-all duration-300"
         >
           {/* SVG background serving as the button shape */}
           <img
@@ -42,7 +42,7 @@ export function Navbar() {
           />
           {/* "Let's Talk" in the rectangle section (left) */}
           <span
-            className="absolute left-5 top-1/2 -translate-y-1/2 [font-family:'Montserrat',Helvetica] font-semibold text-black text-xl z-10"
+            className="absolute left-5 top-1/2 -translate-y-1/2 [font-family:'Montserrat',Helvetica] font-semibold text-black text-xl z-10 "
             style={{ width: '120px', textAlign: 'left' }}
           >
             Let's Talk

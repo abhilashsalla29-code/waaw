@@ -23,7 +23,7 @@ const industries = [
     title: "Financial Services",
     description: "We empower financial brands to drive user trust, boost user experience, streamline operations, and maximize ROI through UX/UI excellence.",
     icons: [
-      { icon: "/i6.jpg", label: "i6" }
+      { icon: "/i6.png", label: "i6" }
     ]
   },
   {

@@ -17,8 +17,8 @@ const pricingPlans = [
       "Basic SEO setup",
       "Delivery within standard timeline",
     ],
-    buttonText: "Find Your Plan",
-    buttonVariant: "default" as const,
+    buttonText: "Get Started",
+    buttonVariant: "secondary" as const,
     highlighted: false,
   },
   {
@@ -104,7 +104,7 @@ export const PricingSection = (): JSX.Element => {
                 {plan.highlighted && (
                   <>
                     <div className="absolute top-0 left-0 w-full h-[175px] bg-[rgba(255,255,255,0.07)] blur-[50px]" />
-                    <div className="absolute top-0 left-0 w-full h-0.5 bg-[#d9d9d9]" />
+                    <div className="absolute top-0 left-0 w-full h-0.5 bg-[#bbbbbb]" />
                     <div className="absolute top-0 left-0 w-full h-[49px] bg-[rgba(255,255,255,0.3)] blur-[50px]" />
                   </>
                 )}
@@ -132,11 +132,7 @@ export const PricingSection = (): JSX.Element => {
                     <div className="mt-6 flex justify-center">
                       <Button
                         variant={plan.buttonVariant}
-                        className={`w-full max-w-[271px] h-[40px] md:h-[50px] rounded-[20px] md:rounded-[30px] backdrop-blur-[2px] backdrop-brightness-[110%] text-${
-                          plan.buttonVariant === "default"
-                            ? "black bg-white"
-                            : "white bg-transparent"
-                        }`}
+                        className="w-full max-w-[271px] h-[40px] md:h-[50px] rounded-[20px] md:rounded-[30px] backdrop-blur-[2px] backdrop-brightness-[110%] text-white bg-transparent"
                       >
                         {plan.buttonText}
                       </Button>
@@ -149,7 +145,7 @@ export const PricingSection = (): JSX.Element => {
                     <div className="mt-4 space-y-3">
                       {plan.features.map((feat, i) => (
                         <div key={i} className="flex items-center gap-3">
-                          <div className="bg-white w-4 h-4 rounded flex items-center justify-center">
+                          <div className="bg-[#ffffff] w-4 h-4 rounded flex items-center justify-center">
                             <CheckIcon className="w-3 h-3 text-black" strokeWidth={3} />
                           </div>
                           <span className="text-[#a19e9e] text-xs md:text-sm">

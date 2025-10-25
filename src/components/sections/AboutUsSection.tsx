@@ -129,7 +129,7 @@ const statsCards = [
   {
     value: "1.5x",
     description: "Launch Smarter Faster",
-    className: "top-[405px] left-[1006px] md:top-[320px] md:left-[calc(100%-340px)] lg:top-[405px] lg:left-[1006px]",
+    className: "top-[405px] left-[1006px] md:top-[320px] md:left-[calc(100%-300px)] lg:top-[405px] lg:left-[1006px] xl:left-[900px] 2xl:left-[950px]",
     rotated: false,
     valueLeft: "left-[34px]",
     descLeft: "left-[119px]",
@@ -137,7 +137,7 @@ const statsCards = [
   {
     value: "30%",
     description: "Years of Skill One Vision",
-    className: "top-[602px] left-[1072px] md:top-[480px] md:left-[calc(100%-280px)] lg:top-[602px] lg:left-[1072px]",
+    className: "top-[602px] left-[1072px] md:top-[480px] md:left-[calc(100%-240px)] lg:top-[602px] lg:left-[1072px] xl:left-[950px] 2xl:left-[1000px]",
     rotated: true,
     valueLeft: "left-[193px]",
     descLeft: "left-[29px]",
@@ -145,7 +145,7 @@ const statsCards = [
   {
     value: "20+",
     description: "Uniquely Coded Foundations",
-    className: "top-[799px] left-[1006px] md:top-[640px] md:left-[calc(100%-340px)] lg:top-[799px] lg:left-[1006px]",
+    className: "top-[799px] left-[1006px] md:top-[640px] md:left-[calc(100%-300px)] lg:top-[799px] lg:left-[1006px] xl:left-[900px] 2xl:left-[950px]",
     rotated: false,
     valueLeft: "left-7",
     descLeft: "left-[113px]",
@@ -155,15 +155,15 @@ const statsCards = [
 const pillButtons = [
   {
     text: "Digital Innovation",
-    className: "top-[804px] left-[138px] md:top-[700px] md:left-[5%] lg:top-[804px] lg:left-[138px]",
+    className: "top-[804px] left-[138px] md:top-[700px] md:left-[5%] lg:top-[804px] lg:left-[138px] hover:scale-105 transition-all duration-300",
   },
   {
     text: "Experience Design",
-    className: "top-[804px] left-[532px] md:top-[700px] md:left-[calc(50%-147px)] lg:top-[804px] lg:left-[532px]",
+    className: "top-[804px] left-[532px] md:top-[700px] md:left-[calc(50%-147px)] lg:top-[804px] lg:left-[532px] hover:scale-105 transition-all duration-300",
   },
   {
     text: "Strategic Development",
-    className: "top-[804px] left-[339px] md:top-[800px] md:left-[calc(50%-147px)] lg:top-[917px] lg:left-[339px]",
+    className: "top-[804px] left-[339px] md:top-[800px] md:left-[calc(50%-147px)] lg:top-[917px] lg:left-[339px] hover:scale-105 transition-all duration-300",
   },
 ];
 
@@ -311,7 +311,7 @@ export const AboutUsSection = (): JSX.Element => {
           </div>
         </section>
       </div>
-      <div className="block 2xl:hidden">
+      <div className="block xl:hidden">
         <AboutUsSectionMobile />
       </div>
     </>
