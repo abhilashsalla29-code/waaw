@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "../ui/card";
+import MatchstickBoxHeading from "./MatchstickHeading";
 
 const servicesData = [
   {
@@ -64,28 +65,30 @@ export const ServicesSection = (): JSX.Element => {
       <div className="relative max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
         {/* Header */}
         <header className="flex flex-col items-center mb-14 md:mb-20 relative text-center">
-          <h1 className="mt-10 font-extrabold text-[#82b7dc] text-[30px] md:text-[38px] lg:text-[48px] tracking-widest leading-tight uppercase underline underline-offset-8 decoration-[2.5px] decoration-[#ffffff88] [font-family:'Montserrat',Helvetica] drop-shadow-[0_2px_12px_rgba(130,183,220,0.4)]">
-            SERVICES
+          <h1 className="mt-10 font-extrabold text-[#82b7dc] text-[30px] md:text-[38px] lg:text-[48px] mb-4 tracking-widest leading-tight uppercase  [font-family:'Montserrat',Helvetica] drop-shadow-[0_2px_12px_rgba(130,183,220,0.4)]">
+           <MatchstickBoxHeading>SERVICES</MatchstickBoxHeading> 
           </h1>
-          <p className="font-extrabold text-[#bbbbbb] text-xl md:text-2xl lg:text-3xl leading-snug max-w-[90%] md:max-w-[600px] mt-3 [font-family:'Montserrat',Helvetica] tracking-wide underline decoration-[#82b7dc]/40 decoration-2 underline-offset-4">
-            Where Creativity Meets Cutting-Edge Technology.
-          </p>
+      <p className="font-extrabold text-[#bbbbbb] text-lg sm:text-xl md:text-2xl lg:text-3xl leading-snug max-w-[95%] sm:max-w-[90%] md:max-w-[600px] lg:max-w-none mt-3 [font-family:'Montserrat',Helvetica] tracking-wide underline decoration-[#82b7dc]/60 decoration-2 underline-offset-4 lg:whitespace-nowrap">
+  Where Creativity Meets Cutting-Edge Technology.
+</p>
+
+
         </header>
 
         {/* Core Pillars */}
         <div className="flex flex-col items-center">
-          <h2 className="font-extrabold text-[#82b7dc] text-[26px] md:text-[32px] lg:text-[40px] text-center tracking-wider leading-normal mb-12 [font-family:'Montserrat',Helvetica] uppercase">
+          <h2 className="font-extrabold text-[#82b7dc] text-[18px] md:text-[32px] lg:text-[30px] text-center tracking-wider leading-normal mb-12 [font-family:'Montserrat',Helvetica] uppercase">
             Our Core Pillars
           </h2>
 
           {/* Decorative corners */}
           <img
-            className="hidden lg:block absolute w-[22%] xl:w-[25%] top-[6%] left-[-10%] opacity-70"
+            className="hidden lg:block absolute w-[22%] xl:w-[25%] top-[6%] left-[-20%] opacity-70"
             alt="Decorative"
             src="/servicesm.png"
           />
           <img
-            className="hidden lg:block absolute w-[22%] xl:w-[25%] bottom-[6%] right-[-10%] opacity-70"
+            className="hidden lg:block absolute w-[22%] xl:w-[25%] bottom-[6%] scale-x-[-1] right-[-20%] opacity-70"
             alt="Decorative"
             src="/servicesm.png"
           />

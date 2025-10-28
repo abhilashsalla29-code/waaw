@@ -85,9 +85,9 @@ export const AudienceGrid = (): JSX.Element => {
               </Card>
 
               {/* Card 2 - Top Right (No Glass, Darker) */}
-              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden backdrop-blur-[3px] backdrop-brightness-[90%] shadow-[inset_0_1px_3px_rgba(255,255,255,0.12),inset_0_-1px_3px_rgba(0,0,0,0.3),0_6px_25px_rgba(0,0,0,0.5)] bg-[linear-gradient(320deg,rgba(18,25,35,0.95)_0%,rgba(28,38,55,0.85)_100%)] border border-white/8 hover:border-[#82b7dc]/25 transition-all duration-300">
+              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden  transition-all duration-300">
                 <CardContent className="relative w-full h-full p-0">
-                  <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90 bg-white/40 blur-[2px]" />
+                  <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90 blur-[2px]" />
                   
                   <div className="relative z-10 pt-8 px-7">
                     <h3 className="text-[#bbbbbb] [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
@@ -143,7 +143,7 @@ export const AudienceGrid = (): JSX.Element => {
             {/* Bottom Row */}
             <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-10">
               {/* Card 3 - Bottom Left (No Glass, Darker) */}
-              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden backdrop-blur-[3px] backdrop-brightness-[90%] shadow-[inset_0_1px_3px_rgba(255,255,255,0.12),inset_0_-1px_3px_rgba(0,0,0,0.3),0_6px_25px_rgba(0,0,0,0.5)] bg-[linear-gradient(320deg,rgba(18,25,35,0.95)_0%,rgba(28,38,55,0.85)_100%)] border border-white/8 hover:border-[#82b7dc]/25 transition-all duration-300">
+              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden  transition-all duration-300">
                 <CardContent className="relative w-full h-full p-0">
                   <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90 bg-white/40 blur-[2px]" />
                   

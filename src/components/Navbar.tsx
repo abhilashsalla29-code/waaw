@@ -32,7 +32,7 @@ export function Navbar() {
         {/* Desktop Contact Button */}
         <Link
           href="/contact"
-          className="hidden md:relative md:inline-flex md:items-center md:justify-center md:w-[200px] md:h-[59px] hover:bg-[#f0f4ff] hover:scale-105 hover:shadow-lg transition-all duration-300"
+          className="hidden md:relative md:inline-flex md:items-center md:justify-center md:w-[200px] md:h-[59px]  hover:scale-105 hover:shadow-lg transition-all duration-300"
         >
           {/* SVG background serving as the button shape */}
           <img

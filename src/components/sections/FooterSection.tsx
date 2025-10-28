@@ -88,7 +88,7 @@ export const FooterSection = (): JSX.Element => (
         {/* Button */}
         <Link href="/contact">
           <Button className="flex items-center gap-2 w-[150px] md:w-[198px] h-[40px] md:h-[50px] bg-gradient-to-r from-[#3466aa] to-[#3466aa] hover:from-[#2a5590] hover:to-[#2a5590] rounded-[20px] md:rounded-[25px] hover:scale-105 transition-all duration-300">
-            <span className="[font-family:'Montserrat',Helvetica] font-bold text-[#bbbbbb] text-sm md:text-base ">
+            <span className="[font-family:'Montserrat',Helvetica] font-bold text-[#bbbbbb] text-sm md:text-base hover:scale-105 duration-200 transition-all ">
               Get Started
             </span>
             <ArrowRightIcon className="w-4 md:w-6 h-4 md:h-6 text-[#bbbbbb]" />

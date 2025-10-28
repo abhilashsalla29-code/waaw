@@ -2,6 +2,8 @@ import React from "react";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 
+import MatchstickHeading from "./MatchstickHeading";
+
 const statsMobile = [
   { value: "1.5x", description: "Launch Smarter Faster" },
   { value: "30%", description: "Years of Skill One Vision" },
@@ -19,6 +21,7 @@ const AboutUsSectionMobile = () => (
     {/* Title */}
     <div className="text-[#82b7dc] text-2xl md:text-4xl lg:text-5xl font-extrabold mt-2 tracking-wide text-center border border-white">
       ABOUT
+      
     </div>
     {/* Mesh */}
     {/* <img src="/mesh1.png" alt="Mesh" className="mx-auto w-[220px] md:w-[300px] lg:w-[400px] mb-3" /> */}
@@ -34,7 +37,7 @@ const AboutUsSectionMobile = () => (
     <Button variant="ghost" className="relative mb-2 px-0">
       <img alt="bg" src="/subtract.svg" className="w-[160px] md:w-[200px] lg:w-[240px] absolute left-0 top-0" />
       <span className="relative font-bold text-[#3466aa] text-sm md:text-base lg:text-lg px-6">Explore Now</span>
-      <img alt="Vector" src="/vector-15.svg" className="absolute w-4 md:w-5 lg:w-6 right-2 top-[14px] md:top-[16px] lg:top-[18px]" />
+      <img alt="Vector" src="/vector-15.svg" className=" w-4 md:w-5 lg:w-6 right-2 top-[14px] md:top-[16px] lg:top-[18px]" />
     </Button>
     {/* Mesh 2 Optional: */}
     <img src="/MESH.png" alt="Mesh2" className="mx-auto w-[130px] md:w-[180px] lg:w-[220px] my-24" />
@@ -63,48 +66,48 @@ const AboutUsSectionMobile = () => (
   </section>
 );
 
-const decorativeElements = [
-  {
-    type: "line",
-    className:
-      "absolute top-[131px] left-[610px] w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90 blur-[2px] md:top-[100px] md:left-[45%]",
-  },
-  {
-    type: "line",
-    className:
-      "absolute top-[131px] left-[797px] w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90 blur-[2px] md:top-[100px] md:left-[55%]",
-  },
-  {
-    type: "dot",
-    className:
-      "absolute top-[111px] left-[622px] w-2 h-2 bg-white rounded rotate-180 blur-sm md:top-[85px] md:left-[45%]",
-  },
-  {
-    type: "dot",
-    className:
-      "absolute top-[111px] left-[809px] w-2 h-2 bg-white rounded rotate-180 blur-sm md:top-[85px] md:left-[55%]",
-  },
-  {
-    type: "glow",
-    className:
-      "top-[172px] left-[603px] absolute w-[157px] h-1 bg-white rounded-[78.5px/2px] blur-[5px] md:top-[130px] md:left-[42%]",
-  },
-  {
-    type: "glow",
-    className:
-      "absolute top-[84px] left-[681px] w-[157px] h-1 bg-white rounded-[78.5px/2px] rotate-180 blur-[5px] md:top-[65px] md:left-[46%]",
-  },
-  {
-    type: "circle",
-    className:
-      "top-[154px] left-[585px] absolute w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90 blur-sm md:top-[120px] md:left-[40%]",
-  },
-  {
-    type: "circle",
-    className:
-      "absolute top-[71px] left-[821px] w-[35px] h-[35px] bg-white rounded-[17.5px] -rotate-90 blur-sm md:top-[55px] md:left-[57%]",
-  },
-];
+// const decorativeElements = [
+//   {
+//     type: "line",
+//     className:
+//       "absolute top-[131px] left-[610px] w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90 blur-[2px] md:top-[100px] md:left-[45%]",
+//   },
+//   {
+//     type: "line",
+//     className:
+//       "absolute top-[131px] left-[797px] w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90 blur-[2px] md:top-[100px] md:left-[55%]",
+//   },
+//   {
+//     type: "dot",
+//     className:
+//       "absolute top-[111px] left-[622px] w-2 h-2 bg-white rounded rotate-180 blur-sm md:top-[85px] md:left-[45%]",
+//   },
+//   {
+//     type: "dot",
+//     className:
+//       "absolute top-[111px] left-[809px] w-2 h-2 bg-white rounded rotate-180 blur-sm md:top-[85px] md:left-[55%]",
+//   },
+//   {
+//     type: "glow",
+//     className:
+//       "top-[172px] left-[603px] absolute w-[157px] h-1 bg-white rounded-[78.5px/2px] blur-[5px] md:top-[130px] md:left-[42%]",
+//   },
+//   {
+//     type: "glow",
+//     className:
+//       "absolute top-[84px] left-[681px] w-[157px] h-1 bg-white rounded-[78.5px/2px] rotate-180 blur-[5px] md:top-[65px] md:left-[46%]",
+//   },
+//   {
+//     type: "circle",
+//     className:
+//       "top-[154px] left-[585px] absolute w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90 blur-sm md:top-[120px] md:left-[40%]",
+//   },
+//   {
+//     type: "circle",
+//     className:
+//       "absolute top-[71px] left-[821px] w-[35px] h-[35px] bg-white rounded-[17.5px] -rotate-90 blur-sm md:top-[55px] md:left-[57%]",
+//   },
+// ];
 
 const glowOrbs = [
   {
@@ -182,11 +185,11 @@ export const AboutUsSection = (): JSX.Element => {
 
         {/* ABOUT Title */}
        <>
-  <div className="w-24 h-px bg-[#82b7dc] mx-auto mb-2"></div>
-  <div className="text-[#82b7dc] text-2xl font-extrabold tracking-wide text-center">
-    ABOUT
+  <div className="w-24 h-px  mx-auto mb-2 "></div>
+  <div className=" text-2xl font-extrabold tracking-wide text-center mt-32">
+   <MatchstickHeading>About</MatchstickHeading>
   </div>
-  <div className="w-24 h-px bg-[#82b7dc] mx-auto mt-2"></div>
+  <div className="w-24 h-px  mx-auto mt-2"></div>
 </>
         {/* Decorative Elements Around ABOUT Title
         <div className="absolute top-[131px] left-[610px] w-[33px] h-px bg-white rounded-[16.5px/0.5px] rotate-90 md:top-[100px] md:left-[45%]" />
@@ -203,12 +206,17 @@ export const AboutUsSection = (): JSX.Element => {
           // <div key={`decorative-${index}`} className={element.className} />
         ))} */}
 
-        Background Mesh Image 2
+        {/* Background Mesh Image 2 */}
         <img
           className="absolute w-[25.49%] h-[35.84%] top-[34.86%] left-[38.19%] md:w-[30%] md:h-[40%] md:top-[28%] md:left-[35%]"
           alt="Mesh"
           src="/MESH.png"
-        /> 
+        />
+        <img
+          className="absolute w-[25.49%] h-[35.84%] top-[70.7%] left-[38.19%] md:w-[30%] md:h-[40%] md:top-[58%] md:left-[35%] opacity-5"
+          alt="Mesh Shadow"
+          src="/MESH.png"
+        />
 
         {/* Glow Orbs */}
         {glowOrbs.map((orb, index) => (
@@ -228,7 +236,7 @@ export const AboutUsSection = (): JSX.Element => {
 
         {/* Vector Line */}
         <img
-          className="absolute top-[512px] left-[172px] w-[366px] h-[74px] md:top-[420px] md:left-[5%] md:w-[300px] lg:top-[512px] lg:left-[172px] lg:w-[366px]"
+          className="absolute top-[512px] left-[192px] w-[366px] h-[74px] md:top-[420px] md:left-[5%] md:w-[300px] lg:top-[512px] lg:left-[132px] lg:w-[366px]"
           alt="Vector"
           src="/vector-1.svg"
         />
@@ -236,10 +244,10 @@ export const AboutUsSection = (): JSX.Element => {
         {/* Explore Now Button */}
         <Button
           variant="ghost"
-          className="absolute top-[486px] left-[138px] w-[194px] h-[52px] md:top-[395px] md:left-[5%] lg:top-[486px] lg:left-[138px] p-0 h-auto hover:bg-transparent group"
+          className="absolute top-[486px] left-[138px] w-[194px] h-[52px] md:top-[395px] md:left-[5%] lg:top-[486px] lg:left-[138px] p-0 h-auto hover:bg-transparent group hover:scale-105 transition-transform duration-300"
         >
           <img
-            className="absolute top-0 w-48 h-[52px] left-0"
+            className="absolute top-0 left-0 w-[200px] h-[59px]"
             alt="Subtract"
             src="/subtract.svg"
           />
@@ -247,7 +255,7 @@ export const AboutUsSection = (): JSX.Element => {
             Explore Now
           </span>
           <img
-            className="absolute w-[15.35%] h-[46.22%] top-[26.92%] left-[78.35%] group-hover:translate-x-1 transition-transform"
+            className="absolute right-2 -top-1/2 translate-y-1/3 w-6 bottom-4 h-9 z-10"
             alt="Vector"
             src="/vector-15.svg"
           />
@@ -281,7 +289,7 @@ export const AboutUsSection = (): JSX.Element => {
         ))}
 
         {/* Strategize Design Launch Title */}
-        <h3 className="absolute top-[662px] left-[281px] w-[304px] md:top-[550px] md:left-[50%] md:-translate-x-1/2 md:w-[350px] lg:top-[662px] lg:left-[281px] lg:w-[304px] [font-family:'Montserrat',Helvetica] font-bold text-white text-[24px] md:text-[28px] lg:text-[32px] text-center tracking-[0] leading-[50px] md:leading-[40px] lg:leading-[50px]">
+        <h3 className="absolute top-[662px] left-[281px] w-[304px] md:top-[550px] md:left-[50%] md:-translate-x-1/2 md:w-[350px] lg:top-[662px] lg:left-[400px] lg:w-[304px] [font-family:'Montserrat',Helvetica] font-bold text-white text-[20px] md:text-[28px] lg:text-[30px] text-center tracking-[0] leading-[50px] md:leading-[40px] lg:leading-[50px]">
           Strategize Design Launch
         </h3>
 
@@ -290,7 +298,7 @@ export const AboutUsSection = (): JSX.Element => {
           <Button
             key={`pill-button-${index}`}
             variant="ghost"
-            className={`${button.className} ${index === 0 ? "flex" : ""} w-[295px] h-[71px] md:w-[260px] md:h-[65px] lg:w-[295px] lg:h-[71px] absolute rounded-[30px] overflow-hidden backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] bg-[linear-gradient(316deg,rgba(255,255,255,0.01)_0%,rgba(130,183,220,0.01)_100%)] hover:bg-[linear-gradient(316deg,rgba(255,255,255,0.08)_0%,rgba(130,183,220,0.08)_100%)] transition-all h-auto p-0 group`}
+            className={`${button.className} ${index === 0 ? "flex" : ""} w-[295px] h-[71px] md:w-[260px] md:h-[65px] lg:w-[295px] lg:h-[71px] absolute rounded-[30px] overflow-hidden backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] hover:bg-black bg-[linear-gradient(316deg,rgba(255,255,255,0.01)_0%,rgba(130,183,220,0.01)_100%)] hover:bg-[linear-gradient(316deg,rgba(255,255,255,0.08)_0%,rgba(130,183,220,0.08)_100%)] transition-all h-auto p-0 group`}
           >
             <div
               className={`${index === 0 ? "mt-[-202px] ml-[183px]" : "absolute top-[-202px] left-[183px]"} w-[7px] h-[397px] rounded-[3.5px/198.5px] -rotate-90 bg-black blur-sm`}

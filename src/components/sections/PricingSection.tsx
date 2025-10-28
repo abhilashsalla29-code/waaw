@@ -132,7 +132,7 @@ export const PricingSection = (): JSX.Element => {
                     <div className="mt-6 flex justify-center">
                       <Button
                         variant={plan.buttonVariant}
-                        className="w-full max-w-[271px] h-[40px] md:h-[50px] rounded-[20px] md:rounded-[30px] backdrop-blur-[2px] backdrop-brightness-[110%] text-white bg-transparent"
+                        className="w-full max-w-[271px] h-[40px] md:h-[50px] rounded-[20px] md:rounded-[30px] backdrop-blur-[2px] backdrop-brightness-[110%] text-white bg-inherit hover:bg-inherit hover:scale-105 transition-transform duration-300"
                       >
                         {plan.buttonText}
                       </Button>

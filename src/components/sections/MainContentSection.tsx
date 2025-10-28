@@ -78,14 +78,14 @@ export const MainContentSection = (): JSX.Element => {
           </div>
 
           <img
-            className="hidden md:block absolute w-[308px] h-[309px] top-[-6px] left-[-178px] object-cover"
+            className="hidden md:block absolute w-[208px] h-[209px] top-[-6px] left-[-128px] object-cover"
             alt="Tk"
             src="/tk3.png"
           />
 
-          <div className="hidden md:block absolute top-[246px] left-[-15px] w-[89px] h-[89px] rounded-[44.5px] blur-[55px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)]" />
+          <div className="hidden md:block absolute top-[246px] left-[-15px] w-[89px] h-[89px] rounded-[44.5px] blur-[55px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] " />
 
-          <Link href="/contact" className="block mt-6">
+          <Link href="/contact" className="block mt-6 hover:scale-105 transition-transform duration-300">
               <div className="relative inline-flex items-center justify-center w-[200px] h-[59px]">
                 <img
                   className="absolute top-0 left-0 w-[200px] h-[59px]"
@@ -93,7 +93,7 @@ export const MainContentSection = (): JSX.Element => {
                   src="/subtract.svg"
                 />
                 <span
-                  className="absolute left-5 top-1/2 -translate-y-1/2 [font-family:'Montserrat',Helvetica] font-semibold text-black text-xl z-10"
+                  className="absolute left-5 top-1/2 -translate-y-1/2 [font-family:'Montserrat',Helvetica] font-semibold text-black text-xl z-10 "
                   style={{ width: '120px', textAlign: 'left' }}
                 >
                   Plan with us

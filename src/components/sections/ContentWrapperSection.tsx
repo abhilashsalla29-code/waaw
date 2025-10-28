@@ -18,8 +18,9 @@ export const ContentWrapperSection = () => {
           Our process ensures seamless design, development, and delivery for impactful digital experiences.
         </p>
 
-        {/* Main visual container with Frame-50 and rotating center */}
+        {/* ===== Main visual + desktop positioned process cards ===== */}
         <div className="relative w-full max-w-[1000px] mx-auto mb-12 md:mb-16">
+          {/* Visual container: gives a fixed-ish area on md+ so cards can be positioned around it */}
           <div className="relative w-full aspect-square max-w-[700px] mx-auto">
             {/* Frame-50 background image */}
             <img
@@ -36,11 +37,73 @@ export const ContentWrapperSection = () => {
                 className="w-full h-full object-contain animate-spin-slow"
               />
             </div>
+
+            {/* ---------- Desktop absolute positioned process cards (md+) ---------- */}
+            {/* Hidden on small screens, visible on md+ */}
+            <div className="hidden md:block">
+              {/* Top Left */}
+              <div className="absolute -left-24 top-16 w-84 lg:w-72">
+                <ProcessCard
+                  title="Envision"
+                  // icon="/frame-1.svg"
+                  items={[
+                    "Define goals",
+                    "Research audience",
+                    "Plan features",
+                    "Set the vision",
+                  ]}
+                />
+              </div>
+
+              {/* Top Right */}
+              <div className="absolute -right-60 top-16 text-right ">
+                <ProcessCard
+                  title="Design"
+                  // icon="/frame-47.svg"
+                  align="left"
+                  items={[
+                    "Wireframes & flows",
+                    "UI/UX layouts",
+                    "Visual interfaces",
+                    "Interactive prototypes",
+                  ]}
+                />
+              </div>
+
+              {/* Bottom Left */}
+              <div className="absolute -left-24 bottom-16 w-84 lg:w-72">
+                <ProcessCard
+                  title="Elevate"
+                  // icon="/frame-39.svg"
+                  items={[
+                    "Refine design",
+                    "Optimize usability",
+                    "Ensure responsiveness",
+                    "Enhance features",
+                  ]}
+                />
+              </div>
+
+              {/* Bottom Right */}
+              <div className="absolute -right-60 bottom-16  text-right ">
+                <ProcessCard
+                  title="Unleash"
+                  // icon="/frame-40.svg"
+                  align="left"
+                  items={[
+                    "Finalize product",
+                    "Test & QA",
+                    "Launch smoothly",
+                    "Provide support",
+                  ]}
+                />
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Process Details Section - Responsive Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 max-w-[1200px] mx-auto">
+        {/* ===== Mobile / small screens: keep the responsive grid (visible on < md) ===== */}
+        <div className="block md:hidden grid grid-cols-1 gap-8 max-w-[1200px] mx-auto">
           {/* Envision */}
           <div className="text-center md:text-left space-y-3">
             <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1a2332] rounded-full flex items-center justify-center mx-auto md:mx-0 mb-3">
@@ -155,6 +218,7 @@ export const ContentWrapperSection = () => {
         </div>
       </div>
 
+      {/* small CSS for slow-spin (kept) */}
       <style jsx>{`
         @keyframes spin-slow {
           from {
@@ -174,3 +238,35 @@ export const ContentWrapperSection = () => {
 };
 
 export default ContentWrapperSection;
+
+/* ---------- helper ProcessCard component (inside same file) ---------- */
+/* If you prefer to split into another file you can — I put it here for convenience. */
+interface ProcessCardProps {
+  title: string;
+  // icon: string;
+  items: string[];
+  align?: "left" | "right";
+}
+
+const ProcessCard: React.FC<ProcessCardProps> = ({ title, items = [], align = "left" }) => {
+  const isRight = align === "right";
+  return (
+    <div className={`text-${isRight ? "right" : "left"} space-y-3 w-72 `}>
+      {/* <div className={`w-12 h-12 md:w-14 md:h-14 bg-[#1a2332] rounded-full flex items-center justify-center mb-3 mx-0 ${isRight ? "ml-auto" : ""}`}>
+        <img className="w-6 h-6 md:w-7 md:h-7" alt={title} src={icon} />
+      </div> */}
+      <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-lg md:text-xl">
+        {title}
+      </h3>
+      <ul className="space-y-2 text-[#bbbbbb] text-sm md:text-base">
+        {items.map((it) => (
+          <li key={it} className={`flex items-start ${isRight ? "justify-end" : "justify-start"}`}>
+            {/* dot */}
+            <span className={`w-1.5 h-1.5 bg-[#82b7dc] rounded-full mt-2 mr-2 flex-shrink-0 ${isRight ? "order-2 ml-2 mr-0" : ""}`}></span>
+            <span className={`${isRight ? "text-right" : ""}`}>{it}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};

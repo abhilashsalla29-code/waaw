@@ -21,7 +21,7 @@ const blogCards = [
 
 export const BlogsSection = (): JSX.Element => {
   return (
-    <section className="relative w-full min-h-[960px] bg-black overflow-hidden py-[50px] px-4 mt-4">
+    <section className="relative w-full min-h-[960px] bg-black overflow-hidden py-[50px] px-4 ">
       <div className="absolute top-[-145px] left-[-145px] w-[290px] h-[290px] rounded-[145px] blur-[250px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(130,183,220,1)_0%)]" />
 
       <div className="absolute top-[777px] left-[1363px] w-[290px] h-[290px] rounded-[145px] blur-[250px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(130,183,220,1)_0%)]" />
@@ -30,8 +30,8 @@ export const BlogsSection = (): JSX.Element => {
         <div className="flex flex-col items-center">
           <div className="relative mb-[30px] md:mb-[111px]">
               <>
-  <div className="w-24 h-px bg-[#82b7dc] mx-auto mb-2"></div>
-  <div className="text-[#82b7dc] text-2xl font-extrabold tracking-wide text-center mt-2">
+  <div className="w-24 h-px bg-[#82b7dc] mx-auto  mt-10"></div>
+  <div className="text-[#82b7dc] text-2xl font-extrabold tracking-wide text-center ">
     BLOGS
   </div>
   <div className="w-24 h-px bg-[#82b7dc] mx-auto "></div>
