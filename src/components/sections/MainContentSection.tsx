@@ -44,7 +44,8 @@ const faqItems = [
 
 export const MainContentSection = (): JSX.Element => {
   return (
-    <section className="w-full relative bg-black overflow-hidden py-[80px] md:py-[141px] px-4 md:px-[138px]">
+    <section className="w-full relative bg-black overflow-hidden py-[80px] md:py-[141px] ">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
       <div className="flex flex-col md:flex-row justify-between items-start gap-8">
         <div className="flex flex-col items-center relative w-full md:w-auto">
           <div className="relative mb-[40px] md:mb-[81px]">
@@ -93,8 +94,8 @@ export const MainContentSection = (): JSX.Element => {
                   src="/subtract.svg"
                 />
                 <span
-                  className="absolute left-5 top-1/2 -translate-y-1/2 [font-family:'Montserrat',Helvetica] font-semibold text-black text-xl z-10 "
-                  style={{ width: '120px', textAlign: 'left' }}
+                  className="absolute left-5 top-1/2 -translate-y-1/2 [font-family:'Montserrat',Helvetica] font-semibold text-black text-l z-10 "
+                  style={{ width: '100px', textAlign: 'left' }}
                 >
                   Plan with us
                 </span>
@@ -107,7 +108,7 @@ export const MainContentSection = (): JSX.Element => {
             </Link>
         </div>
 
-        <div className="w-full md:w-[629px] flex flex-col">
+        <div className="w-full md:w-[629px] max-w-[640px] flex flex-col cursor-auto">
           <Accordion type="single" collapsible className="w-full">
             {faqItems.map((item, index) => (
               <AccordionItem
@@ -166,6 +167,7 @@ export const MainContentSection = (): JSX.Element => {
             ))}
           </Accordion>
         </div>
+      </div>
       </div>
     </section>
   );

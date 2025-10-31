@@ -57,7 +57,7 @@ export const FooterSection = (): JSX.Element => (
     <div className="relative mx-auto max-w-[1106px] min-h-[400px] md:h-[358px] rounded-[30px] overflow-hidden border border-white/20 backdrop-blur-[2px] backdrop-brightness-[110%] bg-[linear-gradient(11deg,rgba(0,0,0,0.1)_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] flex flex-col md:flex-row">
       {/* Left image */}
       <img
-        className="w-full md:w-[41.95%] h-[120px] md:h-full object-cover"
+        className="w-full md:w-[30.95%] h-[160px] sm:h-[200px] md:h-full object-contain"
         src="/audiencegridm.png"
         alt="Decor"
       />
@@ -75,7 +75,7 @@ export const FooterSection = (): JSX.Element => (
         <div className="absolute top-[-15px] right-[50px] md:left-[200px] w-[30px] md:w-[53px] h-[30px] md:h-[53px] rounded-full blur-[6px] md:blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)]" />
 
         {/* Title */}
-        <h2 className="w-full md:w-[517px] [font-family:'Montserrat',Helvetica] font-extrabold text-2xl md:text-4xl text-[#82b7dc] text-center md:text-left mb-4">
+        <h2 className="w-full md:w-[507px] [font-family:'Montserrat',Helvetica] font-extrabold text-2xl md:text-4xl text-[#82b7dc] text-center md:text-left mb-4">
           WHERE IDEAS FLOW AND BRANDS GROW.
         </h2>
 

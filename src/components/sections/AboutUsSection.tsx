@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
+import DecorativeLines from "../common/DecorativeLines";
 
 import MatchstickHeading from "./MatchstickHeading";
 
@@ -19,10 +20,7 @@ const pillMobile = [
 const AboutUsSectionMobile = () => (
   <section className="bg-black px-3 py-8 md:px-6 lg:px-8 xl:px-12 flex flex-col items-center gap-7 min-h-screen w-full">
     {/* Title */}
-    <div className="text-[#82b7dc] text-2xl md:text-4xl lg:text-5xl font-extrabold mt-2 tracking-wide text-center border border-white">
-      ABOUT
-      
-    </div>
+    <DecorativeLines>ABOUT</DecorativeLines>
     {/* Mesh */}
     {/* <img src="/mesh1.png" alt="Mesh" className="mx-auto w-[220px] md:w-[300px] lg:w-[400px] mb-3" /> */}
     {/* Main Heading */}
@@ -185,9 +183,9 @@ export const AboutUsSection = (): JSX.Element => {
 
         {/* ABOUT Title */}
        <>
-  <div className="w-24 h-px  mx-auto mb-2 "></div>
-  <div className=" text-2xl font-extrabold tracking-wide text-center mt-32">
-   <MatchstickHeading>About</MatchstickHeading>
+  <div className="w-24 h-px  mx-auto mb-2  "></div>
+  <div className=" text-2xl font-extrabold tracking-wide text-center mt-36">
+   <DecorativeLines className="text-white">About</DecorativeLines>
   </div>
   <div className="w-24 h-px  mx-auto mt-2"></div>
 </>
@@ -208,7 +206,8 @@ export const AboutUsSection = (): JSX.Element => {
 
         {/* Background Mesh Image 2 */}
         <img
-          className="absolute w-[25.49%] h-[35.84%] top-[34.86%] left-[38.19%] md:w-[30%] md:h-[40%] md:top-[28%] md:left-[35%]"
+          className="absolute w-[25.49%] h-[35.84%] top-[34.86%] left-[38.19%] md:w-[30%] md:h-[40%] md:top-[28%] md:left-[35%] animate-spin"
+          style={{ animationDuration: "13s" }}
           alt="Mesh"
           src="/MESH.png"
         />

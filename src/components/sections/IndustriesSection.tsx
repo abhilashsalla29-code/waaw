@@ -73,13 +73,13 @@ const IndustriesSectionMobile = () => (
               <h3 className="text-[#bbbbbb] text-lg font-bold max-w-[60%]">
                 {industry.title}
               </h3>
-              <div className="flex gap-2 flex-wrap justify-end max-w-[35%]">
+              <div className="grid grid-cols-2 gap-2 justify-end items-center max-w-[35%]">
                 {industry.icons.map((item, iconIdx) => (
                   <div
                     key={iconIdx}
-                    className="w-10 h-10 rounded-lg flex items-center justify-center text-xl"
+                    className="w-12 h-12 rounded-xl flex items-center justify-center"
                   >
-                    <img src={item.icon} alt={item.label} className="w-6 h-6" />
+                    <img src={item.icon} alt={item.label} className="w-8 h-8 object-contain" />
                   </div>
                 ))}
               </div>
@@ -117,76 +117,73 @@ const IndustriesSection = () => {
 
           {/* Industries Grid */}
           <div className="max-w-[1200px] mx-auto space-y-8">
-            {/* Top Row */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {industries.slice(0, 3).map((industry, idx) => (
+            {/* Top Row: 2 wide landscape cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {industries.slice(0, 2).map((industry, idx) => (
                 <Card
                   key={idx}
-                  className="flex flex-col justify-between h-[380px] rounded-3xl bg-gradient-to-br from-[rgba(255,255,255,0.03)] via-[rgba(153,178,213,0.08)] to-[rgba(52,102,170,0.1)] border border-[rgba(255,255,255,0.1)] backdrop-blur-sm shadow-md hover:shadow-lg hover:border-[rgba(130,183,220,0.4)] transition-all"
+                  className="h-[230px] rounded-3xl bg-gradient-to-br from-[rgba(255,255,255,0.03)] via-[rgba(153,178,213,0.08)] to-[rgba(52,102,170,0.1)] border border-[rgba(255,255,255,0.1)] backdrop-blur-sm shadow-md hover:shadow-lg hover:border-[rgba(130,183,220,0.4)] transition-all"
                 >
-                  <CardContent className="flex-1 flex flex-col justify-between p-8">
-                    {/* Drive Growth Tag */}
-                    <div className="inline-block bg-[rgba(130,183,220,0.15)] px-4 py-1.5 rounded-full mb-5">
-                      <span className="text-[#bbbbbb] text-sm font-semibold">Drive Growth</span>
-                    </div>
-
-                    {/* Title and Icons */}
-                    <div className="flex justify-between items-start mb-5">
-                      <h3 className="text-[#bbbbbb] text-xl font-bold leading-tight max-w-[60%]">
-                        {industry.title}
-                      </h3>
-                      <div className="grid grid-cols-2 gap-2 justify-end items-center max-w-[60%]">
-                        {industry.icons.map((item, iconIdx) => (
-                          <div
-                            key={iconIdx}
-                            className="w-20 h-20  flex items-center justify-center"
-                          >
-                            <img src={item.icon} alt={item.label} className="w-12 h-12" />
-                          </div>
-                        ))}
+                  <CardContent className="h-full p-8 flex items-stretch gap-6">
+                    {/* Left content */}
+                    <div className="flex-1 flex flex-col justify-between">
+                      <div className="inline-block bg-[rgba(130,183,220,0.15)] px-4 py-1.5 rounded-full w-max">
+                        <span className="text-[#bbbbbb] text-sm font-semibold">Drive Growth</span>
+                      </div>
+                      <div>
+                        <h3 className="text-[#bbbbbb] text-xl font-bold leading-tight mb-2">
+                          {industry.title}
+                        </h3>
+                        <p className="text-[#bbbbbb] text-sm leading-relaxed max-w-[90%]">
+                          {industry.description}
+                        </p>
                       </div>
                     </div>
-
-                    {/* Description */}
-                    <p className="text-[#bbbbbb] text-sm leading-relaxed">
-                      {industry.description}
-                    </p>
+                    {/* Right icons area */}
+                    <div className="w-[38%] flex items-center justify-center">
+                      {idx === 0 ? (
+                        <div className="grid grid-cols-2 gap-4">
+                          {industry.icons.slice(0, 4).map((item, iconIdx) => (
+                            <div key={iconIdx} className="w-16 h-16 rounded-full border border-white/10 bg-white/5 flex items-center justify-center">
+                              <img src={item.icon} alt={item.label} className="w-8 h-8 object-contain opacity-80" />
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="w-28 h-28 rounded-full border border-white/10 bg-white/5 flex items-center justify-center">
+                          <img src={industry.icons[0]?.icon} alt={industry.icons[0]?.label || 'icon'} className="w-14 h-14 object-contain opacity-80" />
+                        </div>
+                      )}
+                    </div>
                   </CardContent>
                 </Card>
               ))}
             </div>
 
-            {/* Bottom Row */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {industries.slice(3, 5).map((industry, idx) => (
+            {/* Bottom Row: 3 square cards with big centered icons */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {industries.slice(2, 5).map((industry, idx) => (
                 <Card
-                  key={idx + 3}
-                  className="flex flex-col justify-between h-[380px] rounded-3xl bg-gradient-to-br from-[rgba(255,255,255,0.03)] via-[rgba(153,178,213,0.08)] to-[rgba(52,102,170,0.1)] border border-[rgba(255,255,255,0.1)] backdrop-blur-sm shadow-md hover:shadow-lg hover:border-[rgba(130,183,220,0.4)] transition-all"
+                  key={idx + 2}
+                  className="h-[380px] rounded-3xl bg-gradient-to-br from-[rgba(255,255,255,0.03)] via-[rgba(153,178,213,0.08)] to-[rgba(52,102,170,0.1)] border border-[rgba(255,255,255,0.1)] backdrop-blur-sm shadow-md hover:shadow-lg hover:border-[rgba(130,183,220,0.4)] transition-all"
                 >
-                  <CardContent className="flex-1 flex flex-col justify-between p-8">
-                    <div className="inline-block bg-[rgba(130,183,220,0.15)] px-4 py-1.5 rounded-full mb-5">
-                      <span className="text-[#82b7dc] text-sm font-semibold">Drive Growth</span>
+                  <CardContent className="h-full p-8 flex flex-col">
+                    <div className="inline-block bg-[rgba(130,183,220,0.15)] px-4 py-1.5 rounded-full w-max">
+                      <span className="text-[#bbbbbb] text-sm font-semibold">Drive Growth</span>
                     </div>
-
-                    <div className="flex justify-between items-start mb-5">
-                      <h3 className="text-[#bbbbbb] text-xl font-bold leading-tight max-w-[60%]">
-                        {industry.title}
-                      </h3>
-                      <div className="grid grid-cols-2 gap-2 justify-end items-center max-w-[40%]">
-                        {industry.icons.map((item, iconIdx) => (
-                          <div
-                            key={iconIdx}
-                            className="w-10 h-10 bg-[rgba(255,255,255,0.05)] rounded-xl flex items-center justify-center"
-                          >
-                            <img src={item.icon} alt={item.label} className="w-6 h-6" />
-                          </div>
-                        ))}
+                    <div className="flex-1 flex items-center justify-center">
+                      <div className="w-40 h-40 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
+                        <img src={industry.icons[0]?.icon} alt={industry.icons[0]?.label || 'icon'} className="w-24 h-24 object-contain opacity-90" />
                       </div>
                     </div>
-
-                    <p className="text-[#bbbbbb] text-sm leading-relaxed">
-                      {industry.description}
-                    </p>
+                    <div>
+                      <h3 className="text-[#bbbbbb] text-lg font-bold text-center mb-2">
+                        {industry.title}
+                      </h3>
+                      <p className="text-[#bbbbbb] text-xs leading-relaxed text-center">
+                        {industry.description}
+                      </p>
+                    </div>
                   </CardContent>
                 </Card>
               ))}

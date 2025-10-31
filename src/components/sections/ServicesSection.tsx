@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardContent } from "../ui/card";
 import MatchstickBoxHeading from "./MatchstickHeading";
+import DecorativeLines from "../common/DecorativeLines";
 
 const servicesData = [
   {
@@ -66,9 +67,9 @@ export const ServicesSection = (): JSX.Element => {
         {/* Header */}
         <header className="flex flex-col items-center mb-14 md:mb-20 relative text-center">
           <h1 className="mt-10 font-extrabold text-[#82b7dc] text-[30px] md:text-[38px] lg:text-[48px] mb-4 tracking-widest leading-tight uppercase  [font-family:'Montserrat',Helvetica] drop-shadow-[0_2px_12px_rgba(130,183,220,0.4)]">
-           <MatchstickBoxHeading>SERVICES</MatchstickBoxHeading> 
+           <DecorativeLines className="text-white">SERVICES</DecorativeLines> 
           </h1>
-      <p className="font-extrabold text-[#bbbbbb] text-lg sm:text-xl md:text-2xl lg:text-3xl leading-snug max-w-[95%] sm:max-w-[90%] md:max-w-[600px] lg:max-w-none mt-3 [font-family:'Montserrat',Helvetica] tracking-wide underline decoration-[#82b7dc]/60 decoration-2 underline-offset-4 lg:whitespace-nowrap">
+      <p className="font-extrabold text-[#bbbbbb] text-lg sm:text-xl md:text-2xl lg:text-3xl leading-snug max-w-[95%] sm:max-w-[90%] md:max-w-[600px] lg:max-w-none mt-6 [font-family:'Montserrat',Helvetica] tracking-wide  lg:whitespace-nowrap">
   Where Creativity Meets Cutting-Edge Technology.
 </p>
 
@@ -101,10 +102,10 @@ export const ServicesSection = (): JSX.Element => {
             {servicesData.map((service, index) => (
               <div
                 key={index}
-                className="relative flex flex-col md:flex-row items-center md:items-start w-full max-w-[700px] gap-8 md:gap-12 z-10"
+                className="relative flex flex-col md:grid md:grid-cols-[140px_1fr] items-center md:items-start w-full max-w-[980px] gap-8 md:gap-8 z-10"
               >
                 {/* Connector Node */}
-                <div className="relative flex flex-col items-center md:items-center">
+                <div className="relative flex flex-col items-center md:items-center md:w-[140px]">
                   <div className="relative w-10 h-10 bg-gradient-to-br from-[#1b2334] to-[#84bad3] rounded-full flex items-center justify-center shadow-lg ring-2 ring-[#82b7dc]/40">
                     <div className="w-[22px] h-[22px] rounded-full bg-gradient-to-br from-white/70 to-[#82b7dc] blur-[2px]" />
                   </div>
@@ -114,13 +115,13 @@ export const ServicesSection = (): JSX.Element => {
                 </div>
 
                 {/* Service Card */}
-                <Card className="w-full md:w-[600px] min-h-[340px] rounded-3xl border border-white/10 bg-[radial-gradient(50%_50%_at_30%_-4%,rgba(255,255,255,0.15)_0%,rgba(0,0,0,0.18)_100%)] shadow-xl shadow-black/40 backdrop-blur-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
+                <Card className="w-full min-h-[300px] rounded-3xl border border-white/10 bg-[radial-gradient(50%_50%_at_30%_-4%,rgba(255,255,255,0.15)_0%,rgba(0,0,0,0.18)_100%)] shadow-xl shadow-black/40 backdrop-blur-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
                   <CardContent className="relative p-0 h-full">
-                    <div className="relative z-10 py-10 px-8 md:px-14 lg:px-20 text-[#e0e6eb] flex flex-col items-center text-center">
-                      <h4 className="font-extrabold text-[#bbbbbb] text-[22px] md:text-[26px] lg:text-[30px] leading-tight mb-5 tracking-widest uppercase [font-family:'Montserrat',Helvetica] drop-shadow-[0_2px_6px_rgba(255,255,255,0.2)]">
+                    <div className="relative z-10 py-8 px-6 md:px-10 lg:px-12 text-[#e0e6eb] flex flex-col items-center text-center">
+                      <h4 className="font-extrabold text-[#bbbbbb] text-[20px] md:text-[24px] lg:text-[26px] leading-tight mb-4 tracking-widest uppercase [font-family:'Montserrat',Helvetica] drop-shadow-[0_2px_6px_rgba(255,255,255,0.2)]">
                         {service.title}
                       </h4>
-                      <div className="space-y-3 md:space-y-4 lg:space-y-5 text-[13px] md:text-[15px] lg:text-[17px] tracking-wide leading-relaxed font-medium text-[#d8dee4]/90">
+                      <div className="space-y-3 md:space-y-3 lg:space-y-4 text-[13px] md:text-[14px] lg:text-[16px] tracking-wide leading-relaxed font-medium text-[#d8dee4]/90">
                         {service.points.map((point, pointIndex) => (
                           <p
                             key={pointIndex}

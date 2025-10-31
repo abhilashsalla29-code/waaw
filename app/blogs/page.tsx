@@ -10,8 +10,8 @@ export default function Blogs() {
       {/* <div className="min-h-screen bg-black text-[#bbbbbb] flex items-center justify-center">
         <h1 className="text-4xl font-bold">Blogs</h1>
       </div> */}
-      <div className=" bg-black text-[#bbbbbb] top-6  ">
-      <BlogsSection  />
+      <div className=" bg-black text-[#bbbbbb] ">
+      <BlogsSection topOffset />
       </div>
       <FooterSection />
     </main>

@@ -2,8 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ArrowRightIcon } from "lucide-react";
+// Button removed in favor of SVG-wrapped CTA matching navbar
 
 export default function Hero() {
   return (
@@ -43,19 +42,29 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <Link href="/contact">
-              <Button className="bg-white text-[#3466aa] bg-gradient-to-r from-[#3466aa] to-[#3466aa] hover:from-[#2a5590] hover:to-[#2a5590] font-semibold rounded-full px-6 py-2 md:px-8 md:py-3 text-base flex items-center gap-2 hover:bg-[#f0f4ff] hover:scale-105 hover:shadow-lg transition-all duration-300">
-                 <span className="[font-family:'Montserrat',Helvetica] font-bold text-[#bbbbbb] text-sm md:text-base hover:scale-105 duration-200 transition-all ">
-              Get Started
-            </span>
-            <ArrowRightIcon className="w-4 md:w-6 h-4 md:h-6 text-[#bbbbbb]" />
-              </Button>
+            <Link href="/contact" className="relative inline-flex items-center justify-center w-[200px] h-[59px] hover:scale-105 hover:shadow-lg transition-all duration-300">
+              <img
+                className="absolute top-0 left-0 w-[200px] h-[59px]"
+                alt="Subtract"
+                src="/subtract-4.svg"
+              />
+              <span
+                className="absolute left-5 top-1/2 -translate-y-1/2 [font-family:'Montserrat',Helvetica] font-semibold text-black text-xl z-10"
+                style={{ width: '120px', textAlign: 'left' }}
+              >
+                Get Started
+              </span>
+              <img
+                className="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 z-10"
+                alt="Vector"
+                src="/vector-20.svg"
+              />
             </Link>
           </motion.div>
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="relative flex-1 flex items-center justify-center mb-36 md:mb-0">
+        <div className="relative flex-1 flex items-center justify-center mb-28 sm:mb-20 md:mb-0">
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
             <Image
               src="/homepb.png"
@@ -79,9 +88,9 @@ export default function Hero() {
 
 
 <div className="absolute bottom-8 md:bottom-16 left-0 right-0">
-  <div className="container mx-auto px-4 flex justify-center relative h-[150px]  mt-2">
+  <div className="container mx-auto px-4 flex justify-center relative h-[150px] md:h-[180px] mt-2">
     {/* Remove lines/dots below md */}
-    <div className="hidden md:block absolute left-0 right-0 top-1/2 h-[2px] bg-gradient-to-r from-transparent via-white/70 to-transparent" />
+    {/* <div className="hidden md:block absolute left-0 right-0 top-1/2 h-[2px] bg-gradient-to-r from-transparent via-white/70 to-transparent" /> */}
     {/* {[
       { left: "left-[10%]", h: "h-[60px]" },
       { left: "left-[25%]", h: "h-[40px]" },
@@ -112,17 +121,42 @@ export default function Hero() {
     ))} */}
 
     {/* Stats cards - overlap on mobile */}
-    <div className="relative z-10 flex flex-col md:flex-row gap-4 md:gap-12 items-center lg:hidden -mt-8">
+    <div className="relative z-10 flex flex-col md:flex-row gap-4 md:gap-12 items-center lg:hidden -mt-8 ">
       <Stat number="150+" label="Relied on by Leaders" />
       <Stat number="300+" label="Real-Time User" className="-mt-6" />
       <Stat number="15+" label="Industry Expertise" className="-mt-6" />
     </div>
 
     {/* Desktop stats */}
-    <div className="hidden lg:flex relative z-10 flex-row gap-16 items-center">
-      <Stat number="150+" label="Relied on by Leaders" />
-      <Stat number="300+" label="Real-Time User" />
-      <Stat number="15+" label="Industry Expertise" />
+    <div className="hidden lg:block relative z-10 w-full h-[180px]">
+      {/* Top beam */}
+      {/* <div className="absolute left-[6%] right-[6%] top-[14%] h-px bg-white/60 blur-[2px] opacity-70" />
+      {/* Bottom beam */}
+      {/* <div className="absolute left-[6%] right-[6%] bottom-[14%] h-px bg-white/60 blur-[2px] opacity-70" /> */}
+      {/* Left posts + glow dots */}
+      {/* <div className="absolute left-[6%] top-[12%] h-[76%] w-px bg-white/20" /> */}
+      {/* <div className="absolute left-[6%] top-[12%] -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/90 shadow-[0_0_30px_rgba(255,255,255,0.7)]" /> */}
+      {/* <div className="absolute left-[6%] bottom-[12%] -translate-x-1/2 translate-y-1/2 w-6 h-6 rounded-full bg-white/90 shadow-[0_0_30px_rgba(255,255,255,0.7)]" /> */}
+      {/* Right posts + glow dots */}
+      {/* <div className="absolute right-[6%] top-[12%] h-[76%] w-px bg-white/20" /> */}
+      {/* <div className="absolute right-[6%] top-[12%] translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white shadow-[0_0_30px_rgba(255,255,255,0.7)]" /> */}
+      {/* <div className="absolute right-[6%] bottom-[12%] translate-x-1/2 translate-y-1/2 w-6 h-6 rounded-full bg-white shadow-[0_0_30px_rgba(255,255,255,0.7)]" /> */} 
+
+      {/* Cards */}
+      <div className="relative z-10 h-full flex items-center justify-center gap-10">
+        <div className="w-[260px] h-[120px] rounded-2xl bg-[radial-gradient(120%_120%_at_50%_-20%,rgba(255,255,255,0.18)_0%,rgba(52,102,170,0.18)_40%,rgba(0,0,0,0.2)_100%)] border border-white/15 shadow-[0_10px_30px_rgba(0,0,0,0.35)] backdrop-blur-md flex flex-col items-center justify-center">
+          <span className="text-4xl font-extrabold text-white">150+</span>
+          <span className="mt-2 text-sm text-[#c7d0d9]">Relied on by Leaders</span>
+        </div>
+        <div className="w-[260px] h-[120px] rounded-2xl bg-[radial-gradient(120%_120%_at_50%_-20%,rgba(255,255,255,0.18)_0%,rgba(52,102,170,0.18)_40%,rgba(0,0,0,0.2)_100%)] border border-white/15 shadow-[0_10px_30px_rgba(0,0,0,0.35)] backdrop-blur-md flex flex-col items-center justify-center">
+          <span className="text-4xl font-extrabold text-white">300+</span>
+          <span className="mt-2 text-sm text-[#c7d0d9]">Real-Time User</span>
+        </div>
+        <div className="w-[260px] h-[120px] rounded-2xl bg-[radial-gradient(120%_120%_at_50%_-20%,rgba(255,255,255,0.18)_0%,rgba(52,102,170,0.18)_40%,rgba(0,0,0,0.2)_100%)] border border-white/15 shadow-[0_10px_30px_rgba(0,0,0,0.35)] backdrop-blur-md flex flex-col items-center justify-center">
+          <span className="text-4xl font-extrabold text-white">15+</span>
+          <span className="mt-2 text-sm text-[#c7d0d9]">Industry Expertise</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>

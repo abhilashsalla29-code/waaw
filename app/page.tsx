@@ -25,7 +25,7 @@ export default function Page() {
       <section id="pricing">
         <PricingSection />
       </section>
-      <section id="blogs">
+      <section className="mt-0" id="blogs">
         <BlogsSection />
       </section>
       <MainContentSection />

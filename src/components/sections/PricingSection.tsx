@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { CheckIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
@@ -130,12 +131,14 @@ export const PricingSection = (): JSX.Element => {
                     </div>
 
                     <div className="mt-6 flex justify-center">
-                      <Button
-                        variant={plan.buttonVariant}
-                        className="w-full max-w-[271px] h-[40px] md:h-[50px] rounded-[20px] md:rounded-[30px] backdrop-blur-[2px] backdrop-brightness-[110%] text-white bg-inherit hover:bg-inherit hover:scale-105 transition-transform duration-300"
-                      >
-                        {plan.buttonText}
-                      </Button>
+                      <Link href="/contact" className="w-full max-w-[271px]">
+                        <Button
+                          variant={plan.buttonVariant}
+                          className="w-full h-[40px] md:h-[50px] rounded-[20px] md:rounded-[30px] backdrop-blur-[2px] backdrop-brightness-[110%] text-white bg-inherit hover:bg-inherit hover:scale-105 transition-transform duration-300"
+                        >
+                          {plan.buttonText}
+                        </Button>
+                      </Link>
                     </div>
 
                     <h5 className="text-[#a19e9e] font-semibold text-sm md:text-[15px] mt-6">

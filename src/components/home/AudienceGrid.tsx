@@ -2,10 +2,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
+import DecorativeLines from "../common/DecorativeLines";
 
 const cardData = [
   {
-    title: "Innovators & Startups",
+    title: "Innovators, Startups & Entrepreneurs",
     description:
       "Waaw empowers new ventures to turn ideas into fully functional digital products helping founders build, test, and scale faster with modern web and app solutions.",
     hasGlass: true,
@@ -26,7 +27,7 @@ const cardData = [
     position: "bottom-left",
   },
   {
-    title: "Businesses Going Digital",
+    title: "Businesses Going Digital & Growing",
     description:
       "Small and medium enterprises benefit from Waaw's tools to automate operations, create online presence, and deliver seamless customer experiences across platforms.",
     hasGlass: true,
@@ -43,24 +44,18 @@ export const AudienceGrid = (): JSX.Element => {
 
       {/* Title Section */}
       <div className="relative w-full max-w-7xl mx-auto px-4">
-        <div className="relative mb-12 lg:mb-16">
-          {/* Top Decorative Line with Dot */}
-          <div className="absolute top-[-40px] left-[50%] -translate-x-1/2 w-[300px] lg:w-[400px] h-[2px] bg-gradient-to-r from-transparent via-white to-transparent blur-[1px] hidden md:block" />
-          <div className="absolute top-[-45px] left-[50%] -translate-x-1/2 translate-x-[-150px] lg:translate-x-[-200px] w-[14px] h-[14px] bg-white rounded-full blur-[2px] shadow-[0_0_20px_rgba(255,255,255,0.8)] hidden md:block" />
-
-          <h1 className="text-center [font-family:'Montserrat',Helvetica] font-extrabold text-[26px] md:text-[32px] lg:text-[38px] leading-[36px] md:leading-[50px] lg:leading-[60px] tracking-[0] px-4">
-            <span className="text-[#bbbbbb] block mb-1">THE MINDS AND BUSINESSES</span>
-            <span className="text-[#82b7dc]">BEHIND THE WAAW</span>
-          </h1>
-
-          {/* Bottom Decorative Line with Dot */}
-          <div className="absolute bottom-[-40px] right-[50%] translate-x-1/2 w-[300px] lg:w-[400px] h-[2px] bg-gradient-to-r from-transparent via-white to-transparent blur-[1px] hidden md:block" />
-          <div className="absolute bottom-[-45px] right-[50%] translate-x-1/2 translate-x-[150px] lg:translate-x-[200px] w-[14px] h-[14px] bg-white rounded-full blur-[2px] shadow-[0_0_20px_rgba(255,255,255,0.8)] hidden md:block" />
+        <div className="relative mb-12 lg:mb-16 flex justify-center">
+          <DecorativeLines>
+            <h1 className="text-center [font-family:'Montserrat',Helvetica] font-extrabold text-[26px] md:text-[32px] lg:text-[38px] leading-[36px] md:leading-[50px] lg:leading-[60px] tracking-[0] px-4">
+              <span className="text-[#bbbbbb] block mb-1">THE MINDS AND BUSINESSES</span>
+              <span className="text-[#82b7dc]">BEHIND THE WAAW</span>
+            </h1>
+          </DecorativeLines>
         </div>
 
         {/* Desktop Layout - Asymmetric 2x2 Grid with Center Icon */}
         <div className="hidden lg:block relative">
-          <div className="relative w-full max-w-[1100px] mx-auto h-[650px]">
+          <div className="relative w-full max-w-[1100px] mx-auto h-[520px]">
             {/* Top Row */}
             <div className="absolute top-0 left-0 right-0 flex justify-center gap-10">
               {/* Card 1 - Top Left (Glass Effect) */}
@@ -85,7 +80,8 @@ export const AudienceGrid = (): JSX.Element => {
               </Card>
 
               {/* Card 2 - Top Right (No Glass, Darker) */}
-              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden  transition-all duration-300">
+              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden transition-all duration-300 border-none shadow-none bg-transparent">
+
                 <CardContent className="relative w-full h-full p-0">
                   <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90 blur-[2px]" />
                   
@@ -104,14 +100,20 @@ export const AudienceGrid = (): JSX.Element => {
             {/* Center Rotating Icon */}
             <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-20">
               {/* Outer Rotating Ring */}
-              {/* <motion.div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] rounded-full border-2 border-[#82b7dc]/30"
+              {/* Rotating white threads around center */}
+              <motion.div
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 animate={{ rotate: 360 }}
-                transition={{ duration: 15, ease: "linear", repeat: Infinity }}
-                style={{
-                  boxShadow: "0 0 50px 10px rgba(130,183,220,0.15)",
-                }}
-              /> */}
+                transition={{ duration: 12, ease: "linear", repeat: Infinity }}
+              >
+                <svg width="260" height="260" viewBox="0 0 260 260" className="opacity-10">
+                  {/* outer soft ring */}
+                  {/* <circle cx="130" cy="130" r="118" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="20" /> */}
+                  {/* bright partial arcs */}
+                  {/* <path d="M130 12 A118 118 0 0 1 248 130" fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="6" strokeLinecap="round" /> */}
+                  {/* <path d="M12 130 A118 118 0 0 1 130 12" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="6" strokeLinecap="round" /> */}
+                </svg>
+              </motion.div>
 
               {/* Pulsing Glow */}
               <motion.div
@@ -123,7 +125,13 @@ export const AudienceGrid = (): JSX.Element => {
                 transition={{ duration: 3.5, ease: "easeInOut", repeat: Infinity }}
               />
 
-              {/* Center Icon Container */}
+              {/* Blue core disc */}
+             {/* Blue gradient core */}
+<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100px] h-[100px] rounded-full bg-[radial-gradient(circle_at_50%_30%,#9fd0ff_0%,#74add8_40%,#5a95c8_70%,#2b3a4a_100%)] shadow-[0_0_30px_rgba(130,183,220,0.6)]" />
+
+{/* Glassy white ring */}
+<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px]  opacity-15 rounded-full border-[2px] border-white/70 shadow-[0_0_20px_rgba(255,255,255,0.35)]" />
+{/* Center Icon Container */}
               <div className="relative w-[75px] h-[75px] rounded-full bg-gradient-to-br from-[#82b7dc] via-[#5a95c8] to-[#4a7bc8] shadow-[0_0_40px_rgba(130,183,220,0.8),inset_0_2px_10px_rgba(255,255,255,0.35)] flex items-center justify-center border-[3px] border-white/25">
                 {/* Rotating Icon/Image */}
                 <motion.div
@@ -143,9 +151,10 @@ export const AudienceGrid = (): JSX.Element => {
             {/* Bottom Row */}
             <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-10">
               {/* Card 3 - Bottom Left (No Glass, Darker) */}
-              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden  transition-all duration-300">
+              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden transition-all duration-300 border-none shadow-none bg-transparent">
+
                 <CardContent className="relative w-full h-full p-0">
-                  <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90 bg-white/40 blur-[2px]" />
+                  <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90  blur-[2px]" />
                   
                   <div className="relative z-10 pt-8 px-7">
                     <h3 className="text-[#bbbbbb] [font-family:'Montserrat',Helvetica] font-bold text-[24px] text-center mb-5 leading-[32px]">
