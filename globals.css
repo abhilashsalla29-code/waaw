@@ -1,3 +1,129 @@
 @import "./tailwind.css";
 
 
+@keyframes moveLeftRight {
+    0% {
+      left: 0%;
+    }
+    50% {
+      left: calc(100% - var(--dot-size, 14px));
+    }
+    100% {
+      left: 0%;
+    }
+  }
+  
+  @keyframes moveRightLeft {
+    0% {
+      right: 0%;
+    }
+    50% {
+      right: calc(100% - var(--dot-size, 14px));
+    }
+    100% {
+      right: 0%;
+    }
+  }
+  
+  /* Top dot animation */
+  .animate-dot-move-left {
+    position: absolute;
+    animation: moveLeftRight var(--duration, 10s) ease-in-out infinite;
+  }
+  
+  /* Bottom dot animation */
+  .animate-dot-move-right {
+    position: absolute;
+    animation: moveRightLeft var(--duration, 10s) ease-in-out infinite;
+  }
+  
+  /* Glow orb animations - multiple paths */
+  @keyframes orbFloat1 {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(100px, -100px);
+    }
+    50% {
+      transform: translate(-80px, 150px);
+    }
+    75% {
+      transform: translate(120px, 80px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes orbFloat2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(-120px, 80px);
+    }
+    50% {
+      transform: translate(100px, -120px);
+    }
+    75% {
+      transform: translate(-90px, -50px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes orbFloat3 {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(80px, 120px);
+    }
+    50% {
+      transform: translate(-100px, -90px);
+    }
+    75% {
+      transform: translate(90px, 60px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes orbFloat4 {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(-90px, -80px);
+    }
+    50% {
+      transform: translate(120px, 100px);
+    }
+    75% {
+      transform: translate(-110px, 70px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  /* Apply animations to orbs */
+  .animate-orb-1 {
+    animation: orbFloat1 20s ease-in-out infinite;
+  }
+  
+  .animate-orb-2 {
+    animation: orbFloat2 25s ease-in-out infinite;
+  }
+  
+  .animate-orb-3 {
+    animation: orbFloat3 22s ease-in-out infinite;
+  }
+  
+  .animate-orb-4 {
+    animation: orbFloat4 18s ease-in-out infinite;
+  }
+  

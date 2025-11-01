@@ -80,7 +80,7 @@ export const PricingSection = (): JSX.Element => {
             <div className="absolute top-[42px] -left-[26px] w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90" />
             <div className="absolute -top-[35px] -right-[26px] w-[35px] h-[35px] bg-white rounded-[17.5px] -rotate-90" /> */}
           </div>
-          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[24px] md:text-[32px] underline mb-6 text-center">
+          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[24px] md:text-[32px]  mb-6 text-center">
             Invest in Your Digital Future
           </h3>
           <p className="max-w-[845px] text-[#bbbbbb] text-lg md:text-xl text-center">

@@ -49,7 +49,7 @@ export const BlogsSection = ({ topOffset = false }: BlogsProps): JSX.Element => 
             <div className="absolute top-[53px] left-[-19px] w-[35px] h-[35px] bg-white rounded-[17.5px] rotate-90" /> */}
           </div>
 
-          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[24px] md:text-[32px] text-center tracking-[0] leading-[normal] underline mb-[2px] md:mb-[28px] max-w-[529px]">
+          <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-[24px] md:text-[32px] text-center tracking-[0] leading-[normal] mb-[2px] md:mb-[28px] max-w-[529px]">
             Insights That Inspire Innovation
           </h3>
 

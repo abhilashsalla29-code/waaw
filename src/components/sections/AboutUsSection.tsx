@@ -110,19 +110,19 @@ const AboutUsSectionMobile = () => (
 const glowOrbs = [
   {
     className:
-      "absolute top-[677px] left-[870px] w-[34px] h-[34px] rounded-[17px] blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] md:top-[550px] md:left-[70%]",
+      "absolute top-[677px] left-[870px] w-[34px] h-[34px] rounded-[17px] blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] md:top-[550px] md:left-[70%] animate-orb-1",
   },
   {
     className:
-      "absolute top-[694px] left-[608px] w-[18px] h-[18px] rounded-[9px] blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] md:top-[565px] md:left-[42%]",
+      "absolute top-[694px] left-[608px] w-[18px] h-[18px] rounded-[9px] blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] md:top-[565px] md:left-[42%] animate-orb-2",
   },
-  // {
-  //   className:
-  //     "absolute top-[369px] left-[522px] w-[77px] h-[77px] rounded-[38.5px] blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] md:top-[300px] md:left-[35%]",
-  // },
   {
     className:
-      "absolute top-[696px] left-[603px] w-[31px] h-[31px] rounded-[15.5px] blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] md:top-[567px] md:left-[41%]",
+      "absolute top-[369px] left-[522px] w-[37px] h-[37px] rounded-[38.5px] blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] md:top-[300px] md:left-[35%] animate-orb-3",
+  },
+  {
+    className:
+      "absolute top-[696px] left-[603px] w-[31px] h-[31px] rounded-[15.5px] blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] md:top-[567px] md:left-[41%] animate-orb-4",
   },
 ];
 

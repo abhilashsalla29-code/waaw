@@ -6,24 +6,27 @@ type Props = {
   className?: string;
   lineOffset?: number; // px distance from content
   dotSize?: number; // px
+  animationDuration?: number; // seconds
 };
 
 /**
- * DecorativeLines wraps content and renders a top and bottom gradient line
- * with a glowing dot (top-left and bottom-right). The lines automatically
- * match the width of the wrapped content.
+ * DecorativeLines v2
+ * Adds animated glowing dots that travel along the gradient lines.
  */
 export default function DecorativeLines({
   children,
   className,
   lineOffset = 20,
-  dotSize = 14,
+  dotSize = 12,
+  animationDuration = 8,
 }: Props) {
   const topOffset = `-${lineOffset}px`;
   const bottomOffset = `-${lineOffset}px`;
+
   const dotStyle: React.CSSProperties = {
     width: `${dotSize}px`,
     height: `${dotSize}px`,
+    animationDuration: `${animationDuration}s`,
   };
 
   return (
@@ -33,10 +36,10 @@ export default function DecorativeLines({
         className="absolute left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-transparent via-white to-transparent blur-[1px] hidden md:block"
         style={{ top: topOffset, width: "100%" }}
       />
-      {/* Top dot (left side) */}
+      {/* Animated top dot */}
       <div
-        className="absolute rounded-full bg-white blur-[2px] shadow-[0_0_20px_rgba(255,255,255,0.8)] hidden md:block"
-        style={{ top: `calc(${topOffset} - 5px)`, left: 0, ...dotStyle }}
+        className="absolute rounded-full bg-white blur-[3px] shadow-[0_0_20px_rgba(255,255,255,0.8)] hidden md:block animate-dot-move-left"
+        style={{ top: `calc(${topOffset} - 5px)`, ...dotStyle }}
       />
 
       {/* Content */}
@@ -47,13 +50,11 @@ export default function DecorativeLines({
         className="absolute left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-transparent via-white to-transparent blur-[1px] hidden md:block"
         style={{ bottom: bottomOffset, width: "100%" }}
       />
-      {/* Bottom dot (right side) */}
+      {/* Animated bottom dot */}
       <div
-        className="absolute rounded-full bg-white blur-[2px] shadow-[0_0_20px_rgba(255,255,255,0.8)] hidden md:block"
-        style={{ bottom: `calc(${bottomOffset} - 5px)`, right: 0, ...dotStyle }}
+        className="absolute rounded-full bg-white blur-[3px] shadow-[0_0_20px_rgba(255,255,255,0.8)] hidden md:block animate-dot-move-right"
+        style={{ bottom: `calc(${bottomOffset} - 5px)`, ...dotStyle }}
       />
     </div>
   );
 }
-
-
