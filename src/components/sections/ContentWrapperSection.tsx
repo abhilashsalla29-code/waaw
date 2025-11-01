@@ -2,7 +2,7 @@ import React from "react";
 
 export const ContentWrapperSection = () => {
   return (
-    <section className="w-full relative bg-black py-12 md:py-20 px-4 overflow-hidden">
+    <section className="w-full relative bg-black py-12 md:py-10 px-4 overflow-hidden">
       <div className="relative max-w-[1400px] mx-auto">
         {/* Main heading */}
         <h2 className="text-center [font-family:'Montserrat',Helvetica] font-extrabold text-[#82b7dc] text-2xl md:text-4xl lg:text-5xl tracking-[0] leading-normal mb-4 md:mb-6">
@@ -21,12 +21,12 @@ export const ContentWrapperSection = () => {
         {/* ===== Main visual + desktop positioned process cards ===== */}
         <div className="relative w-full max-w-[1000px] mx-auto mb-12 md:mb-16">
           {/* Visual container: gives a fixed-ish area on md+ so cards can be positioned around it */}
-          <div className="relative w-full aspect-square max-w-[700px] mx-auto">
+          <div className="relative w-full aspect-square max-w-[700px] mx-auto ">
             {/* Frame-50 background image */}
             <img
               src="/Frame 50.png"
               alt="Process Framework"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain animate-pulse" style={{ animationDuration: '6s' }}
             />
 
             {/* Rotating center image - audiencegridm */}

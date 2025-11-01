@@ -84,7 +84,7 @@ export const ServicesSection = (): JSX.Element => {
 
           {/* Decorative corners */}
           <img
-            className="hidden lg:block absolute w-[22%] xl:w-[25%] top-[6%] left-[-20%] opacity-70"
+            className="hidden lg:block absolute w-[22%] xl:w-[25%] top-[6%] left-[-20%] opacity-70 "
             alt="Decorative"
             src="/servicesm.png"
           />
@@ -106,8 +106,8 @@ export const ServicesSection = (): JSX.Element => {
               >
                 {/* Connector Node */}
                 <div className="relative flex flex-col items-center md:items-center md:w-[140px]">
-                  <div className="relative w-10 h-10 bg-gradient-to-br from-[#1b2334] to-[#84bad3] rounded-full flex items-center justify-center shadow-lg ring-2 ring-[#82b7dc]/40">
-                    <div className="w-[22px] h-[22px] rounded-full bg-gradient-to-br from-white/70 to-[#82b7dc] blur-[2px]" />
+                  <div className="relative w-10 h-10 bg-gradient-to-br from-[#000000] to-[#b59db7] rounded-full flex items-center justify-center shadow-lg ring-2 ring-[#99b7dc]/40">
+                    <div className="w-[12px] h-[12px] rounded-full bg-gradient-to-br from-white/70 to-[#141313] blur-[1px] animate-pulse" style={{ animationDuration: '5s' }} />
                   </div>
                   <h3 className="mt-3 font-semibold text-[#bbbbbb] text-base md:text-lg lg:text-xl text-center [font-family:'Montserrat',Helvetica] tracking-wide">
                     {service.title}

@@ -23,7 +23,7 @@ type BlogsProps = { topOffset?: boolean };
 
 export const BlogsSection = ({ topOffset = false }: BlogsProps): JSX.Element => {
   return (
-    <section className={`relative w-full min-h-[960px] bg-black overflow-hidden py-[20px] px-4 ${topOffset ? "pt-32" : ""} mt-0`}>
+    <section className={`relative w-full min-h-[760px] bg-black overflow-hidden py-[20px] px-4 ${topOffset ? "pt-32" : ""} mt-0`}>
       <div className="absolute top-[-145px] left-[-145px] w-[290px] h-[290px] rounded-[145px] blur-[250px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(130,183,220,1)_0%)]" />
 
       <div className="absolute top-[777px] left-[1363px] w-[290px] h-[290px] rounded-[145px] blur-[250px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(130,183,220,1)_0%)]" />

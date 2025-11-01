@@ -1,9 +1,11 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="inset-x-0 top-0 z-50 w-full fixed bg-black">
@@ -15,16 +17,16 @@ export function Navbar() {
 
         {/* Center - Navigation links - Desktop */}
         <nav className="hidden md:flex gap-10">
-          <Link href="/" className="text-[#82b7dc] font-semibold text-xl">
+          <Link href="/" className={`${pathname === "/" ? "text-[#82b7dc]" : "text-[#bbbbbb] hover:text-[#82b7dc]"} font-semibold text-xl transition`}>
             Home
           </Link>
-          <Link href="/about" className="text-[#bbbbbb] font-semibold text-xl hover:text-[#82b7dc] transition">
+          <Link href="/about" className={`${pathname === "/about" ? "text-[#82b7dc]" : "text-[#bbbbbb] hover:text-[#82b7dc]"} font-semibold text-xl transition`}>
             About Us
           </Link>
-          <Link href="/services" className="text-[#bbbbbb] font-semibold text-xl hover:text-[#82b7dc] transition">
+          <Link href="/services" className={`${pathname === "/services" ? "text-[#82b7dc]" : "text-[#bbbbbb] hover:text-[#82b7dc]"} font-semibold text-xl transition`}>
             Services
           </Link>
-          <Link href="/blogs" className="text-[#bbbbbb] font-semibold text-xl hover:text-[#82b7dc] transition">
+          <Link href="/blogs" className={`${pathname === "/blogs" ? "text-[#82b7dc]" : "text-[#bbbbbb] hover:text-[#82b7dc]"} font-semibold text-xl transition`}>
             Blogs
           </Link>
         </nav>
@@ -74,16 +76,16 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-black border-t border-gray-800">
           <div className="px-4 py-4 space-y-4">
-            <Link href="/" className="block text-[#82b7dc] font-semibold text-xl" onClick={() => setIsOpen(false)}>
+            <Link href="/" className={`block ${pathname === "/" ? "text-[#82b7dc]" : "text-[#bbbbbb] hover:text-[#82b7dc]"} font-semibold text-xl transition`} onClick={() => setIsOpen(false)}>
               Home
             </Link>
-            <Link href="/about" className="block text-[#bbbbbb] font-semibold text-xl hover:text-[#82b7dc] transition" onClick={() => setIsOpen(false)}>
+            <Link href="/about" className={`block ${pathname === "/about" ? "text-[#82b7dc]" : "text-[#bbbbbb] hover:text-[#82b7dc]"} font-semibold text-xl transition`} onClick={() => setIsOpen(false)}>
               About Us
             </Link>
-            <Link href="/services" className="block text-[#bbbbbb] font-semibold text-xl hover:text-[#82b7dc] transition" onClick={() => setIsOpen(false)}>
+            <Link href="/services" className={`block ${pathname === "/services" ? "text-[#82b7dc]" : "text-[#bbbbbb] hover:text-[#82b7dc]"} font-semibold text-xl transition`} onClick={() => setIsOpen(false)}>
               Services
             </Link>
-            <Link href="/blogs" className="block text-[#bbbbbb] font-semibold text-xl hover:text-[#82b7dc] transition" onClick={() => setIsOpen(false)}>
+            <Link href="/blogs" className={`block ${pathname === "/blogs" ? "text-[#82b7dc]" : "text-[#bbbbbb] hover:text-[#82b7dc]"} font-semibold text-xl transition`} onClick={() => setIsOpen(false)}>
               Blogs
             </Link>
             <Link href="/contact" className="block mt-6" onClick={() => setIsOpen(false)}>

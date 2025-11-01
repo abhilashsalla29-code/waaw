@@ -44,11 +44,11 @@ const faqItems = [
 
 export const MainContentSection = (): JSX.Element => {
   return (
-    <section className="w-full relative bg-black overflow-hidden py-[80px] md:py-[141px] ">
+    <section className="w-full relative bg-black overflow-hidden py-[30px] md:py-[101px] ">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
       <div className="flex flex-col md:flex-row justify-between items-start gap-8">
         <div className="flex flex-col items-center relative w-full md:w-auto">
-          <div className="relative mb-[40px] md:mb-[81px]">
+          <div className="relative mb-[40px] md:mb-[51px]">
                 <>
   <div className="w-24 h-px bg-[#82b7dc] mx-auto mb-2"></div>
   <div className="text-[#82b7dc] text-2xl font-extrabold tracking-wide text-center">
@@ -79,7 +79,7 @@ export const MainContentSection = (): JSX.Element => {
           </div>
 
           <img
-            className="hidden md:block absolute w-[208px] h-[209px] top-[-6px] left-[-128px] object-cover"
+            className="hidden md:block absolute w-[208px] h-[209px] top-[-6px] left-[-128px] object-cover animate-spin" style={{ animationDuration: "10s" }}
             alt="Tk"
             src="/tk3.png"
           />

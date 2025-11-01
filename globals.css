@@ -127,3 +127,49 @@
     animation: orbFloat4 18s ease-in-out infinite;
   }
   
+  @keyframes orbFloat5 {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(50px, -80px);
+    }
+    50% {
+      transform: translate(-60px, 100px);
+    }
+    75% {
+      transform: translate(70px, 60px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  .animate-orb-5 {
+    animation: orbFloat5 15s ease-in-out infinite;
+  }
+  
+  /* Device-specific Hero adjustments */
+  /* iPhone SE and similar (375px-427px) - prevent overlapping */
+  @media (min-width: 375px) and (max-width: 427px) {
+    .hero-infinity-container {
+      max-width: 220px !important;
+    }
+    .hero-gap-container {
+      gap: 1rem !important;
+    }
+  }
+  
+  /* iPhone 14 Pro Max (428px-639px) - reduce gap */
+  @media (min-width: 428px) and (max-width: 639px) {
+    .hero-infinity-container {
+      max-width: 320px !important;
+    }
+    .hero-gap-container {
+      gap: 0.75rem !important;
+    }
+    .hero-infinity-wrapper {
+      margin-bottom: 0.5rem !important;
+    }
+  }
+  

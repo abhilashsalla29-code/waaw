@@ -58,7 +58,7 @@ const pricingPlans = [
 
 export const PricingSection = (): JSX.Element => {
   return (
-    <section className="relative w-full bg-black py-20 px-4">
+    <section className="relative w-full bg-black py-10 px-4">
       <div className="mx-auto max-w-[1440px]">
         {/* Header */}
         <div className="relative mb-20 flex flex-col items-center">

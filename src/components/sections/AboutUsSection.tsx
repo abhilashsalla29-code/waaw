@@ -33,12 +33,12 @@ const AboutUsSectionMobile = () => (
     </p>
     {/* CTA */}
     <Button variant="ghost" className="relative mb-2 px-0">
-      <img alt="bg" src="/subtract.svg" className="w-[160px] md:w-[200px] lg:w-[240px] absolute left-0 top-0" />
+      <img alt="bg" src="/subtract-4.svg" className="w-[160px] md:w-[200px] lg:w-[280px] h-[39px] absolute left-0 top-0" />
       <span className="relative font-bold text-[#3466aa] text-sm md:text-base lg:text-lg px-6">Explore Now</span>
-      <img alt="Vector" src="/vector-15.svg" className=" w-4 md:w-5 lg:w-6 right-2 top-[14px] md:top-[16px] lg:top-[18px]" />
+      {/* <img alt="Vector" src="/vector-15.svg" className="absolute w-4 md:w-5 lg:w-6 right-2 top-[18px] z-10" /> */}
     </Button>
     {/* Mesh 2 Optional: */}
-    <img src="/MESH.png" alt="Mesh2" className="mx-auto w-[130px] md:w-[180px] lg:w-[220px] my-24" />
+    <img src="/MESH.png" alt="Mesh2" className="mx-auto w-[130px] md:w-[180px] lg:w-[220px] my-24 animate-spin" style={{ animationDuration: "10s" }} />
     <div className="flex flex-col items-center gap-4 w-full">
       {statsMobile.map((card, idx) => (
         <Card key={idx} className="w-full max-w-[320px] md:max-w-[400px] lg:max-w-[480px] mx-auto rounded-xl p-0 bg-[rgba(52,102,170,.12)] border-0 backdrop-blur-sm shadow-md">
@@ -254,7 +254,7 @@ export const AboutUsSection = (): JSX.Element => {
             Explore Now
           </span>
           <img
-            className="absolute right-2 -top-1/2 translate-y-1/3 w-6 bottom-4 h-9 z-10"
+            className="absolute right-2 -top-1/2 translate-y-1/3 w-6 bottom-4 h-9 z-10 animate-pulse" style={{ animationDuration: '5s' }}
             alt="Vector"
             src="/vector-15.svg"
           />

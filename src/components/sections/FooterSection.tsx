@@ -47,7 +47,7 @@ const verticalBars = [
 ];
 
 export const FooterSection = (): JSX.Element => (
-  <footer className="w-full relative bg-black overflow-hidden py-[40px] sm:py-[60px] md:py-[84px] px-4 sm:px-8 md:px-[167px]">
+  <footer id="contact" className="w-full relative bg-black overflow-hidden py-[40px] sm:py-[60px] md:py-[84px] px-4 sm:px-8 md:px-[167px]">
     {/* Top-left glow */}
     <div className="absolute top-[-145px] left-[-145px] w-[290px] h-[290px] rounded-full blur-[250px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(130,183,220,1)_0%)]" />
     {/* Bottom-right glow */}
@@ -72,7 +72,7 @@ export const FooterSection = (): JSX.Element => (
         />
 
         {/* Small glow circle - adjusted for mobile */}
-        <div className="absolute top-[-15px] right-[50px] md:left-[200px] w-[30px] md:w-[53px] h-[30px] md:h-[53px] rounded-full blur-[6px] md:blur-[12.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)]" />
+        <div className="absolute top-[-15px] right-[50px] md:left-[200px] w-[30px] md:w-[53px] h-[30px] md:h-[53px] rounded-full blur-[6px] md:blur-[8.5px] [background:radial-gradient(50%_50%_at_95%_-3%,rgba(0,0,0,1)_0%,rgba(255,255,255,1)_100%)] animate-orb-5" />
 
         {/* Title */}
         <h2 className="w-full md:w-[507px] [font-family:'Montserrat',Helvetica] font-extrabold text-2xl md:text-4xl text-[#82b7dc] text-center md:text-left mb-4">
@@ -86,13 +86,21 @@ export const FooterSection = (): JSX.Element => (
         </p>
 
         {/* Button */}
-        <Link href="/contact">
-          <Button className="flex items-center gap-2 w-[150px] md:w-[198px] h-[40px] md:h-[50px] bg-gradient-to-r from-[#3466aa] to-[#3466aa] hover:from-[#2a5590] hover:to-[#2a5590] rounded-[20px] md:rounded-[25px] hover:scale-105 transition-all duration-300">
-            <span className="[font-family:'Montserrat',Helvetica] font-bold text-[#bbbbbb] text-sm md:text-base hover:scale-105 duration-200 transition-all ">
+        <Link
+          href="/contact"
+          className="relative block w-[200px] h-[59px] z-40 hover:scale-105 hover:shadow-lg transition-all duration-300"
+        >
+          <img
+            src="/subtract-4.svg"
+            alt="Button background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="relative z-10 flex items-center justify-between px-5 h-full">
+            <span className="[font-family:'Montserrat',Helvetica] font-semibold text-black text-xl">
               Get Started
             </span>
-            <ArrowRightIcon className="w-4 md:w-6 h-4 md:h-6 text-[#bbbbbb]" />
-          </Button>
+            <img src="/vector-20.svg" alt="Arrow" className="w-6 h-6" />
+          </div>
         </Link>
       </div>
     </div>
