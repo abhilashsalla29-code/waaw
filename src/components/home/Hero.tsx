@@ -42,24 +42,22 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <Link href="/contact" className="relative inline-flex items-center justify-center w-[200px] h-[59px] hover:scale-105 hover:shadow-lg transition-all duration-300">
-              <img
-                className="absolute top-0 left-0 w-[200px] h-[59px]"
-                alt="Subtract"
-                src="/subtract-4.svg"
-              />
-              <span
-                className="absolute left-5 top-1/2 -translate-y-1/2 [font-family:'Montserrat',Helvetica] font-semibold text-black text-xl z-10"
-                style={{ width: '120px', textAlign: 'left' }}
-              >
-                Get Started
-              </span>
-              <img
-                className="absolute right-2 top-1/2 -translate-y-1/2 w-6 h-6 z-10"
-                alt="Vector"
-                src="/vector-20.svg"
-              />
-            </Link>
+          <Link
+       href="/contact"
+  className="relative block w-[200px] h-[59px] z-[9999] hover:scale-105 hover:shadow-lg transition-all duration-300" > 
+      <img
+        src="/subtract-4.svg"
+        alt="Button background"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <div className="relative z-10 flex items-center justify-between px-5 h-full">
+        <span className="[font-family:'Montserrat',Helvetica] font-semibold text-black text-xl">
+          Get Started
+        </span>
+        <img src="/vector-20.svg" alt="Arrow" className="w-6 h-6" />
+      </div>
+    </Link>
           </motion.div>
         </div>
 
@@ -70,7 +68,7 @@ export default function Hero() {
               src="/homepb.png"
               alt="3D metallic knot"
               fill
-              className="object-contain drop-shadow-[0_0_80px_rgba(255,255,255,0.3)]"
+              className="object-contain drop-shadow-[0_0_80px_rgba(255,255,255,0.3)] animate-pulse" style={{ animationDuration: '5s' }}
             />
           </div>
         </div>

@@ -127,3 +127,25 @@
     animation: orbFloat4 18s ease-in-out infinite;
   }
   
+  @keyframes orbFloat5 {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(50px, -80px);
+    }
+    50% {
+      transform: translate(-60px, 100px);
+    }
+    75% {
+      transform: translate(70px, 60px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  .animate-orb-5 {
+    animation: orbFloat5 15s ease-in-out infinite;
+  }
+  

@@ -79,7 +79,7 @@ export const MainContentSection = (): JSX.Element => {
           </div>
 
           <img
-            className="hidden md:block absolute w-[208px] h-[209px] top-[-6px] left-[-128px] object-cover"
+            className="hidden md:block absolute w-[208px] h-[209px] top-[-6px] left-[-128px] object-cover animate-spin" style={{ animationDuration: "10s" }}
             alt="Tk"
             src="/tk3.png"
           />

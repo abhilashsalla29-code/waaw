@@ -80,7 +80,7 @@ export const AudienceGrid = (): JSX.Element => {
               </Card>
 
               {/* Card 2 - Top Right (No Glass, Darker) */}
-              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden transition-all duration-300 border-none shadow-none bg-transparent">
+              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden transition-all duration-300 border-none shadow-none bg-transparent hover:shadow-[0_4px_25px_rgba(52,102,170,0.15)]">
 
                 <CardContent className="relative w-full h-full p-0">
                   <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90 blur-[2px]" />
@@ -151,7 +151,7 @@ export const AudienceGrid = (): JSX.Element => {
             {/* Bottom Row */}
             <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-10">
               {/* Card 3 - Bottom Left (No Glass, Darker) */}
-              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden transition-all duration-300 border-none shadow-none bg-transparent">
+              <Card className="w-[360px] h-[260px] rounded-[28px] overflow-hidden transition-all duration-300 border-none shadow-none bg-transparent hover:shadow-[0_4px_25px_rgba(52,102,170,0.15)]">
 
                 <CardContent className="relative w-full h-full p-0">
                   <div className="absolute top-[-180px] left-[180px] w-[6px] h-[360px] rounded-[3px/180px] -rotate-90  blur-[2px]" />
@@ -221,7 +221,7 @@ export const AudienceGrid = (): JSX.Element => {
               <CardContent className="relative w-full h-full p-6">
                 {card.hasGlass && (
                   <>
-                    <div className="absolute top-[-100px] left-[50%] w-[5px] h-[250px] -rotate-90 bg-white/70 blur-sm" />
+                    {/* <div className="absolute top-[-100px] left-[50%] w-[5px] h-[250px] -rotate-90 bg-white/70 blur-sm" /> */}
                     <div className="absolute top-[50px] left-0 w-[300px] h-[80px] bg-[#82b7dc] rounded-full blur-[80px] opacity-25" />
                   </>
                 )}
