@@ -8,8 +8,8 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-screen bg-black text-[#bbbbbb] overflow-hidden">
       {/* MOBILE VERSION - Hidden on lg+ */}
-      <div className="lg:hidden">
-        <div className="container mx-auto px-4 py-12 flex flex-col items-center gap-6">
+      <div className="lg:hidden pt-20">
+        <div className="container mx-auto px-4 py-2 flex flex-col items-center gap-6">
           {/* Content */}
           <div className="flex-1 max-w-2xl text-center space-y-4">
             <motion.h1
@@ -45,7 +45,7 @@ export default function Hero() {
             >
               <Link
                 href="/contact"
-                className="relative block w-[200px] h-[59px] z-[60] hover:scale-105 hover:shadow-lg transition-all duration-300"
+                className="relative block w-[200px] h-[59px] z-40 hover:scale-105 hover:shadow-lg transition-all duration-300"
               >
                 <img
                   src="/subtract-4.svg"
