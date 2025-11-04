@@ -140,7 +140,7 @@ export default function Hero() {
           </div>
 
           {/* RIGHT SIDE - Landing Image */}
-          <div className="relative flex-1 flex items-center justify-center animate-pulse ">
+          <div className="relative flex-1 flex items-center justify-center animate-pulse hover:scale-105  transition-transform duration-300">
             <motion.img
               src="/land.png"
               alt="Landing Page Image"

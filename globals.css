@@ -127,7 +127,7 @@
     animation: orbFloat4 18s ease-in-out infinite;
   }
   
-  @keyframes orbFloat5 {
+    @keyframes orbFloat5 {
     0% {
       transform: translate(0, 0);
     }
