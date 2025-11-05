@@ -9,10 +9,10 @@ export function Navbar() {
 
   return (
     <header className="inset-x-0 top-0 z-50 w-full fixed bg-black">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         {/* Left side - waaw logo */}
-        <Link href="/" className="text-[#bbbbbb] text-lg font-semibold">
-          waaw
+        <Link href="/">
+          <img src="/logo.png" alt="Logo" className="h-20 w-20" />
         </Link>
 
         {/* Center - Navigation links - Desktop */}

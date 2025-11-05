@@ -112,9 +112,7 @@ export const FooterSection = (): JSX.Element => (
     <div className="mt-8 sm:mt-12 md:mt-16 max-w-[1258px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
       {/* Brand + Social */}
       <div className="flex flex-col items-center md:items-start">
-        <h3 className="[font-family:'Montserrat',Helvetica] font-semibold text-[#bbbbbb] text-2xl mb-4">
-          WAAW
-        </h3>
+        <img src="/logo.png" alt="Logo" className="h-28 w-28 mb-2" />
         <div className="flex gap-4">
           {socialIcons.map((icon, i) => (
             <img

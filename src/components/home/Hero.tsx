@@ -22,7 +22,7 @@ export default function Hero() {
               INTO HIGH IMPACT
             </motion.h1>
             <motion.h2
-              className="text-3xl sm:text-4xl font-bold text-[#82b7dc]"
+              className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#82b7dc] to-[#5D3ACD] bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -99,7 +99,7 @@ export default function Hero() {
               INTO HIGH IMPACT
             </motion.h1>
             <motion.h2
-              className="text-5xl font-bold text-[#82b7dc]"
+              className="text-5xl font-bold bg-gradient-to-r from-[#5D3ACD] to-[#82b7dc] bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
