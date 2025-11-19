@@ -138,126 +138,125 @@ export default function Contact() {
 
       {/* Contact Form Section */}
       <section className="px-6 py-20">
-        <div className="bg-gradient-to-br from-[#0f0f0f] to-[#0a0a0a] rounded-[28px] mx-auto max-w-6xl p-6 sm:p-10 lg:p-12 shadow-2xl border border-white/10 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/5 to-transparent pointer-events-none"></div>
+  <div className="bg-gradient-to-br from-[#0f0f0f] to-[#0a0a0a] rounded-[28px] mx-auto max-w-6xl p-6 sm:p-10 lg:p-12 shadow-2xl border border-white/10 relative overflow-hidden">
 
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 items-start">
-            {/* Left info */}
-            <div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#82b7dc] mb-6 uppercase tracking-wide leading-tight">
-                Together,
-                <br />
-                We'll Build
-                <br />
-                What's Next.
-              </h2>
-              <div className="space-y-4 text-gray-400">
-                <div className="flex items-center gap-3 text-sm">
-                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                      />
-                    </svg>
-                  </div>
-                  <span>7702118555</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm">
-                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
-                  </div>
-                  <span>support@waaw.world</span>
-                </div>
-              </div>
+    {/* Subtle gradient overlay */}
+    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/5 to-transparent pointer-events-none"></div>
+
+    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 items-start">
+
+      {/* ---------------- LEFT INFO ---------------- */}
+      <div>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#82b7dc] mb-6 uppercase tracking-wide leading-tight">
+          Together,
+          <br />
+          We'll Build
+          <br />
+          What's Next.
+        </h2>
+
+        <div className="space-y-4 text-gray-400">
+          {/* Phone */}
+          <div className="flex items-center gap-3 text-sm">
+            <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
             </div>
+            <span>7702118555</span>
+          </div>
 
-            {/* Right form */}
-            <form className="space-y-5">
-              <div>
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="Name"
-                  className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
+          {/* Email */}
+          <div className="flex items-center gap-3 text-sm">
+            <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
-              </div>
-              <div>
-                <input
-                  id="businessName"
-                  type="text"
-                  placeholder="Business Name"
-                  className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
-                />
-              </div>
-              <div>
-                <input
-                  id="contactNumber"
-                  type="tel"
-                  placeholder="Contact Number"
-                  className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
-                />
-              </div>
-              <div>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Email"
-                  className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
-                />
-              </div>
-              <div>
-                <textarea
-                  id="message"
-                  rows={5}
-                  placeholder="Message"
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all resize-none"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="relative inline-flex items-center gap-3 bg-white/90 text-black rounded-full pl-5 pr-14 py-3 font-semibold transition-all duration-300 hover:bg-white"
-              >
-                <span>Submit Inquiry</span>
-                <span className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/10 flex items-center justify-center">
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </form>
+              </svg>
+            </div>
+            <span>support@waaw.world</span>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* ---------------- RIGHT FORM ---------------- */}
+      <form className="space-y-5">
+        <div>
+          <input
+            id="name"
+            type="text"
+            placeholder="Name"
+            className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
+          />
+        </div>
+
+        <div>
+          <input
+            id="businessName"
+            type="text"
+            placeholder="Business Name"
+            className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
+          />
+        </div>
+
+        <div>
+          <input
+            id="contactNumber"
+            type="tel"
+            placeholder="Contact Number"
+            className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
+          />
+        </div>
+
+        <div>
+          <input
+            id="email"
+            type="email"
+            placeholder="Email"
+            className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
+          />
+        </div>
+
+        <div>
+          <textarea
+            id="message"
+            rows={5}
+            placeholder="Message"
+            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all resize-none"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          className="relative inline-flex items-center gap-3 bg-white/90 text-black rounded-full pl-5 pr-14 py-3 font-semibold transition-all duration-300 hover:bg-white"
+        >
+          <span>Submit Inquiry</span>
+
+          <span className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/10 flex items-center justify-center">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
 
       <FooterSection />
     </main>

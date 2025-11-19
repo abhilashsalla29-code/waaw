@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import BlobCursor from "@/components/ui/BlobCursor";
 
 export const metadata: Metadata = {
   title: "Waaw – Innovative Software Development & Digital Solutions",
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <BlobCursor />
         {children}
       </body>
     </html>
