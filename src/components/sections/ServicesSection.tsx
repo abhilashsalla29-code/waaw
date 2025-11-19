@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent } from "../ui/card";
 import MatchstickBoxHeading from "./MatchstickHeading";
 import DecorativeLines from "../common/DecorativeLines";
+import ParallaxCard from "../ui/ParallaxCard";
 
 const servicesData = [
   {
@@ -115,26 +116,28 @@ export const ServicesSection = (): JSX.Element => {
                 </div>
 
                 {/* Service Card */}
-                <Card className="w-full min-h-[300px] rounded-3xl border border-white/10 bg-[radial-gradient(50%_50%_at_30%_-4%,rgba(255,255,255,0.15)_0%,rgba(0,0,0,0.18)_100%)] shadow-xl shadow-black/40 backdrop-blur-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                  <CardContent className="relative p-0 h-full">
-                    <div className="relative z-10 py-8 px-6 md:px-10 lg:px-12 text-[#e0e6eb] flex flex-col items-center text-center">
-                      <h4 className="font-extrabold text-[#bbbbbb] text-[20px] md:text-[24px] lg:text-[26px] leading-tight mb-4 tracking-widest uppercase [font-family:'Montserrat',Helvetica] drop-shadow-[0_2px_6px_rgba(255,255,255,0.2)]">
-                        {service.title}
-                      </h4>
-                      <div className="space-y-3 md:space-y-3 lg:space-y-4 text-[13px] md:text-[14px] lg:text-[16px] tracking-wide leading-relaxed font-medium text-[#d8dee4]/90">
-                        {service.points.map((point, pointIndex) => (
-                          <p
-                            key={pointIndex}
-                            className="transition-transform duration-300 hover:translate-x-1"
-                          >
-                            {point}
-                          </p>
-                        ))}
+                <ParallaxCard intensity={8}>
+                  <Card className="w-full min-h-[300px] rounded-3xl border border-white/10 bg-[radial-gradient(50%_50%_at_30%_-4%,rgba(255,255,255,0.15)_0%,rgba(0,0,0,0.18)_100%)] shadow-xl shadow-black/40 backdrop-blur-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
+                    <CardContent className="relative p-0 h-full">
+                      <div className="relative z-10 py-8 px-6 md:px-10 lg:px-12 text-[#e0e6eb] flex flex-col items-center text-center">
+                        <h4 className="font-extrabold text-[#bbbbbb] text-[20px] md:text-[24px] lg:text-[26px] leading-tight mb-4 tracking-widest uppercase [font-family:'Montserrat',Helvetica] drop-shadow-[0_2px_6px_rgba(255,255,255,0.2)]">
+                          {service.title}
+                        </h4>
+                        <div className="space-y-3 md:space-y-3 lg:space-y-4 text-[13px] md:text-[14px] lg:text-[16px] tracking-wide leading-relaxed font-medium text-[#d8dee4]/90">
+                          {service.points.map((point, pointIndex) => (
+                            <p
+                              key={pointIndex}
+                              className="transition-transform duration-300 hover:translate-x-1"
+                            >
+                              {point}
+                            </p>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
-                  </CardContent>
-                </Card>
+                      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+                    </CardContent>
+                  </Card>
+                </ParallaxCard>
               </div>
             ))}
           </div>

@@ -168,7 +168,7 @@ export default function Contact() {
                       />
                     </svg>
                   </div>
-                  <span>0948764323</span>
+                  <span>7702118555</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
@@ -186,7 +186,7 @@ export default function Contact() {
                       />
                     </svg>
                   </div>
-                  <span>support@wavez.com</span>
+                  <span>support@waaw.world</span>
                 </div>
               </div>
             </div>
@@ -198,6 +198,22 @@ export default function Contact() {
                   id="name"
                   type="text"
                   placeholder="Name"
+                  className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
+                />
+              </div>
+              <div>
+                <input
+                  id="businessName"
+                  type="text"
+                  placeholder="Business Name"
+                  className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
+                />
+              </div>
+              <div>
+                <input
+                  id="contactNumber"
+                  type="tel"
+                  placeholder="Contact Number"
                   className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
                 />
               </div>

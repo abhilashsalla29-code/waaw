@@ -6,8 +6,8 @@ import { Button } from "../ui/button";
 
 const socialIcons = [
   { src: "/frame-14.svg", alt: "LinkedIn" },
-  { src: "/frame-15.svg", alt: "Instagram" },
-  { src: "/frame-16.svg", alt: "YouTube" },
+  { src: "/frame-15.svg", alt: "x" },
+  { src: "/frame-16.svg", alt: "Instagram", href: "https://www.instagram.com/waaw_tech/?hl=en" },
 ];
 
 const contactIcons = [
@@ -115,12 +115,28 @@ export const FooterSection = (): JSX.Element => (
         <img src="/logo.png" alt="Logo" className="h-28 w-28 mb-2" />
         <div className="flex gap-4">
           {socialIcons.map((icon, i) => (
-            <img
-              key={i}
-              src={icon.src}
-              alt={icon.alt}
-              className="w-10 h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity"
-            />
+            icon.href ? (
+              <a
+                key={i}
+                href={icon.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src={icon.src}
+                  alt={icon.alt}
+                  className="w-10 h-10 md:w-12 md:h-12"
+                />
+              </a>
+            ) : (
+              <img
+                key={i}
+                src={icon.src}
+                alt={icon.alt}
+                className="w-10 h-10 md:w-12 md:h-12 hover:opacity-80 transition-opacity"
+              />
+            )
           ))}
         </div>
       </div>
@@ -165,7 +181,7 @@ export const FooterSection = (): JSX.Element => (
         <div className="flex items-center gap-3 mb-3">
           <img src={contactIcons[0].src} alt={contactIcons[0].alt} className="w-8 h-8 md:w-10 md:h-10" />
           <span className="[font-family:'Montserrat',Helvetica] text-[#bbbbbb] text-base">
-            0986753423
+            7702118555
           </span>
         </div>
         <div className="flex items-center gap-3">
@@ -174,7 +190,7 @@ export const FooterSection = (): JSX.Element => (
             href="mailto:support@WAAW.com"
             className="[font-family:'Montserrat',Helvetica] text-[#bbbbbb] text-base hover:text-[#bbbbbb] transition-colors"
           >
-            support@WAAW.com
+            support@WAAW.world
           </a>
         </div>
       </div>

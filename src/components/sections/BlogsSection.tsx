@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "../ui/card";
+import ParallaxCard from "../ui/ParallaxCard";
 
 const blogCards = [
   {
@@ -61,30 +62,31 @@ export const BlogsSection = ({ topOffset = false }: BlogsProps): JSX.Element => 
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[40px] md:gap-[89px] w-full max-w-[1216px]">
             {blogCards.map((card, index) => (
-              <div
-                key={index}
-                className="relative w-full md:w-[350px] h-[350px] md:h-[400px] cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto"
-              >
-                {/* Use frame-17-1.svg as the card background */}
-                <img
-                  src="/blog1.png"
-                  alt="Blog card"
-                  className="absolute inset-0 w-full h-full object-cover object-bottom"
-                />
+              <ParallaxCard intensity={8} key={index}>
+                <div
+                  className="relative w-full md:w-[350px] h-[350px] md:h-[400px] cursor-pointer hover:scale-105 transition-transform duration-300 mx-auto"
+                >
+                  {/* Use frame-17-1.svg as the card background */}
+                  <img
+                    src="/blog1.png"
+                    alt="Blog card"
+                    className="absolute inset-0 w-full h-full object-cover object-bottom"
+                  />
 
-                {/* Content overlay */}
-                <div className="relative z-10 h-full p-6 md:p-6">
-                  {/* Title at top */}
-                  <h4 className="[font-family:'Montserrat',Helvetica] font-bold text-[#bbbbbb] text-[20px] md:text-[24px] text-center tracking-[0] leading-tight mt-2">
-                    {card.title}
-                  </h4>
+                  {/* Content overlay */}
+                  <div className="relative z-10 h-full p-6 md:p-6">
+                    {/* Title at top */}
+                    <h4 className="[font-family:'Montserrat',Helvetica] font-bold text-[#bbbbbb] text-[20px] md:text-[24px] text-center tracking-[0] leading-tight mt-2">
+                      {card.title}
+                    </h4>
 
-                  {/* Description centered vertically */}
-                  <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 [font-family:'Poppins',Helvetica] font-medium text-[#bbbbbb] text-xs md:text-sm text-center tracking-[0] leading-relaxed max-w-[85%]">
-                    {card.description}
-                  </p>
+                    {/* Description centered vertically */}
+                    <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 [font-family:'Poppins',Helvetica] font-medium text-[#bbbbbb] text-xs md:text-sm text-center tracking-[0] leading-relaxed max-w-[85%]">
+                      {card.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </ParallaxCard>
             ))}
           </div>
         </div>
