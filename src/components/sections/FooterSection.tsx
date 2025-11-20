@@ -199,7 +199,7 @@ export const FooterSection = (): JSX.Element => (
     {/* Bottom legal */}
     <div className="mt-8 sm:mt-10 md:mt-12 max-w-[1258px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 md:gap-12">
       <p className="[font-family:'Montserrat',Helvetica] font-normal text-[#bbbbbb] text-xs">
-        Copyright © 2025 WAAW. All rights reserved
+        Copyright © 2024 VisionTech. All rights reserved
       </p>
       <div className="flex gap-6">
         {legalLinks.map((link, i) => (
