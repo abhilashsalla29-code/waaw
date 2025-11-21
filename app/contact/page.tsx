@@ -1,10 +1,61 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Navbar } from "../../src/components/Navbar";
 import FooterSection from "../../src/components/sections/FooterSection";
 import { MessageCircle, Users, Send } from "lucide-react";
 
+const initialFormState = {
+  name: "",
+  businessName: "",
+  contactNumber: "",
+  email: "",
+  message: ""
+};
+
 export default function Contact() {
+  const [formData, setFormData] = useState(initialFormState);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<{ type: "idle" | "success" | "error"; message?: string }>({
+    type: "idle"
+  });
+
+  const handleChange = (field: keyof typeof initialFormState) => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [field]: event.target.value }));
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+    setStatus({ type: "idle" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message ?? "Unable to submit right now. Please try again.");
+      }
+
+      setStatus({ type: "success", message: "Thanks! We received your inquiry and will be in touch shortly." });
+      setFormData(initialFormState);
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message:
+          error instanceof Error ? error.message : "Something went wrong. Please refresh and try again."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main className="relative bg-black text-[#bbbbbb] min-h-screen">
       <Navbar />
@@ -189,12 +240,15 @@ export default function Contact() {
       </div>
 
       {/* ---------------- RIGHT FORM ---------------- */}
-      <form className="space-y-5">
+      <form className="space-y-5" onSubmit={handleSubmit}>
         <div>
           <input
             id="name"
             type="text"
             placeholder="Name"
+            value={formData.name}
+            onChange={handleChange("name")}
+            required
             className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
           />
         </div>
@@ -204,6 +258,8 @@ export default function Contact() {
             id="businessName"
             type="text"
             placeholder="Business Name"
+            value={formData.businessName}
+            onChange={handleChange("businessName")}
             className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
           />
         </div>
@@ -213,6 +269,8 @@ export default function Contact() {
             id="contactNumber"
             type="tel"
             placeholder="Contact Number"
+            value={formData.contactNumber}
+            onChange={handleChange("contactNumber")}
             className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
           />
         </div>
@@ -222,6 +280,9 @@ export default function Contact() {
             id="email"
             type="email"
             placeholder="Email"
+            value={formData.email}
+            onChange={handleChange("email")}
+            required
             className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all"
           />
         </div>
@@ -231,15 +292,29 @@ export default function Contact() {
             id="message"
             rows={5}
             placeholder="Message"
+            value={formData.message}
+            onChange={handleChange("message")}
             className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-[#bbbbbb] placeholder-gray-500 focus:outline-none focus:border-[#82b7dc] focus:ring-1 focus:ring-[#82b7dc]/60 transition-all resize-none"
           ></textarea>
         </div>
 
+        {status.type !== "idle" && (
+          <p
+            className={`text-sm ${
+              status.type === "success" ? "text-emerald-400" : "text-red-400"
+            }`}
+            aria-live="polite"
+          >
+            {status.message}
+          </p>
+        )}
+
         <button
           type="submit"
-          className="relative inline-flex items-center gap-3 bg-white/90 text-black rounded-full pl-5 pr-14 py-3 font-semibold transition-all duration-300 hover:bg-white"
+          disabled={isSubmitting}
+          className="relative inline-flex items-center gap-3 bg-white/90 text-black rounded-full pl-5 pr-14 py-3 font-semibold transition-all duration-300 hover:bg-white disabled:opacity-70 disabled:cursor-not-allowed"
         >
-          <span>Submit Inquiry</span>
+          <span>{isSubmitting ? "Sending..." : "Submit Inquiry"}</span>
 
           <span className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/10 flex items-center justify-center">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
